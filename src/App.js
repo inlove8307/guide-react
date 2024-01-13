@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import UxHeader from "./components/layout/UxHeader";
+import UxFooter from "./components/layout/UxFooter";
+import UxMain from "./components/layout/UxMain";
+import Sample from "./pages/Sample";
+
+import "./assets/css/style.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="ux-container">
+			<UxHeader />
+			<UxMain>
+				<Sample />
+			</UxMain>
+			<UxFooter />
+		</div>
+	);
 }
 
 export default App;
