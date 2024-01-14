@@ -3,24 +3,43 @@
 @import 'base.css';
 @import 'components.css';
 
+body {overflow-x: hidden; width: 100%;}
+
+/* Scrollbar */
+body {overflow-y: overlay;}
+/* Scrollbar Firefox */
+* {scrollbar-width: auto; scrollbar-color: #C9C9C9 #FFFFFF;}
+/* Scrollbar Chrome, Edge, Safari */
+*::-webkit-scrollbar {width: .8rem;}
+*::-webkit-scrollbar-track {background: #FFFFFF;}
+*::-webkit-scrollbar-thumb {background-color: #C9C9C9; border-radius: .4rem; border: .2rem solid #FFFFFF;}
+
 /* Layout Container */
-.ux-container {display: flex; flex-direction: column; height: 100%;}
+.ux-container {display: flex; flex-direction: column; position: relative; height: 100%;}
 /* Layout Common */
 .ux-header,
 .ux-main,
-.ux-footer {display: flex; flex-direction: column; align-items: center;}
-.ux-header article,
-.ux-main article,
-.ux-footer article {width: 1280px;}
+.ux-footer {display: flex; flex-direction: column; align-items: center; position: relative;}
+.ux-header > section,
+.ux-main > section,
+.ux-footer > section {display: flex; flex-direction: column; align-items: center; position: relative; width: 100%;}
+.ux-header > section > article,
+.ux-main > section > article,
+.ux-footer > section > article {position: relative; width: 128rem;}
 /* Layout Header */
-.ux-header {}
-.ux-header section {}
-.ux-header article {}
+.ux-header {position: sticky; top: 0; left: 0; right: 0; border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05); box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.05); background-color: rgba(255, 255, 255);}
+.ux-header section {height: 10rem;}
+.ux-header article {display: flex;}
 /* Layout Main */
 .ux-main {flex-grow: 1;}
 .ux-main section {}
 .ux-main article {}
 /* Layout Footer */
 .ux-footer {}
-.ux-footer section {}
-.ux-footer article {}
+.ux-footer section {height: 12rem; border-top: 0.1rem solid rgba(0, 0, 0, 0.1); background-color: rgba(0, 0, 0, 0.95);}
+.ux-footer article {color: rgba(255, 255, 255, 1);}
+/* Layout z-index */
+.ux-header {z-index: 1;}
+
+/*  */
+.ux-box {height: 100rem;}

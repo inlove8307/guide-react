@@ -1,7 +1,9 @@
 export default () => {
 	return (
 		<article className="ux-contents">
-			Main
+			<div className="ux-box">
+				Main
+			</div>
 		</article>
 	);
 };
