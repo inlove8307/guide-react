@@ -1,9 +1,11 @@
 import React from "react";
 // LAYOUT
+import UxLayout from "components/layout/UxLayout";
 import UxSection from "components/layout/UxSection";
 import UxArticle from "components/layout/UxArticle";
 import UxTitle from "components/layout/UxTitle";
 import UxContent from "components/layout/UxContent";
+import UxDock from "components/layout/UxDock";
 // BASE
 import UxBadge from "components/base/UxBadge";
 import UxButton from "components/base/UxButton";
@@ -52,60 +54,67 @@ import UxTooltip from "components/mixin/UxTooltip";
 
 export default () => {
 	return (
-		<UxSection>
-			<UxArticle>
-				<UxTitle></UxTitle>
-				<UxContent>
+		<UxLayout>
+			<UxSection>
+				<UxArticle>
+					<UxTitle>
+						<h3>Sample</h3>
+					</UxTitle>
+					<UxContent>
 
-					{/* BASE */}
-					<UxBadge />
-					<UxButton />
-					<UxCheckbox />
-					<UxChip />
-					<UxDivider />
-					<UxFile />
-					<UxImage />
-					<UxInput />
-					<UxLink />
-					<UxPassword />
-					<UxRadio />
-					<UxRange />
-					<UxSelect />
-					<UxSwitch />
-					<UxText />
-					<UxTextarea />
+						{/* BASE */}
+						<UxBadge>UxBadge</UxBadge>
+						<UxButton>UxButton</UxButton>
+						<UxCheckbox>UxCheckbox</UxCheckbox>
+						<UxChip>UxChip</UxChip>
+						<UxDivider>UxDivider</UxDivider>
+						<UxFile>UxFile</UxFile>
+						<UxImage>UxImage</UxImage>
+						<UxInput>UxInput</UxInput>
+						<UxLink>UxLink</UxLink>
+						<UxPassword>UxPassword</UxPassword>
+						<UxRadio>UxRadio</UxRadio>
+						<UxRange>UxRange</UxRange>
+						<UxSelect>UxSelect</UxSelect>
+						<UxSwitch>UxSwitch</UxSwitch>
+						<UxText>UxText</UxText>
+						<UxTextarea>UxTextarea</UxTextarea>
 
-					{/* MIXIN */}
-					<UxAlert />
-					<UxBreadcrumb />
-					<UxCalendar />
-					<UxCard />
-					<UxCollapse />
-					<UxConfirm />
-					<UxDatepicker />
-					<UxDropdown />
-					<UxField />
-					<UxFilter />
-					<UxForm />
-					<UxGroup />
-					<UxInfo />
-					<UxKeypad />
-					<UxList />
-					<UxMasking />
-					<UxModal />
-					<UxPagination />
-					<UxPopover />
-					<UxProgress />
-					<UxSwiper />
-					<UxTab />
-					<UxTable />
-					<UxTimeline />
-					<UxToast />
-					<UxToggle />
-					<UxTooltip />
+						{/* MIXIN */}
+						<UxAlert>UxAlert</UxAlert>
+						<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
+						<UxCalendar>UxCalendar</UxCalendar>
+						<UxCard>UxCard</UxCard>
+						<UxCollapse>UxCollapse</UxCollapse>
+						<UxConfirm>UxConfirm</UxConfirm>
+						<UxDatepicker>UxDatepicker</UxDatepicker>
+						<UxDropdown>UxDropdown</UxDropdown>
+						<UxField>UxField</UxField>
+						<UxFilter>UxFilter</UxFilter>
+						<UxForm>UxForm</UxForm>
+						<UxGroup>UxGroup</UxGroup>
+						<UxInfo>UxInfo</UxInfo>
+						<UxKeypad>UxKeypad</UxKeypad>
+						<UxList>UxList</UxList>
+						<UxMasking>UxMasking</UxMasking>
+						<UxModal>UxModal</UxModal>
+						<UxPagination>UxPagination</UxPagination>
+						<UxPopover>UxPopover</UxPopover>
+						<UxProgress>UxProgress</UxProgress>
+						<UxSwiper>UxSwiper</UxSwiper>
+						<UxTab>UxTab</UxTab>
+						<UxTable>UxTable</UxTable>
+						<UxTimeline>UxTimeline</UxTimeline>
+						<UxToast>UxToast</UxToast>
+						<UxToggle>UxToggle</UxToggle>
+						<UxTooltip>UxTooltip</UxTooltip>
 
-				</UxContent>
-			</UxArticle>
-		</UxSection>
+					</UxContent>
+				</UxArticle>
+			</UxSection>
+			<UxDock>
+				Dock
+			</UxDock>
+		</UxLayout>
 	);
 };

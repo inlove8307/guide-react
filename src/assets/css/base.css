@@ -136,6 +136,8 @@ article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, 
 a, area, button, input, label, select, summary, textarea, [tabindex] {touch-action: manipulation;}
 html {height: 100%; font-family: 'Noto Sans KR', 'Roboto'; font-size: 10px; -webkit-tap-highlight-color: transparent;}
 body {height: 100%; margin: 0; font-size: 1.6rem; font-style: normal; font-weight: normal; line-height: inherit; word-break: keep-all; word-wrap: word-break; letter-spacing: -0.1rem; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+html {height: 100%;}
+body {height: 100%;}
 [hidden], hr {display: none;}
 img {vertical-align: middle;}
 fieldset, iframe {width: 100%;}

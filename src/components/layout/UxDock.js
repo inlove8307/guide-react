@@ -1,25 +1,23 @@
 import React from "react";
 import classnames from "classnames";
-import "assets/css/components/layout/UxHeader.css";
+import "assets/css/components/layout/UxDock.css";
 // LAYOUT
 import UxSection from "components/layout/UxSection";
 import UxArticle from "components/layout/UxArticle";
 import UxContent from "components/layout/UxContent";
 
 const Component = (props) => {
-	const originClassName = "ux-header";
+	const originClassName = "ux-dock";
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
-		<header className={mixinClassName}>
-			<UxSection>
-				<UxArticle>
-					<UxContent>
-						Header
-					</UxContent>
-				</UxArticle>
-			</UxSection>
-		</header>
+		<UxSection className={mixinClassName}>
+			<UxArticle>
+				<UxContent>
+					{props.children}
+				</UxContent>
+			</UxArticle>
+		</UxSection>
 	);
 };
 

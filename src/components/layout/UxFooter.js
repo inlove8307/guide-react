@@ -1,6 +1,10 @@
 import React from "react";
 import classnames from "classnames";
 import "assets/css/components/layout/UxFooter.css";
+// LAYOUT
+import UxSection from "components/layout/UxSection";
+import UxArticle from "components/layout/UxArticle";
+import UxContent from "components/layout/UxContent";
 
 const Component = (props) => {
 	const originClassName = "ux-footer";
@@ -8,11 +12,13 @@ const Component = (props) => {
 
 	return (
 		<footer className={mixinClassName}>
-			<section>
-				<article>
-					Footer
-				</article>
-			</section>
+			<UxSection>
+				<UxArticle>
+					<UxContent>
+						Footer
+					</UxContent>
+				</UxArticle>
+			</UxSection>
 		</footer>
 	);
 };
