@@ -1,15 +1,15 @@
 import React from "react";
 import classnames from "classnames";
-import "assets/css/components/layout/UxMain.css";
+import "assets/css/components/layout/UxArticle.css";
 
 const Component = (props) => {
-	const originClassName = "ux-main";
+	const originClassName = "ux-article";
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
-		<main className={mixinClassName}>
+		<section className={mixinClassName}>
 			{props.children}
-		</main>
+		</section>
 	);
 };
 

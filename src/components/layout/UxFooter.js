@@ -1,6 +1,13 @@
-export default (props) => {
+import React from "react";
+import classnames from "classnames";
+import "assets/css/components/layout/UxFooter.css";
+
+const Component = (props) => {
+	const originClassName = "ux-footer";
+	const mixinClassName = classnames(originClassName, props.className);
+
 	return (
-		<footer className="ux-footer">
+		<footer className={mixinClassName}>
 			<section>
 				<article>
 					Footer
@@ -9,3 +16,5 @@ export default (props) => {
 		</footer>
 	);
 };
+
+export default Component;

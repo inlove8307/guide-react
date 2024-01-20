@@ -1,6 +1,13 @@
-export default (props) => {
+import React from "react";
+import classnames from "classnames";
+import "assets/css/components/layout/UxHeader.css";
+
+const Component = (props) => {
+	const originClassName = "ux-header";
+	const mixinClassName = classnames(originClassName, props.className);
+
 	return (
-		<header className="ux-header">
+		<header className={mixinClassName}>
 			<section>
 				<article>
 					Header
@@ -9,3 +16,5 @@ export default (props) => {
 		</header>
 	);
 };
+
+export default Component;
