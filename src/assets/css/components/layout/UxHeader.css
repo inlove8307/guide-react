@@ -1,3 +1,4 @@
+/* UxDock */
 .ux-header {
 	position: sticky;
 	top: 0;
@@ -22,3 +23,5 @@
 	align-items: center;
 	height: 100%;
 }
+/* UxDock z-index */
+.ux-header {z-index: 10;}

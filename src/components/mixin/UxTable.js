@@ -8,7 +8,9 @@ const Component = (props) => {
 
 	return (
 		<div className={mixinClassName}>
-			{props.children}
+			<table className={`${originClassName}-base`}>
+				{props.children}
+			</table>
 		</div>
 	);
 };

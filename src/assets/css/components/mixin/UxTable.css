@@ -1,1 +1,47 @@
-.ux-table {}
+/* UxTable */
+.ux-table {
+	border-top: .1rem solid var(--light3);
+}
+.ux-table .ux-table-base {}
+.ux-table th {
+	background-color: var(--light1);
+	font-weight: 700;
+}
+.ux-table th,
+.ux-table td {
+	padding: .8rem 1.2rem;
+	border-right: .1rem solid var(--light2);
+	border-bottom: .1rem solid var(--light2);
+}
+.ux-table th:last-child,
+.ux-table td:last-child {
+	border-right: 0;
+}
+.ux-table tbody th {
+	border-right: 0;
+}
+/* UxTable Align */
+.ux-table.left th,
+.ux-table.left td {
+	text-align: left;
+}
+.ux-table.right th,
+.ux-table.right td {
+	text-align: right;
+}
+.ux-table.center th,
+.ux-table.center td {
+	text-align: center;
+}
+.ux-table th.left,
+.ux-table td.left {
+	text-align: left;
+}
+.ux-table th.right,
+.ux-table td.right {
+	text-align: right;
+}
+.ux-table th.center,
+.ux-table td.center {
+	text-align: center;
+}

@@ -7,9 +7,26 @@ const Component = (props) => {
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
-		<div className={mixinClassName}>
-			{props.children}
-		</div>
+		<span className={mixinClassName}>
+			<button
+				type="button"
+				className={`${originClassName}-base`}
+				disabled={props.disabled}
+			>
+				{
+					props.icon && props.align === "left" &&
+					<i className={`${originClassName}-icon ${props.icon}`} />
+				}
+				{
+					props.children ||
+					<span className={`${originClassName}-label`}>{props.label}</span>
+				}
+				{
+					props.icon && props.align === "right" &&
+					<i className={`${originClassName}-icon ${props.icon}`} />
+				}
+			</button>
+		</span>
 	);
 };
 

@@ -1,1 +1,42 @@
-.ux-masking {}
+/* UxMasking */
+.ux-masking {
+	position: relative;
+}
+.ux-masking .ux-masking-mask {
+	display: flex;
+	gap: .8rem;
+	position: relative;
+	pointer-events: none;
+}
+.ux-masking .ux-masking-item {
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	background-color: var(--light2);
+}
+.ux-masking .ux-masking-item.enabled {
+	background-color: var(--dark2);
+}
+.ux-masking .ux-masking-input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	color: transparent;
+	caret-color: transparent;
+}
+.ux-masking .ux-masking-input:focus {
+	outline: none;
+}
+
+/* UxMasking z-index */
+.ux-masking .ux-masking-input {
+	z-index: 0;
+}
+.ux-masking .ux-masking-mask {
+	z-index: 1;
+}

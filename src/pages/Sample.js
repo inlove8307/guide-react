@@ -52,19 +52,27 @@ import UxToast from "components/mixin/UxToast";
 import UxToggle from "components/mixin/UxToggle";
 import UxTooltip from "components/mixin/UxTooltip";
 
-export default () => {
+const Page = () => {
 	return (
 		<UxLayout>
 			<UxSection>
 				<UxArticle>
 					<UxTitle>
-						<h3>Sample</h3>
+						<h3>SAMPLE</h3>
 					</UxTitle>
 					<UxContent>
 
 						{/* BASE */}
 						<UxBadge>UxBadge</UxBadge>
-						<UxButton>UxButton</UxButton>
+
+						<UxGroup className="flex">
+							<UxButton
+								icon="icon-003"
+								label="UxButton"
+								align="right"
+							/>
+						</UxGroup>
+
 						<UxCheckbox>UxCheckbox</UxCheckbox>
 						<UxChip>UxChip</UxChip>
 						<UxDivider>UxDivider</UxDivider>
@@ -77,7 +85,13 @@ export default () => {
 						<UxRange>UxRange</UxRange>
 						<UxSelect>UxSelect</UxSelect>
 						<UxSwitch>UxSwitch</UxSwitch>
-						<UxText>UxText</UxText>
+
+						<UxText
+							className="md"
+							prefix="1."
+							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
+						/>
+
 						<UxTextarea>UxTextarea</UxTextarea>
 
 						{/* MIXIN */}
@@ -93,18 +107,123 @@ export default () => {
 						<UxFilter>UxFilter</UxFilter>
 						<UxForm>UxForm</UxForm>
 						<UxGroup>UxGroup</UxGroup>
-						<UxInfo>UxInfo</UxInfo>
-						<UxKeypad>UxKeypad</UxKeypad>
-						<UxList>UxList</UxList>
-						<UxMasking>UxMasking</UxMasking>
+
+						<UxCard>
+							<UxInfo
+								data={[
+									{ label: "label1", value: "value1" },
+									{ label: "label2", value: "value2" },
+									{ label: "label3", value: "value3" },
+								]}
+							/>
+						</UxCard>
+
+						<UxCard>
+							<UxInfo
+								className="line"
+								data={[
+									{ label: "label1", value: "value1" },
+									{ label: "label2", value: "value2" },
+									{ label: "label3", value: "value3" },
+								]}
+							/>
+						</UxCard>
+
+						<UxKeypad
+							shuffle
+							onClick={(event)=>{console.log(event);}}
+						/>
+
+						<UxCard>
+							<UxList
+								bullet="dot"
+								size="md"
+								data={[
+									"가나다라 / 1234 / Bullet Dot",
+									"마바사아 / 5678 / Bullet Dot",
+									"자차카타 / 9012 / Bullet Dot",
+								]}
+							/>
+						</UxCard>
+
+						<UxCard>
+							<UxList
+								className="line"
+								prefix="number"
+								size="md"
+								data={[
+									"가나다라 / 1234 / Prefix Number",
+									"마바사아 / 5678 / Prefix Number",
+									"자차카타 / 9012 / Prefix Number",
+								]}
+							/>
+						</UxCard>
+
+						<UxMasking
+							value="000"
+							mask="7"
+							onChange={(event)=>{console.log(event);}}
+							onFocus={(event)=>{console.log(event);}}
+							onBlur={(event)=>{console.log(event);}}
+						/>
+
 						<UxModal>UxModal</UxModal>
 						<UxPagination>UxPagination</UxPagination>
 						<UxPopover>UxPopover</UxPopover>
 						<UxProgress>UxProgress</UxProgress>
 						<UxSwiper>UxSwiper</UxSwiper>
 						<UxTab>UxTab</UxTab>
-						<UxTable>UxTable</UxTable>
-						<UxTimeline>UxTimeline</UxTimeline>
+
+						<UxTable className="center">
+							<colgroup>
+									<col width="50%" />
+									<col width="50%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">label</th>
+									<th scope="col">label</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>value</td>
+									<td>value</td>
+								</tr>
+							</tbody>
+						</UxTable>
+
+						<UxTable className="center">
+							<colgroup>
+									<col width="50%" />
+									<col width="50%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">label</th>
+									<td className="left">value</td>
+								</tr>
+								<tr>
+									<th scope="row">label</th>
+									<td className="left">value</td>
+								</tr>
+							</tbody>
+						</UxTable>
+
+						<UxTimeline>
+							<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
+							<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
+							<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
+						</UxTimeline>
+
+						<UxTimeline
+							number
+						>
+							<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
+							<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
+							<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
+						</UxTimeline>
+
 						<UxToast>UxToast</UxToast>
 						<UxToggle>UxToggle</UxToggle>
 						<UxTooltip>UxTooltip</UxTooltip>
@@ -118,3 +237,5 @@ export default () => {
 		</UxLayout>
 	);
 };
+
+export default Page;

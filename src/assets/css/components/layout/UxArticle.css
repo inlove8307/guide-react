@@ -1,1 +1,5 @@
-.ux-article {}
+/* UxArticle */
+.ux-article {
+	padding: 0 2rem;
+	width: 102.4rem;
+}

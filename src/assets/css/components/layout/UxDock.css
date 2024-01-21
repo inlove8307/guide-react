@@ -1,3 +1,4 @@
+/* UxDock */
 .ux-dock {
 	flex-shrink: 0;
 	flex-basis: 8rem;
@@ -20,3 +21,5 @@
 	align-items: center;
 	height: 100%;
 }
+/* UxDock z-index */
+.ux-dock {z-index: 10;}

@@ -12,8 +12,8 @@
 	font-style: normal;
 	font-weight: 100;
 	src: local(''),
-		url('../font/noto-sans-kr-v27-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/noto-sans-kr-v27-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 /* noto-sans-kr-300 - latin */
@@ -22,8 +22,8 @@
 	font-style: normal;
 	font-weight: 300;
 	src: local(''),
-		url('../font/noto-sans-kr-v27-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/noto-sans-kr-v27-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 /* noto-sans-kr-400 - latin */
@@ -32,8 +32,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
-		url('../font/noto-sans-kr-v27-latin-400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/noto-sans-kr-v27-latin-400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 /* noto-sans-kr-500 - latin */
@@ -42,8 +42,8 @@
 	font-style: normal;
 	font-weight: 500;
 	src: local(''),
-		url('../font/noto-sans-kr-v27-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/noto-sans-kr-v27-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 /* noto-sans-kr-700 - latin */
@@ -52,8 +52,8 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local(''),
-		url('../font/noto-sans-kr-v27-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/noto-sans-kr-v27-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
 /* noto-sans-kr-900 - latin */
@@ -62,18 +62,19 @@
 	font-style: normal;
 	font-weight: 900;
 	src: local(''),
-		url('../font/noto-sans-kr-v27-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/noto-sans-kr-v27-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/noto-sans-kr/noto-sans-kr-v27-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
+
 /* roboto-100 - latin */
 @font-face {
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 100;
 	src: local(''),
-		url('../font/roboto-v30-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/roboto-v30-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/roboto/roboto-v30-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/roboto/roboto-v30-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+0030-0039;
 }
 /* roboto-300 - latin */
@@ -82,8 +83,8 @@
 	font-style: normal;
 	font-weight: 300;
 	src: local(''),
-		url('../font/roboto-v30-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/roboto-v30-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/roboto/roboto-v30-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/roboto/roboto-v30-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+0030-0039;
 }
 /* roboto-400 - latin */
@@ -92,8 +93,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
-		url('../font/roboto-v30-latin-400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/roboto-v30-latin-400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/roboto/roboto-v30-latin-400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/roboto/roboto-v30-latin-400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+0030-0039;
 }
 /* roboto-500 - latin */
@@ -102,8 +103,8 @@
 	font-style: normal;
 	font-weight: 500;
 	src: local(''),
-		url('../font/roboto-v30-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/roboto-v30-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/roboto/roboto-v30-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/roboto/roboto-v30-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+0030-0039;
 }
 /* roboto-700 - latin */
@@ -112,8 +113,8 @@
 	font-style: normal;
 	font-weight: 700;
 	src: local(''),
-		url('../font/roboto-v30-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/roboto-v30-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/roboto/roboto-v30-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/roboto/roboto-v30-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+0030-0039;
 }
 /* roboto-900 - latin */
@@ -122,9 +123,99 @@
 	font-style: normal;
 	font-weight: 900;
 	src: local(''),
-		url('../font/roboto-v30-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../font/roboto-v30-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url('../font/roboto/roboto-v30-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../font/roboto/roboto-v30-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 		unicode-range: U+0030-0039;
+}
+
+/* nanum-square-300 */
+@font-face {
+	font-family: 'NanumSquare';
+	font-weight: 300;
+	src: url('../font/nanum-square/NanumSquareL.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareL.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareL.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareL.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareL.ttf') format('truetype');
+}
+/* nanum-square-400 */
+@font-face {
+	font-family: 'NanumSquare';
+	font-weight: 400;
+	src: url('../font/nanum-square/NanumSquareR.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareR.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareR.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareR.ttf') format('truetype');
+}
+/* nanum-square-700 */
+@font-face {
+	font-family: 'NanumSquare';
+	font-weight: 700;
+	src: url('../font/nanum-square/NanumSquareB.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareB.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareB.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareB.ttf') format('truetype');
+}
+/* nanum-square-800 */
+@font-face {
+	font-family: 'NanumSquare';
+	font-weight: 800;
+	src: url('../font/nanum-square/NanumSquareEB.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareEB.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareEB.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareEB.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareEB.ttf') format('truetype');
+}
+
+/* nanum-square-ac-300 */
+@font-face {
+	font-family: 'NanumSquareAc';
+	font-weight: 300;
+	src: url('../font/nanum-square/NanumSquareAcL.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareAcL.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareAcL.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareAcL.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareAcL.ttf') format('truetype');
+}
+/* nanum-square-ac-400 */
+@font-face {
+	font-family: 'NanumSquareAc';
+	font-weight: 400;
+	src: url('../font/nanum-square/NanumSquareAcR.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareAcR.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareAcR.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareAcR.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareAcR.ttf') format('truetype');
+}
+/* nanum-square-ac-700 */
+@font-face {
+	font-family: 'NanumSquareAc';
+	font-weight: 700;
+	src: url('../font/nanum-square/NanumSquareAcB.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareAcB.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareAcB.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareAcB.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareAcB.ttf') format('truetype');
+}
+/* nanum-square-ac-800 */
+@font-face {
+	font-family: 'NanumSquareAc';
+	font-weight: 800;
+	src: url('../font/nanum-square/NanumSquareAcEB.eot');
+	src: local('☺'),
+		url('../font/nanum-square/NanumSquareAcEB.eot?#iefix') format('embedded-opentype'),
+		url('../font/nanum-square/NanumSquareAcEB.woff2') format('woff2'),
+		url('../font/nanum-square/NanumSquareAcEB.woff') format('woff'),
+		url('../font/nanum-square/NanumSquareAcEB.ttf') format('truetype');
 }
 
 /* BASE */
@@ -134,10 +225,8 @@ label, button, select, textarea, input, fieldset, legend, a, span, strong, em, a
 :before, :after {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box;}
 article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section, main {display: block;}
 a, area, button, input, label, select, summary, textarea, [tabindex] {touch-action: manipulation;}
-html {height: 100%; font-family: 'Noto Sans KR', 'Roboto'; font-size: 10px; -webkit-tap-highlight-color: transparent;}
+html {height: 100%; font-family: 'NanumSquare', 'Noto Sans KR', 'Roboto'; font-size: 10px; -webkit-tap-highlight-color: transparent;}
 body {height: 100%; margin: 0; font-size: 1.6rem; font-style: normal; font-weight: normal; line-height: inherit; word-break: keep-all; word-wrap: word-break; letter-spacing: -0.1rem; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
-html {height: 100%;}
-body {height: 100%;}
 [hidden], hr {display: none;}
 img {vertical-align: middle;}
 fieldset, iframe {width: 100%;}

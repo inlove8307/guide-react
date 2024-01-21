@@ -1,1 +1,34 @@
+/* UxList */
 .ux-list {}
+.ux-list > ul,
+.ux-list > ol {
+	display: flex;
+	flex-direction: column;
+}
+.ux-list:not(.line) > ul,
+.ux-list:not(.line) > ol {
+	gap: .8rem;
+}
+/* UxList Line */
+.ux-list.line > ul,
+.ux-list.line > ol {}
+.ux-list.line > ul > li,
+.ux-list.line > ol > li {
+	padding: .8rem 0;
+	border-bottom: .1rem solid var(--light1);
+}
+.ux-list.line > ul > li:first-child,
+.ux-list.line > ol > li:first-child {
+	border-top: .1rem solid var(--light2);
+}
+/* UxList in UxCard */
+.ux-card .ux-list.line > ul > li:first-child,
+.ux-card .ux-list.line > ol > li:first-child {
+	padding-top: 0;
+	border-top: 0;
+}
+.ux-card .ux-list.line > ul > li:last-child,
+.ux-card .ux-list.line > ol > li:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}

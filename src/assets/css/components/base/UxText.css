@@ -1,1 +1,66 @@
-.ux-text {}
+/* UxText */
+.ux-text {
+	display: flex;
+	align-items: flex-start;
+}
+/* UxText Prefix */
+.ux-text.prefix {
+	display: flex;
+	gap: .4rem;
+	font-size: var(--font-md)!important;
+}
+/* UxText Bullet */
+.ux-text.bullet {
+	display: flex;
+	gap: .4rem;
+}
+.ux-text.bullet .ux-text-bullet.dot::before {
+	content: "";
+	width: .4rem;
+	height: .4rem;
+	border-radius: 50%;
+	background-color: var(--dark3);
+}
+/* UxText Size */
+.ux-text.xxs {font-size: var(--font-2xs);}
+.ux-text.xs {font-size: var(--font-xs);}
+.ux-text.sm {font-size: var(--font-sm);}
+.ux-text.md {font-size: var(--font-md);}
+.ux-text.lg {font-size: var(--font-lg);}
+.ux-text.xl {font-size: var(--font-xl);}
+.ux-text.xxl {font-size: var(--font-2xl);}
+.ux-text strong {font-weight: 700;}
+/* UxText Prefix, Bullet Height */
+.ux-text.prefix .ux-text-prefix,
+.ux-text.bullet .ux-text-bullet {
+	display: inline-flex;
+	align-items: center;
+}
+.ux-text.xxs.prefix .ux-text-prefix,
+.ux-text.xxs.bullet .ux-text-bullet {
+	height: calc(var(--font-2xs) * 1.5);
+}
+.ux-text.xs.prefix .ux-text-prefix,
+.ux-text.xs.bullet .ux-text-bullet {
+	height: calc(var(--font-xs) * 1.5);
+}
+.ux-text.sm.prefix .ux-text-prefix,
+.ux-text.sm.bullet .ux-text-bullet {
+	height: calc(var(--font-sm) * 1.5);
+}
+.ux-text.md.prefix .ux-text-prefix,
+.ux-text.md.bullet .ux-text-bullet {
+	height: calc(var(--font-md) * 1.5);
+}
+.ux-text.lg.prefix .ux-text-prefix,
+.ux-text.lg.bullet .ux-text-bullet {
+	height: calc(var(--font-lg) * 1.5);
+}
+.ux-text.xl.prefix .ux-text-prefix,
+.ux-text.xl.bullet .ux-text-bullet {
+	height: calc(var(--font-xl) * 1.5);
+}
+.ux-text.xxl.prefix .ux-text-prefix,
+.ux-text.xxl.bullet .ux-text-bullet {
+	height: calc(var(--font-2xl) * 1.5);
+}

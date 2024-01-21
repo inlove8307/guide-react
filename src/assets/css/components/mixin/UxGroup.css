@@ -1,1 +1,59 @@
+
+/* UxGroup */
 .ux-group {}
+/* UxGroup Align */
+.ux-group.center {
+	text-align: center;
+}
+.ux-group.left {
+	text-align: left;
+}
+.ux-group.right {
+	text-align: right;
+}
+
+/* UxGroup Flex */
+.ux-group.flex {
+	display: flex;
+	gap: .8rem;
+}
+.ux-group.flex > * {
+	flex-shrink: 0;
+	flex-basis: 0;
+}
+/* UxGroup Flex Align */
+.ux-group.flex.center {
+	justify-content: center;
+}
+.ux-group.flex.left {
+	justify-content: flex-start;
+}
+.ux-group.flex.right {
+	justify-content: flex-end;
+}
+/* UxGroup Flex Item */
+.ux-group.flex > *.grow {
+	flex-grow: 1;
+}
+.ux-group.flex > *.left {
+	margin-right: auto;
+}
+.ux-group.flex > *.right {
+	margin-left: auto;
+}
+
+/* UxGroup Grid */
+.ux-group.grid {
+	display: grid;
+	gap: .8rem;
+}
+/* UxGroup Grid Column */
+.ux-group.grid.col2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+.ux-group.grid.col3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.ux-group.grid.col4 {
+	grid-template-columns: repeat(4, 1fr);
+}
