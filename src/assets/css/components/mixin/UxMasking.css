@@ -1,5 +1,7 @@
 /* UxMasking */
 .ux-masking {
+	display: flex;
+	align-items: center;
 	position: relative;
 }
 .ux-masking .ux-masking-mask {
@@ -29,7 +31,8 @@
 	color: transparent;
 	caret-color: transparent;
 }
-.ux-masking .ux-masking-input:focus {
+.ux-masking .ux-masking-input:focus,
+.ux-masking .ux-masking-input:focus-visible {
 	outline: none;
 }
 
@@ -39,4 +42,9 @@
 }
 .ux-masking .ux-masking-mask {
 	z-index: 1;
+}
+
+.ux-password .ux-masking {
+	flex-grow: 1;
+	height: 100%;
 }

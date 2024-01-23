@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxMasking.css";
 
-const Component = (props) => {
+const Component = ({...props}, ref) => {
 	const originClassName = "ux-masking";
 	const mixinClassName = classnames(originClassName, props.className);
-	const [value, setValue] = useState(props.value || "");
 
 	const ComponentMask = (props)=>{
 		const masks = (()=>{
 			let array = [];
 
 			while (array.length < Number(props.mask)) {
-				array.length < value.length
+				array.length < props.value?.length
 				? array.push(true)
 				: array.push(false);
 			}
@@ -33,7 +32,6 @@ const Component = (props) => {
 	}
 
 	const handleChange = (event)=>{
-		setValue(event.target.value);
 		props.onChange && props.onChange(event);
 	}
 
@@ -45,20 +43,31 @@ const Component = (props) => {
 		props.onBlur && props.onBlur(event);
 	}
 
+	const handleKeyDown = (event)=>{
+		props.onKeyDown && props.onKeyDown(event);
+	};
+
+	const handleKeyUp = (event)=>{
+		props.onKeyUp && props.onKeyUp(event);
+	};
+
 	return (
 		<div className={mixinClassName}>
 			<ComponentMask {...props} />
 			<input
+				ref={ref}
 				type="text"
 				className={`${originClassName}-input`}
-				value={value}
+				defaultValue={props.value}
 				maxLength={props.mask}
 				onChange={handleChange}
 				onFocus={handleFocus}
 				onBlur={handleBlur}
+				onKeyDown={handleKeyDown}
+				onKeyUp={handleKeyUp}
 			/>
 		</div>
 	);
 };
 
-export default Component;
+export default React.forwardRef(Component);

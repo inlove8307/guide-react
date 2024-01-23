@@ -67,9 +67,13 @@ const Page = () => {
 
 						<UxGroup className="flex">
 							<UxButton
-								icon="icon-003"
 								label="UxButton"
+								icon="ux-icon-clear"
 								align="right"
+							/>
+							<UxButton
+								icon="ux-icon-clear"
+								label="label"
 							/>
 						</UxGroup>
 
@@ -78,9 +82,64 @@ const Page = () => {
 						<UxDivider>UxDivider</UxDivider>
 						<UxFile>UxFile</UxFile>
 						<UxImage>UxImage</UxImage>
-						<UxInput>UxInput</UxInput>
+
+						<UxInput
+							align="right"
+							placeholder="입력하세요."
+							suffix="원"
+							clear
+						/>
+						<UxInput
+							placeholder="입력하세요."
+							button="전송"
+							timer="05:00"
+							clear
+						/>
+						<UxInput
+							placeholder="입력하세요."
+							icon="ux-icon-calendar"
+							clear
+						/>
+						<UxInput
+							value="valid"
+							placeholder="입력하세요."
+							clear
+							valid
+						/>
+						<UxInput
+							value="invalid"
+							placeholder="입력하세요."
+							clear
+							invalid
+						/>
+						<UxInput
+							value="Readonly"
+							placeholder="입력하세요."
+							prefix="prefix"
+							suffix="suffix"
+							button="전송"
+							timer="05:00"
+							clear
+							readonly
+						/>
+						<UxInput
+							value="Disabled"
+							placeholder="입력하세요."
+							prefix="prefix"
+							suffix="suffix"
+							button="전송"
+							timer="05:00"
+							clear
+							disabled
+						/>
+
 						<UxLink>UxLink</UxLink>
-						<UxPassword>UxPassword</UxPassword>
+
+						<UxPassword
+							mask="12"
+							clear
+						/>
+
 						<UxRadio>UxRadio</UxRadio>
 						<UxRange>UxRange</UxRange>
 						<UxSelect>UxSelect</UxSelect>
@@ -88,7 +147,13 @@ const Page = () => {
 
 						<UxText
 							className="md"
-							prefix="1."
+							prefix="-"
+							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
+						/>
+
+						<UxText
+							className="md"
+							bullet="dot"
 							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
 						/>
 
@@ -131,7 +196,6 @@ const Page = () => {
 
 						<UxKeypad
 							shuffle
-							onClick={(event)=>{console.log(event);}}
 						/>
 
 						<UxCard>
@@ -160,11 +224,8 @@ const Page = () => {
 						</UxCard>
 
 						<UxMasking
-							value="000"
+							value="123"
 							mask="7"
-							onChange={(event)=>{console.log(event);}}
-							onFocus={(event)=>{console.log(event);}}
-							onBlur={(event)=>{console.log(event);}}
 						/>
 
 						<UxModal>UxModal</UxModal>
