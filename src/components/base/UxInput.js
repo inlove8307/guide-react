@@ -45,7 +45,10 @@ const Component = (props) => {
 	};
 
 	return (
-		<div className={mixinClassName}>
+		<div
+			className={mixinClassName}
+			style={props.size && { flexBasis: `${props.size}px` }}
+		>
 			{
 				props.prefix &&
 				<span className={`${originClassName}-prefix`}>{props.prefix}</span>

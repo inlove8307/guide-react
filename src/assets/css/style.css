@@ -2,6 +2,33 @@
 
 @import "base.css";
 @import "icon.css";
-@import "components.css";
+/* @import "components.css"; */
+
+/* VARIABLES */
+:root {
+	/* COLOR */
+	--color1: rgba();
+	--color2: rgba();
+	--color3: rgba();
+	--light0: rgb(255, 255, 255);
+	--light1: rgb(238, 238, 238);
+	--light2: rgb(204, 204, 204);
+	--light3: rgb(170, 170, 170);
+	--dark0: rgb(0, 0, 0);
+	--dark1: rgb(34, 34, 34);
+	--dark2: rgb(68, 68, 68);
+	--dark3: rgb(102, 102, 102);
+	--valid: rgb(0, 150, 255);
+	--invalid: rgb(255, 150, 0);
+
+	/* FONT */
+	--font-2xs: 1rem;
+	--font-xs: 1.2rem;
+	--font-sm: 1.4rem;
+	--font-md: 1.6rem;
+	--font-lg: 1.8rem;
+	--font-xl: 2rem;
+	--font-2xl: 2.2rem;
+}
 
 #root {height: 100%;}

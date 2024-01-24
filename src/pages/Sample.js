@@ -83,62 +83,173 @@ const Page = () => {
 						<UxFile>UxFile</UxFile>
 						<UxImage>UxImage</UxImage>
 
-						<UxInput
-							align="right"
-							placeholder="입력하세요."
-							suffix="원"
-							clear
-						/>
-						<UxInput
-							placeholder="입력하세요."
-							button="전송"
-							timer="05:00"
-							clear
-						/>
-						<UxInput
-							placeholder="입력하세요."
-							icon="ux-icon-calendar"
-							clear
-						/>
-						<UxInput
-							value="valid"
-							placeholder="입력하세요."
-							clear
-							valid
-						/>
-						<UxInput
-							value="invalid"
-							placeholder="입력하세요."
-							clear
-							invalid
-						/>
-						<UxInput
-							value="Readonly"
-							placeholder="입력하세요."
-							prefix="prefix"
-							suffix="suffix"
-							button="전송"
-							timer="05:00"
-							clear
-							readonly
-						/>
-						<UxInput
-							value="Disabled"
-							placeholder="입력하세요."
-							prefix="prefix"
-							suffix="suffix"
-							button="전송"
-							timer="05:00"
-							clear
-							disabled
-						/>
+						<UxForm>
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								align="right"
+							>
+								<UxInput
+									align="right"
+									placeholder="입력하세요."
+									suffix="원"
+									clear
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+							>
+								<UxInput
+									placeholder="입력하세요."
+									button="전송"
+									timer="05:00"
+									clear
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+							>
+								<UxInput
+									placeholder="입력하세요."
+									icon="ux-icon-calendar"
+									clear
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								valid
+							>
+								<UxInput
+									value="valid"
+									placeholder="입력하세요."
+									clear
+									// valid
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								invalid
+							>
+								<UxInput
+									value="invalid"
+									placeholder="입력하세요."
+									clear
+									// invalid
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								readonly
+							>
+								<UxInput
+									value="Readonly"
+									placeholder="입력하세요."
+									prefix="prefix"
+									suffix="suffix"
+									button="전송"
+									timer="05:00"
+									clear
+									// readonly
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								disabled
+							>
+								<UxInput
+									value="Disabled"
+									placeholder="입력하세요."
+									prefix="prefix"
+									suffix="suffix"
+									button="전송"
+									timer="05:00"
+									clear
+									// disabled
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+							>
+								<UxPassword
+									mask="7"
+									clear
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								readonly
+							>
+								<UxPassword
+									mask="7"
+									clear
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								disabled
+							>
+								<UxPassword
+									mask="7"
+									clear
+								/>
+							</UxField>
+
+							<UxField
+								label="Field Label"
+								message="Field Message"
+								result="Field Result"
+								readonly
+							>
+								<UxGroup
+									className="flex"
+									field
+								>
+									<UxInput
+										className="grow"
+										value="010"
+										// size="50"
+									/>
+									<UxPassword
+										className="grow"
+										mask="4"
+									/>
+									<UxPassword
+										className="grow"
+										mask="4"
+									/>
+								</UxGroup>
+							</UxField>
+						</UxForm>
 
 						<UxLink>UxLink</UxLink>
-
-						<UxPassword
-							mask="12"
-							clear
-						/>
 
 						<UxRadio>UxRadio</UxRadio>
 						<UxRange>UxRange</UxRange>

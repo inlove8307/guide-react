@@ -31,7 +31,7 @@
 	padding: 0;
 	min-height: initial;
 	border-radius: 0;
-	box-shadow: none;
+	box-shadow: none!important;
 }
 /* UxButton Status */
 .ux-button .ux-button-base:hover {

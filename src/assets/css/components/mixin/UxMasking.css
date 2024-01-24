@@ -35,6 +35,12 @@
 .ux-masking .ux-masking-input:focus-visible {
 	outline: none;
 }
+.ux-masking .ux-masking-input::selection {
+  background: #FFF; /* WebKit/Blink Browsers */
+}
+.ux-masking .ux-masking-input::-moz-selection {
+  background: #FFF; /* Gecko Browsers */
+}
 
 /* UxMasking z-index */
 .ux-masking .ux-masking-input {

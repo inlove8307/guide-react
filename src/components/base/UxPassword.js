@@ -36,12 +36,15 @@ const Component = (props) => {
 		setPassword(maskRef.current.value);
 	};
 
+
+
 	return (
 		<div className={mixinClassName}>
 			<Masking
 				ref={maskRef}
 				value={password}
 				mask={props.mask}
+				hasFocus={(props.readonly || props.disabled) ? false : true}
 				onChange={handleChange}
 				onFocus={handleFocus}
 				onBlur={handleBlur}
@@ -49,7 +52,7 @@ const Component = (props) => {
 				onKeyUp={handleKeyUp}
 			/>
 			{
-				props.clear && password &&
+				props.clear && password && !props.readonly && !props.disabled &&
 				<UxButton
 					className={`${originClassName}-clear`}
 					icon="ux-icon-clear"
