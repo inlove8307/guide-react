@@ -1,5 +1,5 @@
-/* UxForm */
-.ux-form {
+/* UxFieldset */
+.ux-fieldset {
 	display: flex;
 	flex-direction: column;
 	gap: 2.4rem;

@@ -1,2 +1,32 @@
 /* UxCheckbox */
-.ux-checkbox {}
+.ux-checkbox {
+	display: inline-flex;
+}
+.ux-checkbox .ux-checkbox-base {
+	display: inline-flex;
+	position: relative;
+	align-items: center;
+	gap: .8rem;
+	cursor: pointer;
+}
+.ux-checkbox .ux-checkbox-input[type=checkbox] {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: 0;
+	background-color: transparent;
+	opacity: 0;
+}
+.ux-checkbox .ux-checkbox-icon {
+	flex-shrink: 0;
+}
+.ux-checkbox .ux-checkbox-label {
+	flex-shrink: 0;
+}
+/* UxCheckbox Disabled */
+.ux-checkbox.disabled .ux-checkbox-icon {
+	background-color: var(--light2);
+}

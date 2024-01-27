@@ -11,15 +11,15 @@ const Component = (props) => {
 	keyArray.splice(9, 0, "delete");
 	keyArray.splice(11, 0, "clear");
 
-	const handleClick = (event)=>{
+	const handleClick = (event) => {
 		props.onClick && props.onClick(event);
 	}
 
 	const handler = {
-		"delete": (event)=>{
+		"delete": (event) => {
 			props.onDelete && props.onDelete(event);
 		},
-		"clear": (event)=>{
+		"clear": (event) => {
 			props.onClear && props.onClear(event);
 		}
 	}
@@ -28,7 +28,7 @@ const Component = (props) => {
 		<div className={mixinClassName}>
 			<div className={`${originClassName}-base`}>
 				{
-					keyArray.map((item, index)=>{
+					keyArray.map((item, index) => {
 
 
 						return (

@@ -1,2 +1,44 @@
 /* UxSwitch */
-.ux-switch {}
+.ux-switch {
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+}
+.ux-switch .ux-switch-base {
+	position: relative;
+}
+.ux-switch .ux-switch-input {
+	overflow: hidden;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	z-index: -1;
+}
+.ux-switch .ux-switch-track {
+	display: flex;
+	width: 3.4rem;
+	height: 2rem;
+	border-radius: 1rem;
+	background-color: var(--light1);
+	box-shadow: 0 0 0 .1rem var(--light2);
+	cursor: pointer;
+	transition: all .15s ease-in-out;
+}
+.ux-switch .ux-switch-slide {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 1rem;
+	background-color: var(--light0);
+	box-shadow: 0 0 0 .1rem var(--light2);
+	transform: translateX(0);
+	transition: all .15s ease-in-out;
+}
+.ux-switch.active .ux-switch-track {
+	background-color: var(--color1);
+}
+.ux-switch.active .ux-switch-slide {
+	transform: translateX(calc(100% - .6rem));
+}

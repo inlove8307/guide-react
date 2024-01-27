@@ -1,2 +1,32 @@
 /* UxRadio */
-.ux-radio {}
+.ux-radio {
+	display: inline-flex;
+}
+.ux-radio .ux-radio-base {
+	display: inline-flex;
+	position: relative;
+	align-items: center;
+	gap: .8rem;
+	cursor: pointer;
+}
+.ux-radio .ux-radio-input[type=radio] {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: 0;
+	background-color: transparent;
+	opacity: 0;
+}
+.ux-radio .ux-radio-icon {
+	flex-shrink: 0;
+}
+.ux-radio .ux-radio-label {
+	flex-shrink: 0;
+}
+/* UxCheckbox Disabled */
+.ux-radio.disabled .ux-radio-icon {
+	background-color: var(--light2);
+}

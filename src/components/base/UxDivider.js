@@ -7,9 +7,7 @@ const Component = (props) => {
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
-		<div className={mixinClassName}>
-			{props.children}
-		</div>
+		<div className={mixinClassName} />
 	);
 };
 

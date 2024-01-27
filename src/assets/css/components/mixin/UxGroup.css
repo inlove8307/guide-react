@@ -14,11 +14,18 @@
 /* UxGroup Flex */
 .ux-group.flex {
 	display: flex;
+	align-items: center;
 	gap: .8rem;
 }
 .ux-group.flex > * {
 	flex-shrink: 0;
 	flex-basis: 0;
+}
+.ux-group.flex.column {
+	flex-direction: column;
+}
+.ux-group.flex.wrap {
+	flex-wrap: wrap;
 }
 /* UxGroup Flex Align */
 .ux-group.flex.center {
@@ -29,6 +36,18 @@
 }
 .ux-group.flex.right {
 	justify-content: flex-end;
+}
+.ux-group.flex.column.center {
+	justify-content: initial;
+	align-items: center;
+}
+.ux-group.flex.column.left {
+	justify-content: initial;
+	align-items: flex-start;
+}
+.ux-group.flex.column.right {
+	justify-content: initial;
+	align-items: flex-end;
 }
 /* UxGroup Flex Item */
 .ux-group.flex > *.grow {
@@ -63,7 +82,7 @@
 	transition: box-shadow .1s ease-in-out;
 }
 .ux-group.field:focus-within {
-	box-shadow: inset 0 0 0 .2rem var(--light2);
+	box-shadow: inset 0 0 0 .2rem var(--light3);
 }
 .ux-group.field.valid {
 	box-shadow: inset 0 0 0 .1rem var(--valid);

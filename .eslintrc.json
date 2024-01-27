@@ -13,6 +13,9 @@
 		// tabindex 데이터 타입 롤 제외
 		"jsx-a11y/tabindex-no-positive": "off",
 		// a href="#" 허용
-		"jsx-a11y/anchor-is-valid": "off"
+		"jsx-a11y/anchor-is-valid": "off",
+		// "jsx-a11y/label-has-associated-control": [ 2, {
+		// 	"some": [ "nesting", "id" ]
+		// }]
 	}
 }

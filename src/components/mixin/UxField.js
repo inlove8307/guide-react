@@ -4,9 +4,14 @@ import "assets/css/components/mixin/UxField.css";
 
 const Component = (props) => {
 	const originClassName = "ux-field";
-	const mixinClassName = classnames(originClassName, props.className, props.align, {valid: props.valid}, {invalid: props.invalid}, {readonly: props.readonly}, {disabled: props.disabled});
+	const mixinClassName = classnames(originClassName, props.className, props.align, {
+		valid: props.valid,
+		invalid: props.invalid,
+		readonly: props.readonly,
+		disabled: props.disabled
+	});
 
-	const children = (children)=>{
+	const children = (children) => {
 		if (Array.isArray(children)) {
 			return children;
 		}
@@ -15,7 +20,7 @@ const Component = (props) => {
 		}
 	}
 
-	const mergeProps = (children, object)=>{
+	const mergeProps = (children, object) => {
 		if (React.isValidElement(children)) {
 			return React.cloneElement(children, object);
 		}
@@ -32,7 +37,7 @@ const Component = (props) => {
 				<p className={`${originClassName}-label`}>{props.label}</p>
 			}
 			{
-				children(props.children).map((element, index)=>{
+				children(props.children).map((element, index) => {
 					return mergeProps(element, {
 						key: index,
 						valid: props.valid,

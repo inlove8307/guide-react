@@ -6,7 +6,7 @@ const Component = (props, ref) => {
 	const originClassName = "ux-masking";
 	const mixinClassName = classnames(originClassName, props.className, {readonly: props.readonly}, {disabled: props.disabled});
 
-	const ComponentMask = (props)=>{
+	const ComponentMask = (props) => {
 		let string = props.value || "";
 
 		if (!props.hasFocus) {
@@ -15,7 +15,7 @@ const Component = (props, ref) => {
 			}
 		}
 
-		const masks = (()=>{
+		const masks = (() => {
 			let array = [];
 
 			while (array.length < Number(props.mask)) {
@@ -39,23 +39,23 @@ const Component = (props, ref) => {
 		);
 	}
 
-	const handleChange = (event)=>{
+	const handleChange = (event) => {
 		props.onChange && props.onChange(event);
 	}
 
-	const handleFocus = (event)=>{
+	const handleFocus = (event) => {
 		props.onFocus && props.onFocus(event);
 	}
 
-	const handleBlur = (event)=>{
+	const handleBlur = (event) => {
 		props.onBlur && props.onBlur(event);
 	}
 
-	const handleKeyDown = (event)=>{
+	const handleKeyDown = (event) => {
 		props.onKeyDown && props.onKeyDown(event);
 	};
 
-	const handleKeyUp = (event)=>{
+	const handleKeyUp = (event) => {
 		props.onKeyUp && props.onKeyUp(event);
 	};
 

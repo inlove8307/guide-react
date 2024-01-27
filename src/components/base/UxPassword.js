@@ -6,37 +6,40 @@ import UxButton from "components/base/UxButton";
 
 const Component = (props) => {
 	const originClassName = "ux-password";
-	const mixinClassName = classnames(originClassName, props.className, {valid: props.valid}, {invalid: props.invalid}, {readonly: props.readonly}, {disabled: props.disabled});
+	const mixinClassName = classnames(originClassName, props.className, {
+		valid: props.valid,
+		invalid: props.invalid,
+		readonly: props.readonly,
+		disabled: props.disabled
+	});
 	const [password, setPassword] = useState(props.value);
 	const maskRef = useRef();
 
-	const handleChange = (event)=>{
+	const handleChange = (event) => {
 		setPassword(event.target.value);
 		props.onChange && props.onChange(event);
 	}
 
-	const handleFocus = (event)=>{
+	const handleFocus = (event) => {
 		props.onFocus && props.onFocus(event);
 	}
 
-	const handleBlur = (event)=>{
+	const handleBlur = (event) => {
 		props.onBlur && props.onBlur(event);
 	}
 
-	const handleKeyDown = (event)=>{
+	const handleKeyDown = (event) => {
 		props.onKeyDown && props.onKeyDown(event);
 	};
 
-	const handleKeyUp = (event)=>{
+	const handleKeyUp = (event) => {
 		props.onKeyUp && props.onKeyUp(event);
 	};
 
-	const handleClear = (event)=>{
+	const handleClear = (event) => {
 		maskRef.current.value = "";
 		setPassword(maskRef.current.value);
 	};
-
-
 
 	return (
 		<div className={mixinClassName}>
@@ -55,7 +58,7 @@ const Component = (props) => {
 				props.clear && password && !props.readonly && !props.disabled &&
 				<UxButton
 					className={`${originClassName}-clear`}
-					icon="ux-icon-clear"
+					icon={<span className="ux-icon-clear" />}
 					onClick={handleClear}
 				/>
 			}

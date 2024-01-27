@@ -7,7 +7,7 @@
 /* VARIABLES */
 :root {
 	/* COLOR */
-	--color1: rgba();
+	--color1: rgb(217, 13, 88);
 	--color2: rgba();
 	--color3: rgba();
 	--light0: rgb(255, 255, 255);
@@ -18,8 +18,8 @@
 	--dark1: rgb(34, 34, 34);
 	--dark2: rgb(68, 68, 68);
 	--dark3: rgb(102, 102, 102);
-	--valid: rgb(0, 150, 255);
-	--invalid: rgb(255, 150, 0);
+	--valid: rgb(10, 93, 166);
+	--invalid: rgb(242, 56, 39);
 
 	/* FONT */
 	--font-2xs: 1rem;

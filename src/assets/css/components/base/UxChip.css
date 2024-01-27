@@ -1,2 +1,25 @@
 /* UxChip */
-.ux-chip {}
+.ux-chip {
+	display: inline-flex;
+}
+.ux-chip .ux-chip-base {
+	display: inline-flex;
+	align-items: center;
+	gap: .4rem;
+	padding: 0 1.2rem;
+	height: 2.8rem;
+	border-radius: 1.4rem;
+	background-color: var(--color1);
+	color: var(--light0);
+}
+.ux-chip .ux-chip-label {
+}
+.ux-chip .ux-chip-icon {
+}
+.ux-chip .presentation {
+
+}
+.ux-chip.presentation .ux-chip-base,
+.ux-chip .ux-chip-icon.presentation {
+	cursor: pointer;
+}

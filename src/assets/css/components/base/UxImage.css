@@ -1,2 +1,6 @@
 /* UxImage */
 .ux-image {}
+.ux-image.full .ux-image-base {
+	width: 100%;
+}
+.ux-image .ux-image-caption {}

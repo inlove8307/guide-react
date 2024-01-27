@@ -1,2 +1,20 @@
 /* UxDivider */
-.ux-divider {}
+.ux-divider {
+	background-color: var(--light1);
+}
+.ux-divider.sm {
+	height: .4rem;
+}
+.ux-divider.md {
+	height: .8rem;
+}
+.ux-divider.lg {
+	height: 1.6rem;
+}
+.ux-divider.dash {
+	height: .1rem;
+	background-image: repeating-linear-gradient(to right, var(--light3), var(--light3) .1rem, var(--light0) .1rem, var(--light0) .4rem);
+}
+.ux-divider.wide {
+	margin: 0 -2rem;
+}

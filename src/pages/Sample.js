@@ -1,4 +1,6 @@
 import React from "react";
+//UTILS
+import { getParents, getClosest } from "utils/dom";
 // LAYOUT
 import UxLayout from "components/layout/UxLayout";
 import UxSection from "components/layout/UxSection";
@@ -33,6 +35,7 @@ import UxConfirm from "components/mixin/UxConfirm";
 import UxDatepicker from "components/mixin/UxDatepicker";
 import UxDropdown from "components/mixin/UxDropdown";
 import UxField from "components/mixin/UxField";
+import UxFieldset from "components/mixin/UxFieldset";
 import UxFilter from "components/mixin/UxFilter";
 import UxForm from "components/mixin/UxForm";
 import UxGroup from "components/mixin/UxGroup";
@@ -51,6 +54,8 @@ import UxTimeline from "components/mixin/UxTimeline";
 import UxToast from "components/mixin/UxToast";
 import UxToggle from "components/mixin/UxToggle";
 import UxTooltip from "components/mixin/UxTooltip";
+// IMAGE
+import image from "assets/image/sample/image_01.png"
 
 const Page = () => {
 	return (
@@ -63,198 +68,487 @@ const Page = () => {
 					<UxContent>
 
 						{/* BASE */}
-						<UxBadge>UxBadge</UxBadge>
-
-						<UxGroup className="flex">
+						<UxGroup className="flex wrap">
 							<UxButton
 								label="UxButton"
-								icon="ux-icon-clear"
-								align="right"
+								onClick={(event)=>{console.log("UxButton onClick", event);}}
 							/>
 							<UxButton
-								icon="ux-icon-clear"
-								label="label"
+								label="UxButton"
+								icon={
+									<span
+										className="ux-icon-clear"
+										align="left"
+									/>
+								}
+								onClick={(event)=>{console.log("UxButton onClick", event);}}
+							/>
+							<UxButton
+								label="UxButton"
+								icon={<span className="ux-icon-clear" />}
+								onClick={(event)=>{console.log("UxButton onClick", event);}}
+							/>
+							<UxButton
+								icon={<span className="ux-icon-clear"/>}
+								onClick={(event)=>{console.log("UxButton onClick", event);}}
 							/>
 						</UxGroup>
 
-						<UxCheckbox>UxCheckbox</UxCheckbox>
-						<UxChip>UxChip</UxChip>
-						<UxDivider>UxDivider</UxDivider>
-						<UxFile>UxFile</UxFile>
-						<UxImage>UxImage</UxImage>
+						<UxGroup className="flex wrap">
+							<UxChip
+								label="UxChip"
+								onClick={(event)=>{console.log("UxChip onClick", event);}}
+							/>
+							<UxChip
+								label="UxChip"
+								onClick={(event)=>{console.log("UxChip onClick", event);}}
+								icon={
+									<span
+										role="presentation"
+										className="ux-icon-clear white"
+										onClick={(event)=>{console.log("UxChip Icon onClick", event);}}
+									/>
+								}
+							/>
+						</UxGroup>
+
+						<UxGroup className="flex wrap">
+							<UxLink
+								href="#"
+								label="UxLink"
+							/>
+							<UxLink
+								className="underline"
+								href="#"
+								label="UxLink Underline"
+							/>
+							<UxLink
+								href="#"
+								label="UxLink Icon"
+								icon={<span className="ux-icon-arrow-right" />}
+							/>
+						</UxGroup>
+
+						<UxBadge>99</UxBadge>
+
+						<UxDivider className="sm"/>
+						<UxDivider className="md"/>
+						<UxDivider className="lg"/>
+						<UxDivider className="dash"/>
+
+						<UxImage
+							className="full"
+							src={image}
+							alt="UxImage Alt"
+						>
+							UxImage Figcaption
+						</UxImage>
 
 						<UxForm>
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								align="right"
-							>
-								<UxInput
-									align="right"
-									placeholder="입력하세요."
-									suffix="원"
-									clear
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-							>
-								<UxInput
-									placeholder="입력하세요."
-									button="전송"
-									timer="05:00"
-									clear
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-							>
-								<UxInput
-									placeholder="입력하세요."
-									icon="ux-icon-calendar"
-									clear
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								valid
-							>
-								<UxInput
-									value="valid"
-									placeholder="입력하세요."
-									clear
-									// valid
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								invalid
-							>
-								<UxInput
-									value="invalid"
-									placeholder="입력하세요."
-									clear
-									// invalid
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								readonly
-							>
-								<UxInput
-									value="Readonly"
-									placeholder="입력하세요."
-									prefix="prefix"
-									suffix="suffix"
-									button="전송"
-									timer="05:00"
-									clear
-									// readonly
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								disabled
-							>
-								<UxInput
-									value="Disabled"
-									placeholder="입력하세요."
-									prefix="prefix"
-									suffix="suffix"
-									button="전송"
-									timer="05:00"
-									clear
-									// disabled
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-							>
-								<UxPassword
-									mask="7"
-									clear
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								readonly
-							>
-								<UxPassword
-									mask="7"
-									clear
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								disabled
-							>
-								<UxPassword
-									mask="7"
-									clear
-								/>
-							</UxField>
-
-							<UxField
-								label="Field Label"
-								message="Field Message"
-								result="Field Result"
-								readonly
-							>
-								<UxGroup
-									className="flex"
-									field
+							<UxFieldset>
+								<UxField
+									label="UxInput Suffix"
+									message="Message"
 								>
 									<UxInput
-										className="grow"
-										value="010"
-										// size="50"
+										align="right"
+										placeholder="입력하세요."
+										suffix="원"
+										clear
 									/>
+								</UxField>
+
+								<UxField
+									label="UxInput Prefix"
+									message="Message"
+								>
+									<UxInput
+										prefix="$"
+										placeholder="입력하세요."
+										clear
+									/>
+								</UxField>
+
+								<UxField
+									label="UxInput Submit"
+									message="Message"
+								>
+									<UxInput
+										placeholder="입력하세요."
+										button="전송"
+										timer="05:00"
+										clear
+									/>
+								</UxField>
+
+								<UxField
+									label="UxInput Icon"
+									message="Message"
+								>
+									<UxInput
+										placeholder="입력하세요."
+										icon="ux-icon-calendar"
+										clear
+										onIconClick={(event)=>{console.log("UxInput onIconClick", event);}}
+									/>
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxInput Valid"
+									message="Message"
+									result="Result"
+									valid
+								>
+									<UxInput
+										value="valid"
+										placeholder="입력하세요."
+										clear
+									/>
+								</UxField>
+
+								<UxField
+									label="UxInput Invalid"
+									message="Message"
+									result="Result"
+									invalid
+								>
+									<UxInput
+										value="invalid"
+										placeholder="입력하세요."
+										clear
+									/>
+								</UxField>
+
+								<UxField
+									label="UxInput Readonly"
+									message="Message"
+									readonly
+								>
+									<UxInput
+										value="Readonly"
+										placeholder="입력하세요."
+										prefix="prefix"
+										suffix="suffix"
+										button="전송"
+										timer="05:00"
+										clear
+									/>
+								</UxField>
+
+								<UxField
+									label="UxInput Disabled"
+									message="Message"
+									disabled
+								>
+									<UxInput
+										value="Disabled"
+										placeholder="입력하세요."
+										prefix="prefix"
+										suffix="suffix"
+										button="전송"
+										timer="05:00"
+										clear
+									/>
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxPassword"
+									message="Message"
+								>
 									<UxPassword
-										className="grow"
-										mask="4"
+										mask="7"
+										clear
 									/>
+								</UxField>
+
+								<UxField
+									label="UxPassword Readonly"
+									message="Message"
+									readonly
+								>
 									<UxPassword
-										className="grow"
-										mask="4"
+										mask="7"
+										clear
 									/>
-								</UxGroup>
-							</UxField>
+								</UxField>
+
+								<UxField
+									label="UxPassword Disabled"
+									message="Message"
+									disabled
+								>
+									<UxPassword
+										mask="7"
+										clear
+									/>
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxInput UxPassword"
+									message="Message"
+								>
+									<UxGroup
+										className="flex"
+										field
+									>
+										<UxInput
+											className="grow"
+											value="010"
+										/>
+										<UxPassword
+											className="grow"
+											mask="4"
+										/>
+										<UxPassword
+											className="grow"
+											mask="4"
+										/>
+									</UxGroup>
+								</UxField>
+
+								<UxField
+									label="UxInput UxPassword Readonly"
+									message="Message"
+									readonly
+								>
+									<UxGroup
+										className="flex"
+										field
+									>
+										<UxInput
+											className="grow"
+											value="010"
+										/>
+										<UxPassword
+											className="grow"
+											mask="4"
+										/>
+										<UxPassword
+											className="grow"
+											mask="4"
+										/>
+									</UxGroup>
+								</UxField>
+
+								<UxField
+									label="UxInput UxPassword Disabled"
+									message="Message"
+									disabled
+								>
+									<UxGroup
+										className="flex"
+										field
+									>
+										<UxInput
+											className="grow"
+											value="010"
+										/>
+										<UxPassword
+											className="grow"
+											mask="4"
+										/>
+										<UxPassword
+											className="grow"
+											mask="4"
+										/>
+									</UxGroup>
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxTextarea"
+									message="Message"
+									result="Result"
+								>
+									<UxTextarea
+										maxLength="300"
+										placeholder="300자 이내로 작성해 주세요."
+										fluid
+									/>
+								</UxField>
+
+								<UxField
+									label="UxTextarea Valid"
+									message="Message"
+									result="Result"
+									valid
+								>
+									<UxTextarea
+										maxLength="300"
+										placeholder="300자 이내로 작성해 주세요."
+										value="Valid"
+										fluid
+									/>
+								</UxField>
+
+								<UxField
+									label="UxTextarea Invalid"
+									message="Message"
+									result="Result"
+									invalid
+								>
+									<UxTextarea
+										maxLength="300"
+										placeholder="300자 이내로 작성해 주세요."
+										value="Invalid"
+										fluid
+									/>
+								</UxField>
+
+								<UxField
+									label="UxTextarea Readonly"
+									message="Message"
+									result="Result"
+									readonly
+								>
+									<UxTextarea
+										maxLength="300"
+										placeholder="300자 이내로 작성해 주세요."
+										value="Readonly"
+										fluid
+									/>
+								</UxField>
+
+								<UxField
+									label="UxTextarea Disabled"
+									message="Message"
+									result="Result"
+									disabled
+								>
+									<UxTextarea
+										maxLength="300"
+										placeholder="300자 이내로 작성해 주세요."
+										value="Disabled"
+										fluid
+									/>
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxFile"
+									message="Message"
+								>
+									<UxFile placeholder="파일 버튼을 클릭하세요." />
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxCheckbox"
+									message="Message"
+								>
+									<UxGroup
+										className="flex"
+										checkbox
+									>
+										<UxCheckbox
+											className="grow"
+											label="Unchecked"
+										/>
+										<UxCheckbox
+											className="grow"
+											checked={true}
+											label="Checked"
+										/>
+									</UxGroup>
+								</UxField>
+
+								<UxField
+									label="UxCheckbox Disabled"
+									message="Message"
+									disabled
+								>
+									<UxGroup
+										className="flex"
+										checkbox
+									>
+										<UxCheckbox
+											className="grow"
+											label="Unchecked"
+										/>
+										<UxCheckbox
+											className="grow"
+											checked={true}
+											label="Checked"
+										/>
+									</UxGroup>
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxRadio"
+									message="Message"
+								>
+									<UxGroup
+										className="flex"
+										radio
+										name="RADIO01"
+										selected="A"
+										onChange={(event)=>{console.log(event)}}
+									>
+										<UxRadio
+											className="grow"
+											label="Unselected"
+											value="A"
+										/>
+										<UxRadio
+											className="grow"
+											label="selected"
+											value="B"
+										/>
+									</UxGroup>
+								</UxField>
+
+								<UxField
+									label="UxRadio Disabled"
+									message="Message"
+									disabled
+								>
+									<UxGroup
+										className="flex"
+										radio
+										name="RADIO02"
+										selected="A"
+									>
+										<UxRadio
+											className="grow"
+											label="Unselected"
+											value="A"
+										/>
+										<UxRadio
+											className="grow"
+											label="selected"
+											value="B"
+										/>
+									</UxGroup>
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxSwitch"
+									message="Message"
+								>
+									<UxSwitch
+										checked={false}
+										labelLeft="LIGHT"
+										labelRight="DARK"
+									/>
+								</UxField>
+							</UxFieldset>
 						</UxForm>
 
-						<UxLink>UxLink</UxLink>
-
-						<UxRadio>UxRadio</UxRadio>
 						<UxRange>UxRange</UxRange>
 						<UxSelect>UxSelect</UxSelect>
-						<UxSwitch>UxSwitch</UxSwitch>
 
 						<UxText
 							className="md"
@@ -267,8 +561,6 @@ const Page = () => {
 							bullet="dot"
 							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
 						/>
-
-						<UxTextarea>UxTextarea</UxTextarea>
 
 						{/* MIXIN */}
 						<UxAlert>UxAlert</UxAlert>

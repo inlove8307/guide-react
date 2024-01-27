@@ -33,7 +33,7 @@
 }
 /* UxInput Focus */
 .ux-input:focus-within {
-	box-shadow: inset 0 0 0 .2rem var(--light2);
+	box-shadow: inset 0 0 0 .2rem var(--light3);
 }
 /* UxInput Valid */
 .ux-input.valid {
@@ -51,7 +51,6 @@
 }
 /* UxInput Readonly */
 .ux-input.readonly {
-	box-shadow: inset 0 0 0 .1rem var(--light2);
 	background-color: var(--light1);
 }
 .ux-input.readonly .ux-input-base,

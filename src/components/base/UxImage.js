@@ -7,9 +7,19 @@ const Component = (props) => {
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
-		<div className={mixinClassName}>
-			{props.children}
-		</div>
+		<figure className={mixinClassName}>
+			<img
+				className={`${originClassName}-base`}
+				src={props.src}
+				alt={props.alt}
+			/>
+			{
+				props.children &&
+				<figcaption className={`${originClassName}-caption`}>
+					{props.children}
+				</figcaption>
+			}
+		</figure>
 	);
 };
 
