@@ -89,3 +89,6 @@
 .ux-group.field.disabled .ux-input {
 	background-color: transparent;
 }
+.ux-group.field .ux-select + .ux-input {
+	padding-left: 0;
+}

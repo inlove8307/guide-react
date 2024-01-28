@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxGroup.css";
+import { arrayChild, mergeProps } from "utils/core";
 
 const Component = (props) => {
 	const originClassName = "ux-group";
 	const mixinClassName = classnames(originClassName, props.className, {
 		field: props.field,
+		dash: props.dash,
 		radio: props.radio,
 		checkbox: props.checkbox,
 		valid: props.valid,
@@ -14,21 +16,6 @@ const Component = (props) => {
 		disabled: props.disabled
 	});
 	const [selected, setSelected] = useState(props.selected);
-
-	const children = (children) => {
-		if (Array.isArray(children)) {
-			return children;
-		}
-		else {
-			return [children];
-		}
-	}
-
-	const mergeProps = (children, object) => {
-		if (React.isValidElement(children)) {
-			return React.cloneElement(children, object);
-		}
-	}
 
 	const getProps = (index) => {
 		if (props.field) {
@@ -78,7 +65,7 @@ const Component = (props) => {
 		<div className={mixinClassName}>
 			{
 				(props.field || props.radio || props.checkbox) &&
-				children(props.children).map((element, index) => {
+				arrayChild(props.children).map((element, index) => {
 					return mergeProps(element, getProps(index));
 				})
 			}

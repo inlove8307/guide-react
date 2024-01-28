@@ -106,10 +106,10 @@
 	background-color: var(--light2);
 	pointer-events: none;
 }
-.ux-field .ux-group.field > * + * {
+.ux-field .ux-group.field.dash > * + * {
 	position: relative;
 }
-.ux-field .ux-group.field > * + *::before {
+.ux-field .ux-group.field.dash > * + *::before {
 	content: "-";
 	display: flex;
 	justify-content: center;

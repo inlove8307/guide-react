@@ -14,7 +14,7 @@
 .ux-textarea .ux-textarea-base {
 	display: flex;
 }
-.ux-textarea-input {
+.ux-textarea .ux-textarea-input {
 	overflow: hidden;
 	width: 100%;
 	height: 2.4rem;
@@ -30,7 +30,7 @@
 .ux-textarea .ux-textarea-input:focus-visible {
 	outline: none;
 }
-.ux-textarea-count {
+.ux-textarea .ux-textarea-count {
 	text-align: right;
 	/* transform: translateY(-100%); */
 }

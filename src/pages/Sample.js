@@ -129,7 +129,7 @@ const Page = () => {
 							/>
 						</UxGroup>
 
-						<UxBadge>99</UxBadge>
+						<UxBadge label="99" />
 
 						<UxDivider className="sm"/>
 						<UxDivider className="md"/>
@@ -296,6 +296,7 @@ const Page = () => {
 									<UxGroup
 										className="flex"
 										field
+										dash
 									>
 										<UxInput
 											className="grow"
@@ -320,6 +321,7 @@ const Page = () => {
 									<UxGroup
 										className="flex"
 										field
+										dash
 									>
 										<UxInput
 											className="grow"
@@ -344,6 +346,7 @@ const Page = () => {
 									<UxGroup
 										className="flex"
 										field
+										dash
 									>
 										<UxInput
 											className="grow"
@@ -437,6 +440,113 @@ const Page = () => {
 									message="Message"
 								>
 									<UxFile placeholder="파일 버튼을 클릭하세요." />
+								</UxField>
+							</UxFieldset>
+
+							<UxFieldset>
+								<UxField
+									label="UxSelect"
+									message="Message"
+								>
+									<UxSelect
+										placeholder="선택해주세요."
+										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									>
+										<span data-value="0" data-label="React" />
+										<span data-value="1" data-label="Vue" />
+										<span data-value="2" data-label="Svelte" />
+									</UxSelect>
+								</UxField>
+
+								<UxField
+									label="UxSelect Valid"
+									message="Message"
+									result="Result"
+									valid
+								>
+									<UxSelect
+										placeholder="선택해주세요."
+										value="0"
+										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									>
+										<span data-value="0" data-label="React" />
+										<span data-value="1" data-label="Vue" />
+										<span data-value="2" data-label="Svelte" />
+									</UxSelect>
+								</UxField>
+
+								<UxField
+									label="UxSelect Invalid"
+									message="Message"
+									result="Result"
+									invalid
+								>
+									<UxSelect
+										placeholder="선택해주세요."
+										value="0"
+										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									>
+										<span data-value="0" data-label="React" />
+										<span data-value="1" data-label="Vue" />
+										<span data-value="2" data-label="Svelte" />
+									</UxSelect>
+								</UxField>
+
+								<UxField
+									label="UxSelect Readonly"
+									message="Message"
+									readonly
+								>
+									<UxSelect
+										placeholder="선택해주세요."
+										value="0"
+										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									>
+										<span data-value="0" data-label="React" />
+										<span data-value="1" data-label="Vue" />
+										<span data-value="2" data-label="Svelte" />
+									</UxSelect>
+								</UxField>
+
+								<UxField
+									label="UxSelect Disabled"
+									message="Message"
+									disabled
+								>
+									<UxSelect
+										placeholder="선택해주세요."
+										value="0"
+										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									>
+										<span data-value="0" data-label="React" />
+										<span data-value="1" data-label="Vue" />
+										<span data-value="2" data-label="Svelte" />
+									</UxSelect>
+								</UxField>
+
+								<UxField
+									label="UxSelect UxInput"
+									message="Message"
+									result="Result"
+								>
+									<UxGroup
+										className="flex"
+										field
+									>
+										<UxSelect
+											placeholder="선택해주세요."
+											onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+											size="120"
+										>
+											<span data-value="0" data-label="React" />
+											<span data-value="1" data-label="Vue" />
+											<span data-value="2" data-label="Svelte" />
+										</UxSelect>
+										<UxInput
+											className="grow"
+											placeholder="입력하세요."
+										/>
+									</UxGroup>
 								</UxField>
 							</UxFieldset>
 
@@ -548,7 +658,6 @@ const Page = () => {
 						</UxForm>
 
 						<UxRange>UxRange</UxRange>
-						<UxSelect>UxSelect</UxSelect>
 
 						<UxText
 							className="md"
