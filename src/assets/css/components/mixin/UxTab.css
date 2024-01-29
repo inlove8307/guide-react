@@ -1,2 +1,19 @@
 /* UxTab */
 .ux-tab {}
+.ux-tab .ux-tab-base {}
+.ux-tab .ux-tab-scroll {overflow-x: hidden; box-shadow: inset 0 -.1rem 0 var(--light2);}
+.ux-tab .ux-tab-list {display: flex; position: relative;}
+.ux-tab .ux-tab-button {flex-shrink: 0; padding: .8rem 1.6rem;}
+.ux-tab .ux-tab-label {color: var(--light3);}
+.ux-tab .ux-tab-button.active .ux-tab-label {color: var(--color1);}
+.ux-tab .ux-tab-panel {display: none; padding: 1.6rem;}
+.ux-tab .ux-tab-panel.active {display: block; background-color: var(--light1);}
+/* UxTab Linear */
+.ux-tab.linear .ux-tab-linear {position: absolute; bottom: 0; left: 0; height: .2rem; background-color: var(--color1); transition: all .1s ease-in-out;}
+/* UxTab Scroll */
+.ux-tab.scroll .ux-tab-scroll {overflow-x: auto;}
+.ux-tab.scroll .ux-tab-scroll::-webkit-scrollbar {display: none;}
+/* UxTab Full */
+.ux-tab.full .ux-tab-button {flex-grow: 1; flex-basis: 0;}
+/* UxTab Mobile */
+.ux-container.mobile .ux-tab {width: calc(100vw - 4rem);}

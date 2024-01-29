@@ -745,7 +745,44 @@ const Page = () => {
 						<UxPopover>UxPopover</UxPopover>
 						<UxProgress>UxProgress</UxProgress>
 						<UxSwiper>UxSwiper</UxSwiper>
-						<UxTab>UxTab</UxTab>
+						<UxTab
+							// selected={3}
+							linear
+							scroll
+							// full
+							onChange={(event, index) => {console.log(event, index)}}
+						>
+							<div data-label="Tab1">
+								Contents1
+							</div>
+							<div data-label="Tab2">
+								Contents2
+							</div>
+							<div data-label="Tab3">
+								Contents3
+							</div>
+							<div data-label="Tab4">
+								Contents4
+							</div>
+							<div data-label="Tab5">
+								Contents5
+							</div>
+							<div data-label="Tab6">
+								Contents6
+							</div>
+							<div data-label="Tab7">
+								Contents7
+							</div>
+							<div data-label="Tab8">
+								Contents8
+							</div>
+							<div data-label="Tab9">
+								Contents9
+							</div>
+							<div data-label="Tab10">
+								Contents10
+							</div>
+						</UxTab>
 
 						<UxTable className="center">
 							<colgroup>
