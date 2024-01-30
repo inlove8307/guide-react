@@ -676,7 +676,58 @@ const Page = () => {
 						<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
 						<UxCalendar>UxCalendar</UxCalendar>
 						<UxCard>UxCard</UxCard>
-						<UxCollapse>UxCollapse</UxCollapse>
+
+						<UxCollapse
+							onClick={(event, index)=>{console.log(event, index)}}
+						>
+							<div data-expanded={false}>
+								<div data-role="button">
+									<span>UxCollapse1</span>
+								</div>
+								<div data-role="content">
+									<UxInfo
+										data={[
+											{ label: "label1", value: "value1" },
+											{ label: "label2", value: "value2" },
+											{ label: "label3", value: "value3" },
+										]}
+									/>
+								</div>
+							</div>
+							<div data-expanded={false}>
+								<div data-role="button">
+									<span>UxCollapse2</span>
+								</div>
+								<div data-role="content">
+									<UxList
+										bullet="dot"
+										size="md"
+										data={[
+											"가나다라 / 1234 / Bullet Dot",
+											"마바사아 / 5678 / Bullet Dot",
+											"자차카타 / 9012 / Bullet Dot",
+										]}
+									/>
+								</div>
+							</div>
+							<div data-expanded={false}>
+								<div data-role="button">
+									<span>UxCollapse3</span>
+								</div>
+								<div data-role="content">
+								<UxList
+										prefix="-"
+										size="md"
+										data={[
+											"가나다라 / 1234 / Bullet Dot",
+											"마바사아 / 5678 / Bullet Dot",
+											"자차카타 / 9012 / Bullet Dot",
+										]}
+									/>
+								</div>
+							</div>
+						</UxCollapse>
+
 						<UxConfirm>UxConfirm</UxConfirm>
 						<UxDatepicker>UxDatepicker</UxDatepicker>
 						<UxDropdown>UxDropdown</UxDropdown>

@@ -1,2 +1,36 @@
 /* UxCollapse */
-.ux-collapse {}
+.ux-collapse {
+	overflow: hidden;
+	border-radius: 1.6rem;
+	border: .1rem solid var(--light2);
+	box-shadow: 0 .1rem .5rem var(--light1);
+}
+.ux-collapse .ux-collapse-base {
+	display: flex;
+	flex-direction: column;
+}
+.ux-collapse .ux-collapse-base + .ux-collapse-base {
+	border-top: .1rem solid var(--light2);
+}
+.ux-collapse .ux-collapse-button {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1.2rem 1.6rem;
+	transition: color .15s ease-in-out;
+}
+.ux-collapse .ux-collapse-base.expanded .ux-collapse-button {
+	box-shadow: 0 .1rem .5rem var(--light1);
+	color: var(--color1);
+}
+.ux-collapse .ux-collapse-icon {
+	margin-left: auto;
+}
+.ux-collapse .ux-collapse-section {
+	overflow: hidden;
+	box-shadow: inset 0 0.1rem 0 var(--light1);
+	transition: max-height .15s ease-in-out;
+}
+.ux-collapse .ux-collapse-article {
+	padding: 1.2rem 1.6rem;
+}
