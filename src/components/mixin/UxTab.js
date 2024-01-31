@@ -38,7 +38,7 @@ const Component = (props) => {
 		setTimeout(() => {
 			linearRef.current.style.width = `${tabsRef.current[index].clientWidth}px`;
 			linearRef.current.style.left = `${tabsRef.current[index].offsetLeft}px`;
-		}, 10);
+		}, 1);
 	};
 
 	const setScroll = (index) => {

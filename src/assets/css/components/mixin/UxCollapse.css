@@ -19,7 +19,7 @@
 	padding: 1.2rem 1.6rem;
 	transition: color .15s ease-in-out;
 }
-.ux-collapse .ux-collapse-base.expanded .ux-collapse-button {
+.ux-collapse .ux-collapse-base.expanded > .ux-collapse-button {
 	box-shadow: 0 .1rem .5rem var(--light1);
 	color: var(--color1);
 }

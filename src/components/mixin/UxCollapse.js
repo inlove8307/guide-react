@@ -16,6 +16,9 @@ const Component = (props) => {
 
 			item.props.children.map((item, index) => {
 				object[item.props["data-role"]] = item.props.children;
+				if (item.props.onClick) {
+					object["onClick"] = item.props.onClick;
+				}
 			});
 
 			array.push(object);
@@ -31,25 +34,40 @@ const Component = (props) => {
 		array[index].expanded = !array[index].expanded;
 		setData(array);
 		setCollapse(index);
-		props.onClick && props.onClick(event, index);
+		data[index].onClick && data[index].onClick(event, index);
+		props.onChange && props.onChange(event, index);
 	};
 
 	const setCollapse = (index) => {
 		const element = collapse.current[index];
 
 		if (element) {
-			data[index].expanded
-				? element.style.maxHeight = `${element.scrollHeight}px`
-				: element.style.maxHeight = 0;
+			if (data[index].expanded) {
+				element.style.maxHeight = `${element.scrollHeight}px`;
+			}
+			else {
+				element.style.maxHeight = `${element.clientHeight}px`;
+				setTimeout(() => {
+					element.style.maxHeight = 0;
+				}, 1);
+			}
+		}
+	}
+
+	const handleTransitionEnd = (element, index) => {
+		if (data[index].expanded) {
+			element.style.maxHeight = "initial";
 		}
 	}
 
 	useEffect(() => {
 		setTimeout(() => {
 			data.map((item, index) => {
+				const element = collapse.current[index];
 				setCollapse(index);
+				element.addEventListener("transitionend", handleTransitionEnd.bind(this, element, index));
 			});
-		}, 10);
+		}, 1);
 	}, []);
 
 	return (

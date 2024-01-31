@@ -678,12 +678,16 @@ const Page = () => {
 						<UxCard>UxCard</UxCard>
 
 						<UxCollapse
-							onClick={(event, index)=>{console.log(event, index)}}
+							// onChange={(event, index)=>{console.log("UxCollapse All")}}
 						>
 							<div data-expanded={false}>
-								<div data-role="button">
+								<button
+									type="button"
+									data-role="button"
+									// onClick={() => {console.log("UxCollapse button1");}}
+								>
 									<span>UxCollapse1</span>
-								</div>
+								</button>
 								<div data-role="content">
 									<UxInfo
 										data={[
@@ -695,9 +699,13 @@ const Page = () => {
 								</div>
 							</div>
 							<div data-expanded={false}>
-								<div data-role="button">
+							<button
+									type="button"
+									data-role="button"
+									// onClick={() => {console.log("UxCollapse button2");}}
+								>
 									<span>UxCollapse2</span>
-								</div>
+								</button>
 								<div data-role="content">
 									<UxList
 										bullet="dot"
@@ -711,11 +719,15 @@ const Page = () => {
 								</div>
 							</div>
 							<div data-expanded={false}>
-								<div data-role="button">
+							<button
+									type="button"
+									data-role="button"
+									// onClick={() => {console.log("UxCollapse button3");}}
+								>
 									<span>UxCollapse3</span>
-								</div>
+								</button>
 								<div data-role="content">
-								<UxList
+									<UxList
 										prefix="-"
 										size="md"
 										data={[
@@ -797,7 +809,7 @@ const Page = () => {
 						<UxProgress>UxProgress</UxProgress>
 						<UxSwiper>UxSwiper</UxSwiper>
 						<UxTab
-							// selected={3}
+							selected={3}
 							linear
 							scroll
 							// full
