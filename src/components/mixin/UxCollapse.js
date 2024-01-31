@@ -16,6 +16,7 @@ const Component = (props) => {
 
 			item.props.children.map((item, index) => {
 				object[item.props["data-role"]] = item.props.children;
+
 				if (item.props.onClick) {
 					object["onClick"] = item.props.onClick;
 				}
@@ -29,44 +30,61 @@ const Component = (props) => {
 	const [data, setData] = useState(array);
 	const collapse = useRef([]);
 
-	const handleClick = (event, index) => {
-		const array = [...data];
-		array[index].expanded = !array[index].expanded;
-		setData(array);
-		setCollapse(index);
-		data[index].onClick && data[index].onClick(event, index);
-		props.onChange && props.onChange(event, index);
+	const setExpanded = (index) => {
+		const clone = [...data];
+
+		if (props.once) {
+			clone.map((item, cloneIndex) => {
+				item.expanded = (index === cloneIndex)
+					? !item.expanded
+					: false;
+			});
+		}
+		else {
+			clone[index].expanded = !clone[index].expanded;
+		}
+
+		setData(clone);
 	};
 
-	const setCollapse = (index) => {
-		const element = collapse.current[index];
+	const setCollapse = () => {
+		data.map((item, index) => {
+			const element = collapse.current[index];
 
-		if (element) {
-			if (data[index].expanded) {
+			if (item.expanded) {
 				element.style.maxHeight = `${element.scrollHeight}px`;
 			}
 			else {
 				element.style.maxHeight = `${element.clientHeight}px`;
+
 				setTimeout(() => {
 					element.style.maxHeight = 0;
 				}, 1);
 			}
-		}
-	}
+		});
+	};
 
-	const handleTransitionEnd = (element, index) => {
+	const handleClick = (event, index) => {
+		setExpanded(index);
+		setCollapse(index);
+		data[index].onClick && data[index].onClick(event, index);
+		props.onClick && props.onClick(event, index);
+	};
+
+	const handleTransitionEnd = (element, index, event) => {
 		if (data[index].expanded) {
 			element.style.maxHeight = "initial";
 		}
-	}
+	};
 
 	useEffect(() => {
 		setTimeout(() => {
 			data.map((item, index) => {
 				const element = collapse.current[index];
-				setCollapse(index);
 				element.addEventListener("transitionend", handleTransitionEnd.bind(this, element, index));
 			});
+
+			setCollapse();
 		}, 1);
 	}, []);
 

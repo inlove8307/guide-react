@@ -29,7 +29,7 @@
 .ux-collapse .ux-collapse-section {
 	overflow: hidden;
 	box-shadow: inset 0 0.1rem 0 var(--light1);
-	transition: max-height .15s ease-in-out;
+	transition: max-height .15s ease;
 }
 .ux-collapse .ux-collapse-article {
 	padding: 1.2rem 1.6rem;

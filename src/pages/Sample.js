@@ -678,9 +678,10 @@ const Page = () => {
 						<UxCard>UxCard</UxCard>
 
 						<UxCollapse
-							// onChange={(event, index)=>{console.log("UxCollapse All")}}
+							once
+							// onClick={(event, index)=>{console.log("UxCollapse All")}}
 						>
-							<div data-expanded={false}>
+							<div data-expanded={true}>
 								<button
 									type="button"
 									data-role="button"
