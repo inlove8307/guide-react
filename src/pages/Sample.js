@@ -536,7 +536,7 @@ const Page = () => {
 										<UxSelect
 											placeholder="선택해주세요."
 											onSelect={(props) => {console.log("UxSelect onSelect", props);}}
-											size="120"
+											size="12"
 										>
 											<span data-value="0" data-label="React" />
 											<span data-value="1" data-label="Vue" />

@@ -52,7 +52,7 @@ const Component = (props) => {
 	return (
 		<div
 			className={mixinClassName}
-			style={props.size && { flexBasis: `${props.size}px` }}
+			style={{flexBasis: `${props.size}rem`}}
 		>
 			{
 				props.prefix &&

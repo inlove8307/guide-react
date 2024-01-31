@@ -1,5 +1,5 @@
 /* UxArticle */
 .ux-article {
-	padding: 0 2rem;
+	padding: 0 var(--space);
 	width: 102.4rem;
 }

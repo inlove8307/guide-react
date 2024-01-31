@@ -6,6 +6,13 @@
 
 /* VARIABLES */
 :root {
+	--100vh: calc(var(--vh, 1vh) * 100);
+	--100vw: calc(var(--vw, 1vw) * 100);
+
+	/* SPACE */
+	--space: 2rem;
+	--minus: calc(var(--space) * -1);
+
 	/* COLOR */
 	--color1: rgb(217, 13, 88);
 	--color2: rgba();
@@ -18,7 +25,7 @@
 	--dark1: rgb(34, 34, 34);
 	--dark2: rgb(68, 68, 68);
 	--dark3: rgb(102, 102, 102);
-	--valid: rgb(10, 93, 166);
+	--valid: rgb(28, 87, 248);
 	--invalid: rgb(242, 56, 39);
 
 	/* FONT */
@@ -29,6 +36,13 @@
 	--font-lg: 1.8rem;
 	--font-xl: 2rem;
 	--font-2xl: 2.2rem;
+
+	/* HEADING */
+	--font-h1: 0.0rem;
+	--font-h2: 0.0rem;
+	--font-h3: 0.0rem;
+	--font-h4: 0.0rem;
+	--font-h5: 0.0rem;
 }
 
 #root {height: 100%;}

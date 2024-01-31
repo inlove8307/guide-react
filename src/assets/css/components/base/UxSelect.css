@@ -1,7 +1,6 @@
 /* UxSelect */
 .ux-select {
 	display: flex;
-	flex-basis: initial!important;
 }
 .ux-select .ux-select-base {
 	display: flex;

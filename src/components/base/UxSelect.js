@@ -57,7 +57,7 @@ const Component = (props) => {
 	return (
 		<div
 			className={classnames(mixinClassName, {extended, selected})}
-			style={{width: `${props.size}px`}}
+			style={{flexBasis: `${props.size}rem`}}
 		>
 			<div className={`${originClassName}-base`}>
 				<UxButton

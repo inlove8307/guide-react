@@ -16,5 +16,5 @@
 	background-image: repeating-linear-gradient(to right, var(--light3), var(--light3) .1rem, var(--light0) .1rem, var(--light0) .4rem);
 }
 .ux-divider.wide {
-	margin: 0 -2rem;
+	margin: 0 var(--minus);
 }
