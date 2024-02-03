@@ -149,7 +149,7 @@ const Page = () => {
 							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
 						/>
 
-<UxCard>
+						<UxCard>
 							<UxList
 								bullet="dot"
 								size="md"
