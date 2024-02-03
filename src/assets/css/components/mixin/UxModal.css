@@ -1,2 +1,98 @@
 /* UxModal */
-.ux-modal {}
+.ux-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	backdrop-filter: blur(.5rem);
+	-webkit-backdrop-filter: blur(.5rem);
+	transition: background-color .1s ease-in-out;
+}
+.ux-modal-base {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1.6rem;
+	background-color: var(--light0);
+	box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+.ux-modal-header {
+	display: flex;
+	align-items: center;
+	padding: 1.6rem;
+	font-weight: 700;
+	color: var(--color1);
+}
+.ux-modal-close {
+	margin-left: auto;
+}
+.ux-modal-main {
+	padding: 0 1.6rem;
+}
+.ux-modal-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .8rem;
+	padding: 1.6rem;
+}
+/* UxModal Base */
+.ux-modal.base {}
+.ux-modal.base .ux-modal-base {
+	justify-content: center;
+	align-items: center;
+	min-width: 30rem;
+	min-height: 10rem;
+}
+.ux-modal.base .ux-modal-header {}
+.ux-modal.base .ux-modal-main {}
+.ux-modal.base .ux-modal-footer {}
+.ux-modal.base .ux-modal-footer > * {}
+/* UxModal Alert */
+.ux-modal.alert {}
+.ux-modal.alert .ux-modal-base {}
+.ux-modal.alert .ux-modal-header {}
+.ux-modal.alert .ux-modal-main {
+	min-width: 30rem;
+}
+.ux-modal.alert .ux-modal-footer {}
+.ux-modal.alert .ux-modal-footer > * {
+	flex-grow: 1;
+}
+/* UxModal Confirm */
+.ux-modal.confirm {}
+.ux-modal.confirm .ux-modal-base {}
+.ux-modal.confirm .ux-modal-header {}
+.ux-modal.confirm .ux-modal-main {
+	min-width: 30rem;
+}
+.ux-modal.confirm .ux-modal-footer {}
+.ux-modal.confirm .ux-modal-footer > * {
+	flex-grow: 1;
+}
+/* UxModal BottomSheet */
+.ux-modal.bottom {}
+.ux-modal.bottom .ux-modal-base {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: auto;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	transform: translateY(100%);
+	transition: transform .1s ease-in-out;
+}
+.ux-modal.bottom .ux-modal-header {}
+.ux-modal.bottom .ux-modal-main {}
+.ux-modal.bottom .ux-modal-footer {}
+.ux-modal.bottom .ux-modal-footer > * {
+	flex-grow: 1;
+}
+/* UxModal z-index */
+.ux-modal {z-index: 100;}

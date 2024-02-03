@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxSwitch.css";
 
-const Component = (props) => {
+const UxSwitch = (props) => {
 	const originClassName = "ux-switch";
 	const mixinClassName = classnames(originClassName, props.className);
 	const [checked, setChecked] = useState(props.checked || false);
@@ -32,4 +32,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxSwitch;

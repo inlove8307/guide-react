@@ -3,7 +3,7 @@ import classnames from "classnames";
 import "assets/css/components/mixin/UxGroup.css";
 import { arrayChild, mergeProps } from "utils/core";
 
-const Component = (props) => {
+const UxGroup = (props) => {
 	const originClassName = "ux-group";
 	const mixinClassName = classnames(originClassName, props.className, {
 		field: props.field,
@@ -74,4 +74,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxGroup;

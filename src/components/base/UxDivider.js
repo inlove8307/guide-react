@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxDivider.css";
 
-const Component = (props) => {
+const UxDivider = (props) => {
 	const originClassName = "ux-divider";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -11,4 +11,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxDivider;

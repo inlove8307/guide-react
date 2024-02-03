@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxBreadcrumb.css";
 
-const Component = (props) => {
+const UxBreadcrumb = (props) => {
 	const originClassName = "ux-breadcrumb";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -13,4 +13,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxBreadcrumb;

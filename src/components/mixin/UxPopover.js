@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxPopover.css";
 
-const Component = (props) => {
+const UxPopover = (props) => {
 	const originClassName = "ux-popover";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -13,4 +13,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxPopover;

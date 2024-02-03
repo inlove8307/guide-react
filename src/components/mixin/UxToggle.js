@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxToggle.css";
 
-const Component = (props) => {
+const UxToggle = (props) => {
 	const originClassName = "ux-toggle";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -13,4 +13,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxToggle;

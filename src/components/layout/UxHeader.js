@@ -6,7 +6,7 @@ import UxSection from "components/layout/UxSection";
 import UxArticle from "components/layout/UxArticle";
 import UxContent from "components/layout/UxContent";
 
-const Component = (props) => {
+const UxHeader = (props) => {
 	const originClassName = "ux-header";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -23,4 +23,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxHeader;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxMasking.css";
 
-const Component = (props, ref) => {
+const UxMasking = (props, ref) => {
 	const originClassName = "ux-masking";
 	const mixinClassName = classnames(originClassName, props.className, {readonly: props.readonly}, {disabled: props.disabled});
 
@@ -81,4 +81,4 @@ const Component = (props, ref) => {
 	);
 };
 
-export default React.forwardRef(Component);
+export default React.forwardRef(UxMasking);

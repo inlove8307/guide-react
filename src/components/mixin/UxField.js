@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxField.css";
 
-const Component = (props) => {
+const UxField = (props) => {
 	const originClassName = "ux-field";
 	const mixinClassName = classnames(originClassName, props.className, props.align, {
 		valid: props.valid,
@@ -59,4 +59,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxField;

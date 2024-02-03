@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/layout/UxAside.css";
 
-const Component = (props) => {
+const UxAside = (props) => {
 	const originClassName = "ux-aside";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -13,4 +13,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxAside;

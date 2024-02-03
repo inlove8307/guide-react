@@ -1,6 +1,6 @@
 import React from "react";
-//UTILS
-import { getParents, getClosest } from "utils/dom";
+// HOOK
+import useModals from "hook/useModals";
 // LAYOUT
 import UxLayout from "components/layout/UxLayout";
 import UxSection from "components/layout/UxSection";
@@ -43,7 +43,6 @@ import UxInfo from "components/mixin/UxInfo";
 import UxKeypad from "components/mixin/UxKeypad";
 import UxList from "components/mixin/UxList";
 import UxMasking from "components/mixin/UxMasking";
-import UxModal from "components/mixin/UxModal";
 import UxPagination from "components/mixin/UxPagination";
 import UxPopover from "components/mixin/UxPopover";
 import UxProgress from "components/mixin/UxProgress";
@@ -58,6 +57,8 @@ import UxTooltip from "components/mixin/UxTooltip";
 import image from "assets/image/sample/image_01.png"
 
 const Page = () => {
+	const { Modal, Alert, Confirm, BottomSheet } = useModals();
+
 	return (
 		<UxLayout>
 			<UxSection>
@@ -135,6 +136,100 @@ const Page = () => {
 						<UxDivider className="md"/>
 						<UxDivider className="lg"/>
 						<UxDivider className="dash"/>
+
+						<UxText
+							className="md"
+							prefix="-"
+							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
+						/>
+
+						<UxText
+							className="md"
+							bullet="dot"
+							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
+						/>
+
+<UxCard>
+							<UxList
+								bullet="dot"
+								size="md"
+								data={[
+									"가나다라 / 1234 / Bullet Dot",
+									"마바사아 / 5678 / Bullet Dot",
+									"자차카타 / 9012 / Bullet Dot",
+								]}
+							/>
+						</UxCard>
+
+						<UxCard>
+							<UxList
+								className="line"
+								prefix="number"
+								size="md"
+								data={[
+									"가나다라 / 1234 / Prefix Number",
+									"마바사아 / 5678 / Prefix Number",
+									"자차카타 / 9012 / Prefix Number",
+								]}
+							/>
+						</UxCard>
+
+						<UxCard>
+							<UxInfo
+								data={[
+									{ label: "label1", value: "value1" },
+									{ label: "label2", value: "value2" },
+									{ label: "label3", value: "value3" },
+								]}
+							/>
+						</UxCard>
+
+						<UxCard>
+							<UxInfo
+								className="line"
+								data={[
+									{ label: "label1", value: "value1" },
+									{ label: "label2", value: "value2" },
+									{ label: "label3", value: "value3" },
+								]}
+							/>
+						</UxCard>
+
+						<UxTable className="center">
+							<colgroup>
+									<col width="50%" />
+									<col width="50%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">label</th>
+									<th scope="col">label</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>value</td>
+									<td>value</td>
+								</tr>
+							</tbody>
+						</UxTable>
+
+						<UxTable className="center">
+							<colgroup>
+									<col width="50%" />
+									<col width="50%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">label</th>
+									<td className="left">value</td>
+								</tr>
+								<tr>
+									<th scope="row">label</th>
+									<td className="left">value</td>
+								</tr>
+							</tbody>
+						</UxTable>
 
 						<UxImage
 							className="full"
@@ -657,25 +752,61 @@ const Page = () => {
 							</UxFieldset>
 						</UxForm>
 
-						<UxRange>UxRange</UxRange>
+						<UxGroup className="flex">
+							<UxButton
+								label="Alert"
+								onClick={() => {
+									Alert("메세지", {
+										title: "알림",
+										onConfirm: (close) => {
+											console.log("Alert close");
+											close();
+										}
+									});
+								}}
+							/>
 
-						<UxText
-							className="md"
-							prefix="-"
-							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
-						/>
+							<UxButton
+								label="Confirm"
+								onClick={() => {
+									Confirm("메세지", {
+										title: "알림",
+										onCancel: (close) => {
+											console.log("Confirm onCancel");
+											close();
+										},
+										onConfirm: (close) => {
+											console.log("Confirm onConfirm");
+											close();
+										}
+									});
+								}}
+							/>
 
-						<UxText
-							className="md"
-							bullet="dot"
-							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
-						/>
+							<UxButton
+								label="BottomSheet"
+								onClick={() => {
+									BottomSheet("메세지", {
+										title: "알림",
+										onCancel: (close) => {
+											console.log("BottomSheet onCancel");
+											close();
+										},
+										onConfirm: (close) => {
+											console.log("BottomSheet onConfirm");
+											close();
+										}
+									});
+								}}
+							/>
 
-						{/* MIXIN */}
-						<UxAlert>UxAlert</UxAlert>
-						<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
-						<UxCalendar>UxCalendar</UxCalendar>
-						<UxCard>UxCard</UxCard>
+							<UxButton
+								label="Modal"
+								onClick={() => {
+									Modal("컨텐츠");
+								}}
+							/>
+						</UxGroup>
 
 						<UxCollapse
 							once
@@ -741,74 +872,6 @@ const Page = () => {
 							</div>
 						</UxCollapse>
 
-						<UxConfirm>UxConfirm</UxConfirm>
-						<UxDatepicker>UxDatepicker</UxDatepicker>
-						<UxDropdown>UxDropdown</UxDropdown>
-						<UxField>UxField</UxField>
-						<UxFilter>UxFilter</UxFilter>
-						<UxForm>UxForm</UxForm>
-						<UxGroup>UxGroup</UxGroup>
-
-						<UxCard>
-							<UxInfo
-								data={[
-									{ label: "label1", value: "value1" },
-									{ label: "label2", value: "value2" },
-									{ label: "label3", value: "value3" },
-								]}
-							/>
-						</UxCard>
-
-						<UxCard>
-							<UxInfo
-								className="line"
-								data={[
-									{ label: "label1", value: "value1" },
-									{ label: "label2", value: "value2" },
-									{ label: "label3", value: "value3" },
-								]}
-							/>
-						</UxCard>
-
-						<UxKeypad
-							shuffle
-						/>
-
-						<UxCard>
-							<UxList
-								bullet="dot"
-								size="md"
-								data={[
-									"가나다라 / 1234 / Bullet Dot",
-									"마바사아 / 5678 / Bullet Dot",
-									"자차카타 / 9012 / Bullet Dot",
-								]}
-							/>
-						</UxCard>
-
-						<UxCard>
-							<UxList
-								className="line"
-								prefix="number"
-								size="md"
-								data={[
-									"가나다라 / 1234 / Prefix Number",
-									"마바사아 / 5678 / Prefix Number",
-									"자차카타 / 9012 / Prefix Number",
-								]}
-							/>
-						</UxCard>
-
-						<UxMasking
-							value="123"
-							mask="7"
-						/>
-
-						<UxModal>UxModal</UxModal>
-						<UxPagination>UxPagination</UxPagination>
-						<UxPopover>UxPopover</UxPopover>
-						<UxProgress>UxProgress</UxProgress>
-						<UxSwiper>UxSwiper</UxSwiper>
 						<UxTab
 							selected={3}
 							linear
@@ -848,41 +911,9 @@ const Page = () => {
 							</div>
 						</UxTab>
 
-						<UxTable className="center">
-							<colgroup>
-									<col width="50%" />
-									<col width="50%" />
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">label</th>
-									<th scope="col">label</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>value</td>
-									<td>value</td>
-								</tr>
-							</tbody>
-						</UxTable>
-
-						<UxTable className="center">
-							<colgroup>
-									<col width="50%" />
-									<col width="50%" />
-							</colgroup>
-							<tbody>
-								<tr>
-									<th scope="row">label</th>
-									<td className="left">value</td>
-								</tr>
-								<tr>
-									<th scope="row">label</th>
-									<td className="left">value</td>
-								</tr>
-							</tbody>
-						</UxTable>
+						<UxKeypad
+							shuffle
+						/>
 
 						<UxTimeline>
 							<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
@@ -898,6 +929,16 @@ const Page = () => {
 							<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
 						</UxTimeline>
 
+						<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
+						<UxCalendar>UxCalendar</UxCalendar>
+						<UxRange>UxRange</UxRange>
+						<UxDatepicker>UxDatepicker</UxDatepicker>
+						<UxDropdown>UxDropdown</UxDropdown>
+						<UxFilter>UxFilter</UxFilter>
+						<UxPagination>UxPagination</UxPagination>
+						<UxPopover>UxPopover</UxPopover>
+						<UxProgress>UxProgress</UxProgress>
+						<UxSwiper>UxSwiper</UxSwiper>
 						<UxToast>UxToast</UxToast>
 						<UxToggle>UxToggle</UxToggle>
 						<UxTooltip>UxTooltip</UxTooltip>

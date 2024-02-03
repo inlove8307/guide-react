@@ -1,5 +1,11 @@
 import React from "react";
 
+export const sleep = (delay) => {
+	new Promise((resolve) => {
+		setTimeout(resolve, delay)
+	});
+};
+
 export const arrayChild = (children) => {
 	if (Array.isArray(children)) {
 		return children;
@@ -7,10 +13,10 @@ export const arrayChild = (children) => {
 	else {
 		return [children];
 	}
-}
+};
 
 export const mergeProps = (element, object) => {
 	if (React.isValidElement(element)) {
 		return React.cloneElement(element, object);
 	}
-}
+};

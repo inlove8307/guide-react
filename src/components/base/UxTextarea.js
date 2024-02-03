@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxTextarea.css";
 
-const Component = (props) => {
+const UxTextarea = (props) => {
 	const originClassName = "ux-textarea";
 	const mixinClassName = classnames(originClassName, props.className, {
 		valid: props.valid,
@@ -59,4 +59,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxTextarea;

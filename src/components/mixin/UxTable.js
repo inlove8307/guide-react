@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxTable.css";
 
-const Component = (props) => {
+const UxTable = (props) => {
 	const originClassName = "ux-table";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -15,4 +15,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxTable;

@@ -4,7 +4,7 @@ import "assets/css/components/mixin/UxList.css";
 //MIXIN
 import UxText from "components/base/UxText";
 
-const Component = (props) => {
+const UxList = (props) => {
 	const originClassName = "ux-list";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -39,4 +39,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxList;

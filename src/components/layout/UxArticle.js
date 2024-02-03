@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/layout/UxArticle.css";
 
-const Component = (props) => {
+const UxArticle = (props) => {
 	const originClassName = "ux-article";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -13,4 +13,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxArticle;

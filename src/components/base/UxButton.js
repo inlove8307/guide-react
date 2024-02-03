@@ -3,7 +3,7 @@ import classnames from "classnames";
 import "assets/css/components/base/UxButton.css";
 import { getClosest } from "utils/dom";
 
-const Component = (props) => {
+const UxButton = (props) => {
 	const originClassName = "ux-button";
 	const mixinClassName = classnames(originClassName, props.className, { icon: !props.label && !props.children });
 
@@ -12,6 +12,14 @@ const Component = (props) => {
 		props.onClick && props.onClick(event);
 	};
 
+	const handleFocus = (event) => {
+		props.onFocus && props.onFocus(event);
+	}
+
+	const handleBlur = (event) => {
+		props.onBlur && props.onBlur(event);
+	}
+
 	return (
 		<span className={mixinClassName}>
 			<button
@@ -19,6 +27,8 @@ const Component = (props) => {
 				className={`${originClassName}-base`}
 				disabled={props.disabled}
 				onClick={handleClick}
+				onFocus={handleFocus}
+				onBlur={handleBlur}
 			>
 				{
 					props.icon && props.icon.props.align === "left" &&
@@ -40,4 +50,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxButton;

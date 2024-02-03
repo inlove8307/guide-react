@@ -4,7 +4,7 @@ import "assets/css/components/base/UxPassword.css";
 import Masking from "components/mixin/UxMasking";
 import UxButton from "components/base/UxButton";
 
-const Component = (props) => {
+const UxPassword = (props) => {
 	const originClassName = "ux-password";
 	const mixinClassName = classnames(originClassName, props.className, {
 		valid: props.valid,
@@ -66,4 +66,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxPassword;

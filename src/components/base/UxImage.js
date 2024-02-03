@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxImage.css";
 
-const Component = (props) => {
+const UxImage = (props) => {
 	const originClassName = "ux-image";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -23,4 +23,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxImage;

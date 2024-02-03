@@ -3,7 +3,7 @@ import classnames from "classnames";
 import "assets/css/components/base/UxInput.css";
 import UxButton from "components/base/UxButton";
 
-const Component = (props) => {
+const UxInput = (props) => {
 	const originClassName = "ux-input";
 	const mixinClassName = classnames(originClassName, props.className, props.align, {
 		valid: props.valid,
@@ -108,4 +108,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxInput;

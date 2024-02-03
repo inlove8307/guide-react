@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxText.css";
 
-const Component = (props) => {
+const UxText = (props) => {
 	const originClassName = "ux-text";
 	const mixinClassName = classnames(originClassName, props.className, props.bullet, {prefix: props.prefix});
 
@@ -17,4 +17,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxText;

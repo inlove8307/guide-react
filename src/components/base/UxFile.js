@@ -3,7 +3,7 @@ import classnames from "classnames";
 import "assets/css/components/base/UxFile.css";
 import UxButton from "components/base/UxButton";
 
-const Component = (props) => {
+const UxFile = (props) => {
 	const originClassName = "ux-file";
 	const mixinClassName = classnames(originClassName, props.className);
 	const fileRef = useRef();
@@ -42,4 +42,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxFile;

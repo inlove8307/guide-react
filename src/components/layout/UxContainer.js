@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/layout/UxContainer.css";
 
-const Component = (props) => {
+const UxContainer = (props) => {
 	const originClassName = "ux-container";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -13,4 +13,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxContainer;

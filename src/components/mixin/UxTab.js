@@ -3,7 +3,7 @@ import classnames from "classnames";
 import "assets/css/components/mixin/UxTab.css";
 import { arrayChild } from "utils/core";
 
-const Component = (props) => {
+const UxTab = (props) => {
 	const originClassName = "ux-tab";
 	const mixinClassName = classnames(originClassName, props.className, {
 		linear: props.linear,
@@ -102,4 +102,4 @@ const Component = (props) => {
 	)
 };
 
-export default Component;
+export default UxTab;

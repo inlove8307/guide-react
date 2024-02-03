@@ -4,7 +4,7 @@ import "assets/css/components/mixin/UxInfo.css";
 //MIXIN
 import UxGroup from "components/mixin/UxGroup";
 
-const Component = (props) => {
+const UxInfo = (props) => {
 	const originClassName = "ux-info";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -27,4 +27,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxInfo;

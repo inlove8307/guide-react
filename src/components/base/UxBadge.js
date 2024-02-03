@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxBadge.css";
 
-const Component = (props) => {
+const UxBadge = (props) => {
 	const originClassName = "ux-badge";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -15,4 +15,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxBadge;

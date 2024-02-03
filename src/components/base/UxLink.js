@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxLink.css";
 
-const Component = (props) => {
+const UxLink = (props) => {
 	const originClassName = "ux-link";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -21,4 +21,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxLink;

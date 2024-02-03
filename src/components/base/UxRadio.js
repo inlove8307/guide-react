@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxRadio.css";
 
-const Component = (props) => {
+const UxRadio = (props) => {
 	const originClassName = "ux-radio";
 	const mixinClassName = classnames(originClassName, props.className, {disabled: props.disabled});
 	const [isChecked, setIsChecked] = useState(false);
@@ -39,4 +39,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxRadio;

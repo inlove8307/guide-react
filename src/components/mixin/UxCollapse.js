@@ -3,7 +3,7 @@ import classnames from "classnames";
 import "assets/css/components/mixin/UxCollapse.css";
 import { arrayChild } from "utils/core";
 
-const Component = (props) => {
+const UxCollapse = (props) => {
 	const originClassName = "ux-collapse";
 	const mixinClassName = classnames(originClassName, props.className);
 	const array = (() => {
@@ -124,4 +124,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxCollapse;

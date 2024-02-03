@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxChip.css";
 
-const Component = (props) => {
+const UxChip = (props) => {
 	const originClassName = "ux-chip";
 	const mixinClassName = classnames(originClassName, props.className, {presentation: props.onClick});
 
@@ -42,4 +42,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxChip;

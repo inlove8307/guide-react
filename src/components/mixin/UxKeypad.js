@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxKeypad.css";
 
-const Component = (props) => {
+const UxKeypad = (props) => {
 	const originClassName = "ux-keypad";
 	const mixinClassName = classnames(originClassName, props.className);
 	let keyArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -51,4 +51,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxKeypad;

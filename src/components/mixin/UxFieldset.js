@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxFieldset.css";
 
-const Component = (props) => {
+const UxFieldset = (props) => {
 	const originClassName = "ux-fieldset";
 	const mixinClassName = classnames(originClassName, props.className);
 
@@ -17,4 +17,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxFieldset;

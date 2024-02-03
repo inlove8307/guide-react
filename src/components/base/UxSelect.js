@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxSelect.css";
-import { arrayChild, mergeProps } from "utils/core";
-import { getClosest } from "utils/dom";
+import { arrayChild } from "utils/core";
 import UxButton from "components/base/UxButton";
 
-const Component = (props) => {
+const UxSelect = (props) => {
 	const originClassName = "ux-select";
 	const mixinClassName = classnames(originClassName, props.className, {
 		valid: props.valid,
@@ -32,17 +31,16 @@ const Component = (props) => {
 		props.onSelect && props.onSelect(item);
 	}
 
-	const handleClick = (event) => {
-		!getClosest(event.target, `.${originClassName}`) &&
-		setExtended(false);
+	const handleFocus = (event) => {
+		props.onFocus && props.onFocus(event);
 	}
 
-	useEffect(() => {
-		document.addEventListener("click", handleClick);
-		return () => {
-			document.removeEventListener("click", handleClick);
-		}
-	});
+	const handleBlur = async (event) => {
+		setTimeout(() => {
+			setExtended(false);
+		}, 1);
+		props.onBlur && props.onBlur(event);
+	}
 
 	useEffect(() => {
 		extended
@@ -64,10 +62,14 @@ const Component = (props) => {
 					className={`${originClassName}-button`}
 					label={selected || props.placeholder}
 					icon={
-						extended ? <span className="ux-icon-arrow-up" /> : <span className="ux-icon-arrow-down" />
+						extended
+							? <span className="ux-icon-arrow-up" />
+							: <span className="ux-icon-arrow-down" />
 					}
 					disabled={props.readonly || props.disabled}
 					onClick={handleButtonClick}
+					onFocus={handleFocus}
+					onBlur={handleBlur}
 				/>
 				<div
 					ref={transRef}
@@ -106,4 +108,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxSelect;

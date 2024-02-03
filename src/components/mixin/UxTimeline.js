@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxTimeline.css";
 
-const Component = (props) => {
+const UxTimeline = (props) => {
 	const originClassName = "ux-timeline";
 	const mixinClassName = classnames(originClassName, props.className, {number: props.number});
 	let timelineArray = [];
@@ -36,4 +36,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxTimeline;

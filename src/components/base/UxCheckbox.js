@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxCheckbox.css";
 
-const Component = (props) => {
+const UxCheckbox = (props) => {
 	const originClassName = "ux-checkbox";
 	const mixinClassName = classnames(originClassName, props.className, {disabled: props.disabled});
 	const [checked, setChecked] = useState(props.checked || false);
@@ -34,4 +34,4 @@ const Component = (props) => {
 	);
 };
 
-export default Component;
+export default UxCheckbox;
