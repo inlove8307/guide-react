@@ -1,7 +1,7 @@
 /* UxArticle */
 .ux-article {
 	padding: 0 var(--space);
-	width: 102.4rem;
+	width: 72rem;
 }
 .ux-content .ux-article {
 	padding: initial;

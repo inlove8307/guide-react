@@ -1117,7 +1117,7 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
-							<h4>UxKeypad</h4>
+							<h4>UxTimeline</h4>
 							<UxGroup className="flex wrap">
 								<UxTimeline>
 									<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
