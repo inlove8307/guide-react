@@ -42,14 +42,11 @@
 .ux-timeline-index {
 	flex-grow: 0;
 	flex-shrink: 0;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
 	margin-top: .8rem;
 	width: 1.2rem;
 	height: 1.2rem;
 	border-radius: 50%;
-	background-color: var(--dark3);
+	background-color: var(--color1);
 	font-size: 0;
 	line-height: 0;
 	color: transparent;
@@ -74,10 +71,14 @@
 	gap: 1.2rem;
 }
 .ux-timeline.number .ux-timeline-index {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-top: .8rem;
 	width: 2.4rem;
 	height: 2.4rem;
-	font-size: 1.6rem;
+	font-weight: 700;
+	font-size: 1.4rem;
 	line-height: 1.5;
 	color: var(--light0);
 }
