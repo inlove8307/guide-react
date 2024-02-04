@@ -34,7 +34,6 @@
 	height: 0;
 }
 .ux-file .ux-file-label {
-	line-height: 1;
 	color: var(--light3);
 }
 .ux-file .ux-file-label.path {

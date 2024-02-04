@@ -1,5 +1,7 @@
 /* UxTimeline */
-.ux-timeline {}
+.ux-timeline {
+	width: 100%;
+}
 .ux-timeline-base {
 	display: flex;
 	flex-direction: column;
@@ -47,8 +49,6 @@
 	height: 1.2rem;
 	border-radius: 50%;
 	background-color: var(--color1);
-	font-size: 0;
-	line-height: 0;
 	color: transparent;
 }
 .ux-timeline-content {
@@ -79,7 +79,6 @@
 	height: 2.4rem;
 	font-weight: 700;
 	font-size: 1.4rem;
-	line-height: 1.5;
 	color: var(--light0);
 }
 .ux-timeline.number .ux-timeline-content {}

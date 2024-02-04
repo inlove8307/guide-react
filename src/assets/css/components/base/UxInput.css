@@ -84,6 +84,7 @@
 }
 /* UxInput in UxGroup */
 .ux-group.field .ux-input {
+	flex-basis: 0;
 	box-shadow: none;
 	background-color: transparent;
 }

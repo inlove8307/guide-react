@@ -87,6 +87,9 @@
 	color: var(--dark3);
 }
 /* UxSelect in UxGroup */
+.ux-group.field .ux-select {
+	flex-basis: 0;
+}
 .ux-group.field .ux-select .ux-button-base {
 	padding-right: 0;
 	box-shadow: none;

@@ -7,7 +7,7 @@ const UxDivider = (props) => {
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
-		<div className={mixinClassName} />
+		<hr className={mixinClassName} />
 	);
 };
 

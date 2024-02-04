@@ -1,5 +1,8 @@
 /* UxDivider */
 .ux-divider {
+	display: block;
+	margin: 0;
+	border: 0;
 	background-color: var(--light1);
 }
 .ux-divider.sm {
@@ -15,6 +18,12 @@
 	height: .1rem;
 	background-image: repeating-linear-gradient(to right, var(--light3), var(--light3) .1rem, var(--light0) .1rem, var(--light0) .4rem);
 }
-.ux-divider.wide {
-	margin: 0 var(--minus);
+/* UxDivider Wide */
+.ux-container.mobile .ux-divider.wide {
+	margin-left: var(--minus);
+	margin-right: var(--minus);
+}
+/* UxArticle + UxDivider */
+.ux-article + .ux-divider {
+	margin: 2.4rem 0;
 }

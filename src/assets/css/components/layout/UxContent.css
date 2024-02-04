@@ -3,6 +3,5 @@
 .ux-main .ux-section:not(.ux-dock) .ux-content {
 	display: flex;
 	flex-direction: column;
-	gap: 2.4rem;
-	padding: 4rem 0 8rem;
+	padding: 2.4rem 0 8rem;
 }

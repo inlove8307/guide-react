@@ -67,924 +67,1094 @@ const Page = () => {
 						<h3>SAMPLE</h3>
 					</UxTitle>
 					<UxContent>
-						{/* BASE */}
-						<UxGroup className="flex wrap">
-							<UxButton
-								label="UxButton"
-								onClick={(event)=>{console.log("UxButton onClick", event);}}
-							/>
-							<UxButton
-								className="fill"
-								label="UxButton"
-								onClick={(event)=>{console.log("UxButton onClick", event);}}
-							/>
-							<UxButton
-								label="UxButton"
-								icon={
-									<span
-										className="ux-icon-clear"
-										align="left"
-									/>
-								}
-								onClick={(event)=>{console.log("UxButton onClick", event);}}
-							/>
-							<UxButton
-								label="UxButton"
-								icon={<span className="ux-icon-clear" />}
-								onClick={(event)=>{console.log("UxButton onClick", event);}}
-							/>
-							<UxButton
-								icon={<span className="ux-icon-clear"/>}
-								onClick={(event)=>{console.log("UxButton onClick", event);}}
-							/>
-						</UxGroup>
+						{/* UxButton */}
+						<UxArticle>
+							<h4>UxButton</h4>
+							<UxGroup className="flex wrap">
+								<UxButton
+									label="UxButton"
+									onClick={(event)=>{console.log("UxButton onClick", event);}}
+								/>
+								<UxButton
+									className="fill"
+									label="UxButton"
+									onClick={(event)=>{console.log("UxButton onClick", event);}}
+								/>
+								<UxButton
+									label="UxButton"
+									icon={
+										<span
+											className="ux-icon-clear"
+											align="left"
+										/>
+									}
+									onClick={(event)=>{console.log("UxButton onClick", event);}}
+								/>
+								<UxButton
+									label="UxButton"
+									icon={<span className="ux-icon-clear" />}
+									onClick={(event)=>{console.log("UxButton onClick", event);}}
+								/>
+								<UxButton
+									icon={<span className="ux-icon-clear"/>}
+									onClick={(event)=>{console.log("UxButton onClick", event);}}
+								/>
+							</UxGroup>
+						</UxArticle>
 
-						<UxGroup className="flex wrap">
-							<UxChip
-								label="UxChip"
-								onClick={(event)=>{console.log("UxChip onClick", event);}}
-							/>
-							<UxChip
-								label="UxChip"
-								onClick={(event)=>{console.log("UxChip onClick", event);}}
-								icon={
-									<span
-										role="presentation"
-										className="ux-icon-clear white"
-										onClick={(event)=>{console.log("UxChip Icon onClick", event);}}
-									/>
-								}
-							/>
-						</UxGroup>
+						<UxDivider className="md wide"/>
 
-						<UxGroup className="flex wrap">
-							<UxLink
-								href="#"
-								label="UxLink"
-							/>
-							<UxLink
-								className="underline"
-								href="#"
-								label="UxLink Underline"
-							/>
-							<UxLink
-								href="#"
-								label="UxLink Icon"
-								icon={<span className="ux-icon-arrow-right" />}
-							/>
-						</UxGroup>
+						<UxArticle>
+							<h4>UxChip</h4>
+							<UxGroup className="flex wrap">
+								<UxChip
+									label="UxChip"
+									onClick={(event)=>{console.log("UxChip onClick", event);}}
+								/>
+								<UxChip
+									label="UxChip"
+									onClick={(event)=>{console.log("UxChip onClick", event);}}
+									icon={
+										<span
+											role="presentation"
+											className="ux-icon-clear white"
+											onClick={(event)=>{console.log("UxChip Icon onClick", event);}}
+										/>
+									}
+								/>
+							</UxGroup>
+						</UxArticle>
 
-						<UxBadge label="99" />
+						<UxDivider className="md wide"/>
 
-						<UxGroup>
-							<UxDivider className="sm"/>
-							<UxDivider className="md"/>
-							<UxDivider className="lg"/>
-							<UxDivider className="dash"/>
-						</UxGroup>
+						<UxArticle>
+							<h4>UxLink</h4>
+							<UxGroup className="flex wrap">
+								<UxLink
+									href="#"
+									label="UxLink"
+								/>
+								<UxLink
+									className="underline"
+									href="#"
+									label="UxLink Underline"
+								/>
+								<UxLink
+									href="#"
+									label="UxLink Icon"
+									icon={<span className="ux-icon-arrow-right" />}
+								/>
+							</UxGroup>
+						</UxArticle>
 
-						<UxList>
-							<UxText
-								className="xxs"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
+						<UxDivider className="md wide"/>
 
-							<UxText
-								className="xs"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
+						<UxArticle>
+							<h4>UxBadge</h4>
+							<UxGroup className="flex wrap">
+								<UxBadge label="99" />
+							</UxGroup>
+						</UxArticle>
 
-							<UxText
-								className="sm"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
+						<UxDivider className="md wide"/>
 
-							<UxText
-								className="md"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
+						<UxArticle>
+							<h4>UxDivider</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxDivider className="sm"/>
+								<UxDivider className="md"/>
+								<UxDivider className="lg"/>
+								<UxDivider className="dash"/>
+							</UxGroup>
+						</UxArticle>
 
-							<UxText
-								className="lg"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
+						<UxDivider className="md wide"/>
 
-							<UxText
-								className="xl"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
+						<UxArticle>
+							<h4>UxText Size</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxText
+									className="xxs"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="xs"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="sm"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="md"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="lg"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="xl"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="xxl"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+							</UxGroup>
+						</UxArticle>
 
-							<UxText
-								className="xxl"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
-						</UxList>
+						<UxDivider className="md wide"/>
 
-						<UxList>
-							<UxText
-								prefix="-"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
+						<UxArticle>
+							<h4>UxText Prefix, Bullet</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxText
+									prefix="-"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
 
-							<UxText
-								bullet="dot"
-								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-							/>
-						</UxList>
+								<UxText
+									bullet="dot"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+							</UxGroup>
+						</UxArticle>
 
-						<UxCard>
-							<UxList
-								bullet="dot"
-								data={[
-									"가나다라 / 1234 / Bullet Dot",
-									"마바사아 / 5678 / Bullet Dot",
-									"자차카타 / 9012 / Bullet Dot",
-								]}
-							/>
-						</UxCard>
+						<UxDivider className="md wide"/>
 
-						<UxCard>
-							<UxList
-								className="line"
-								prefix="number"
-								data={[
-									"가나다라 / 1234 / Prefix Number",
-									"마바사아 / 5678 / Prefix Number",
-									"자차카타 / 9012 / Prefix Number",
-								]}
-							/>
-						</UxCard>
+						<UxArticle>
+							<h4>UxList</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxList
+									bullet="dot"
+									data={[
+										"가나다라 / 1234 / Bullet Dot",
+										"마바사아 / 5678 / Bullet Dot",
+										"자차카타 / 9012 / Bullet Dot",
+									]}
+								/>
+								<UxList
+									className="line"
+									prefix="number"
+									data={[
+										"가나다라 / 1234 / Prefix Number",
+										"마바사아 / 5678 / Prefix Number",
+										"자차카타 / 9012 / Prefix Number",
+									]}
+								/>
+							</UxGroup>
+						</UxArticle>
 
-						<UxCard>
-							<UxInfo
-								data={[
-									{ label: "label1", value: "value1" },
-									{ label: "label2", value: "value2" },
-									{ label: "label3", value: "value3" },
-								]}
-							/>
-						</UxCard>
+						<UxDivider className="md wide"/>
 
-						<UxCard>
-							<UxInfo
-								className="line"
-								data={[
-									{ label: "label1", value: "value1" },
-									{ label: "label2", value: "value2" },
-									{ label: "label3", value: "value3" },
-								]}
-							/>
-						</UxCard>
+						<UxArticle>
+							<h4>UxInfo</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxInfo
+									data={[
+										{ label: "label1", value: "value1" },
+										{ label: "label2", value: "value2" },
+										{ label: "label3", value: "value3" },
+									]}
+								/>
+								<UxInfo
+									className="line"
+									data={[
+										{ label: "label1", value: "value1" },
+										{ label: "label2", value: "value2" },
+										{ label: "label3", value: "value3" },
+									]}
+								/>
+							</UxGroup>
+						</UxArticle>
 
-						<UxTable className="center">
-							<colgroup>
-									<col width="50%" />
-									<col width="50%" />
-							</colgroup>
-							<thead>
-								<tr>
-									<th scope="col">label</th>
-									<th scope="col">label</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>value</td>
-									<td>value</td>
-								</tr>
-							</tbody>
-						</UxTable>
+						<UxDivider className="md wide"/>
 
-						<UxTable className="center">
-							<colgroup>
-									<col width="50%" />
-									<col width="50%" />
-							</colgroup>
-							<tbody>
-								<tr>
-									<th scope="row">label</th>
-									<td className="left">value</td>
-								</tr>
-								<tr>
-									<th scope="row">label</th>
-									<td className="left">value</td>
-								</tr>
-							</tbody>
-						</UxTable>
+						<UxArticle>
+							<h4>UxTable</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxTable className="center">
+									<colgroup>
+											<col width="50%" />
+											<col width="50%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">label</th>
+											<th scope="col">label</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>value</td>
+											<td>value</td>
+										</tr>
+									</tbody>
+								</UxTable>
 
-						<UxImage
-							className="full"
-							src={image}
-							alt="UxImage Alt"
-						>
-							UxImage Figcaption
-						</UxImage>
+								<UxTable className="center">
+									<colgroup>
+											<col width="50%" />
+											<col width="50%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">label</th>
+											<td className="left">value</td>
+										</tr>
+										<tr>
+											<th scope="row">label</th>
+											<td className="left">value</td>
+										</tr>
+									</tbody>
+								</UxTable>
+							</UxGroup>
+						</UxArticle>
 
-						<UxForm>
-							<UxFieldset>
-								<UxField
-									label="UxInput Suffix"
-									message="Message"
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxImage</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxImage
+									className="full"
+									src={image}
+									alt="UxImage Alt"
 								>
-									<UxInput
-										align="right"
-										placeholder="입력하세요."
-										suffix="원"
-										clear
-									/>
-								</UxField>
+									UxImage Figcaption
+								</UxImage>
+							</UxGroup>
+						</UxArticle>
 
-								<UxField
-									label="UxInput Prefix"
-									message="Message"
-								>
-									<UxInput
-										prefix="$"
-										placeholder="입력하세요."
-										clear
-									/>
-								</UxField>
+						<UxDivider className="md wide"/>
 
-								<UxField
-									label="UxInput Submit"
-									message="Message"
-								>
-									<UxInput
-										placeholder="입력하세요."
-										button="전송"
-										timer="05:00"
-										clear
-									/>
-								</UxField>
-
-								<UxField
-									label="UxInput Icon"
-									message="Message"
-								>
-									<UxInput
-										placeholder="입력하세요."
-										icon="ux-icon-calendar"
-										clear
-										onIconClick={(event)=>{console.log("UxInput onIconClick", event);}}
-									/>
-								</UxField>
-							</UxFieldset>
-
-							<UxFieldset>
-								<UxField
-									label="UxInput Valid"
-									message="Message"
-									result="Result"
-									valid
-								>
-									<UxInput
-										value="valid"
-										placeholder="입력하세요."
-										clear
-									/>
-								</UxField>
-
-								<UxField
-									label="UxInput Invalid"
-									message="Message"
-									result="Result"
-									invalid
-								>
-									<UxInput
-										value="invalid"
-										placeholder="입력하세요."
-										clear
-									/>
-								</UxField>
-
-								<UxField
-									label="UxInput Readonly"
-									message="Message"
-									readonly
-								>
-									<UxInput
-										value="Readonly"
-										placeholder="입력하세요."
-										prefix="prefix"
-										suffix="suffix"
-										button="전송"
-										timer="05:00"
-										clear
-									/>
-								</UxField>
-
-								<UxField
-									label="UxInput Disabled"
-									message="Message"
-									disabled
-								>
-									<UxInput
-										value="Disabled"
-										placeholder="입력하세요."
-										prefix="prefix"
-										suffix="suffix"
-										button="전송"
-										timer="05:00"
-										clear
-									/>
-								</UxField>
-							</UxFieldset>
-
-							<UxFieldset>
-								<UxField
-									label="UxPassword"
-									message="Message"
-								>
-									<UxPassword
-										mask="7"
-										clear
-									/>
-								</UxField>
-
-								<UxField
-									label="UxPassword Readonly"
-									message="Message"
-									readonly
-								>
-									<UxPassword
-										mask="7"
-										clear
-									/>
-								</UxField>
-
-								<UxField
-									label="UxPassword Disabled"
-									message="Message"
-									disabled
-								>
-									<UxPassword
-										mask="7"
-										clear
-									/>
-								</UxField>
-							</UxFieldset>
-
-							<UxFieldset>
-								<UxField
-									label="UxInput UxPassword"
-									message="Message"
-								>
-									<UxGroup
-										className="flex"
-										field
-										dash
+						<UxArticle>
+							<h4>UxInput</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
 									>
 										<UxInput
-											className="grow"
-											value="010"
+											align="right"
+											placeholder="입력하세요."
+											suffix="원"
+											clear
 										/>
-										<UxPassword
-											className="grow"
-											mask="4"
-										/>
-										<UxPassword
-											className="grow"
-											mask="4"
-										/>
-									</UxGroup>
-								</UxField>
+									</UxField>
 
-								<UxField
-									label="UxInput UxPassword Readonly"
-									message="Message"
-									readonly
-								>
-									<UxGroup
-										className="flex"
-										field
-										dash
+									<UxField
+										label="label"
+										message="Message"
 									>
 										<UxInput
-											className="grow"
-											value="010"
+											prefix="$"
+											placeholder="입력하세요."
+											clear
 										/>
-										<UxPassword
-											className="grow"
-											mask="4"
-										/>
-										<UxPassword
-											className="grow"
-											mask="4"
-										/>
-									</UxGroup>
-								</UxField>
+									</UxField>
 
-								<UxField
-									label="UxInput UxPassword Disabled"
-									message="Message"
-									disabled
-								>
-									<UxGroup
-										className="flex"
-										field
-										dash
+									<UxField
+										label="label"
+										message="Message"
 									>
 										<UxInput
-											className="grow"
-											value="010"
+											placeholder="입력하세요."
+											button="전송"
+											timer="05:00"
+											clear
 										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+									>
+										<UxInput
+											placeholder="입력하세요."
+											icon="ux-icon-calendar"
+											clear
+											onIconClick={(event)=>{console.log("UxInput onIconClick", event);}}
+										/>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxInput Status</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										valid
+									>
+										<UxInput
+											value="valid"
+											placeholder="입력하세요."
+											clear
+										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										invalid
+									>
+										<UxInput
+											value="invalid"
+											placeholder="입력하세요."
+											clear
+										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										readonly
+									>
+										<UxInput
+											value="Readonly"
+											placeholder="입력하세요."
+											prefix="prefix"
+											suffix="suffix"
+											button="전송"
+											timer="05:00"
+											clear
+										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										disabled
+									>
+										<UxInput
+											value="Disabled"
+											placeholder="입력하세요."
+											prefix="prefix"
+											suffix="suffix"
+											button="전송"
+											timer="05:00"
+											clear
+										/>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxPassword</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+									>
 										<UxPassword
-											className="grow"
-											mask="4"
+											mask="7"
+											clear
 										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										readonly
+									>
 										<UxPassword
-											className="grow"
-											mask="4"
+											mask="7"
+											clear
 										/>
-									</UxGroup>
-								</UxField>
-							</UxFieldset>
+									</UxField>
 
-							<UxFieldset>
-								<UxField
-									label="UxTextarea"
-									message="Message"
-									result="Result"
-								>
-									<UxTextarea
-										maxLength="300"
-										placeholder="300자 이내로 작성해 주세요."
-										fluid
-									/>
-								</UxField>
-
-								<UxField
-									label="UxTextarea Valid"
-									message="Message"
-									result="Result"
-									valid
-								>
-									<UxTextarea
-										maxLength="300"
-										placeholder="300자 이내로 작성해 주세요."
-										value="Valid"
-										fluid
-									/>
-								</UxField>
-
-								<UxField
-									label="UxTextarea Invalid"
-									message="Message"
-									result="Result"
-									invalid
-								>
-									<UxTextarea
-										maxLength="300"
-										placeholder="300자 이내로 작성해 주세요."
-										value="Invalid"
-										fluid
-									/>
-								</UxField>
-
-								<UxField
-									label="UxTextarea Readonly"
-									message="Message"
-									result="Result"
-									readonly
-								>
-									<UxTextarea
-										maxLength="300"
-										placeholder="300자 이내로 작성해 주세요."
-										value="Readonly"
-										fluid
-									/>
-								</UxField>
-
-								<UxField
-									label="UxTextarea Disabled"
-									message="Message"
-									result="Result"
-									disabled
-								>
-									<UxTextarea
-										maxLength="300"
-										placeholder="300자 이내로 작성해 주세요."
-										value="Disabled"
-										fluid
-									/>
-								</UxField>
-							</UxFieldset>
-
-							<UxFieldset>
-								<UxField
-									label="UxFile"
-									message="Message"
-								>
-									<UxFile placeholder="파일 버튼을 클릭하세요." />
-								</UxField>
-							</UxFieldset>
-
-							<UxFieldset>
-								<UxField
-									label="UxSelect"
-									message="Message"
-								>
-									<UxSelect
-										placeholder="선택해주세요."
-										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									<UxField
+										label="label"
+										message="Message"
+										disabled
 									>
-										<span data-value="0" data-label="React" />
-										<span data-value="1" data-label="Vue" />
-										<span data-value="2" data-label="Svelte" />
-									</UxSelect>
-								</UxField>
+										<UxPassword
+											mask="7"
+											clear
+										/>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
 
-								<UxField
-									label="UxSelect Valid"
-									message="Message"
-									result="Result"
-									valid
-								>
-									<UxSelect
-										placeholder="선택해주세요."
-										value="0"
-										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxInput + UxPassword</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
 									>
-										<span data-value="0" data-label="React" />
-										<span data-value="1" data-label="Vue" />
-										<span data-value="2" data-label="Svelte" />
-									</UxSelect>
-								</UxField>
+										<UxGroup
+											className="flex"
+											field
+											dash
+										>
+											<UxInput
+												className="grow"
+												value="010"
+											/>
+											<UxPassword
+												className="grow"
+												mask="4"
+											/>
+											<UxPassword
+												className="grow"
+												mask="4"
+											/>
+										</UxGroup>
+									</UxField>
 
-								<UxField
-									label="UxSelect Invalid"
-									message="Message"
-									result="Result"
-									invalid
-								>
-									<UxSelect
-										placeholder="선택해주세요."
-										value="0"
-										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									<UxField
+										label="label"
+										message="Message"
+										readonly
 									>
-										<span data-value="0" data-label="React" />
-										<span data-value="1" data-label="Vue" />
-										<span data-value="2" data-label="Svelte" />
-									</UxSelect>
-								</UxField>
+										<UxGroup
+											className="flex"
+											field
+											dash
+										>
+											<UxInput
+												className="grow"
+												value="010"
+											/>
+											<UxPassword
+												className="grow"
+												mask="4"
+											/>
+											<UxPassword
+												className="grow"
+												mask="4"
+											/>
+										</UxGroup>
+									</UxField>
 
-								<UxField
-									label="UxSelect Readonly"
-									message="Message"
-									readonly
-								>
-									<UxSelect
-										placeholder="선택해주세요."
-										value="0"
-										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+									<UxField
+										label="label"
+										message="Message"
+										disabled
 									>
-										<span data-value="0" data-label="React" />
-										<span data-value="1" data-label="Vue" />
-										<span data-value="2" data-label="Svelte" />
-									</UxSelect>
-								</UxField>
+										<UxGroup
+											className="flex"
+											field
+											dash
+										>
+											<UxInput
+												className="grow"
+												value="010"
+											/>
+											<UxPassword
+												className="grow"
+												mask="4"
+											/>
+											<UxPassword
+												className="grow"
+												mask="4"
+											/>
+										</UxGroup>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
 
-								<UxField
-									label="UxSelect Disabled"
-									message="Message"
-									disabled
-								>
-									<UxSelect
-										placeholder="선택해주세요."
-										value="0"
-										onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxTextarea</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
 									>
-										<span data-value="0" data-label="React" />
-										<span data-value="1" data-label="Vue" />
-										<span data-value="2" data-label="Svelte" />
-									</UxSelect>
-								</UxField>
+										<UxTextarea
+											maxLength="300"
+											placeholder="300자 이내로 작성해 주세요."
+											fluid
+										/>
+									</UxField>
 
-								<UxField
-									label="UxSelect UxInput"
-									message="Message"
-									result="Result"
-								>
-									<UxGroup
-										className="flex"
-										field
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										valid
+									>
+										<UxTextarea
+											maxLength="300"
+											placeholder="300자 이내로 작성해 주세요."
+											value="Valid"
+											fluid
+										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										invalid
+									>
+										<UxTextarea
+											maxLength="300"
+											placeholder="300자 이내로 작성해 주세요."
+											value="Invalid"
+											fluid
+										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										readonly
+									>
+										<UxTextarea
+											maxLength="300"
+											placeholder="300자 이내로 작성해 주세요."
+											value="Readonly"
+											fluid
+										/>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										disabled
+									>
+										<UxTextarea
+											maxLength="300"
+											placeholder="300자 이내로 작성해 주세요."
+											value="Disabled"
+											fluid
+										/>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxFile</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+									>
+										<UxFile placeholder="파일 버튼을 클릭하세요." />
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxSelect</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
 									>
 										<UxSelect
 											placeholder="선택해주세요."
 											onSelect={(props) => {console.log("UxSelect onSelect", props);}}
-											size="12"
 										>
 											<span data-value="0" data-label="React" />
 											<span data-value="1" data-label="Vue" />
 											<span data-value="2" data-label="Svelte" />
 										</UxSelect>
-										<UxInput
-											className="grow"
-											placeholder="입력하세요."
-										/>
-									</UxGroup>
-								</UxField>
-							</UxFieldset>
+									</UxField>
 
-							<UxFieldset>
-								<UxField
-									label="UxCheckbox"
-									message="Message"
-								>
-									<UxGroup
-										className="flex"
-										checkbox
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										valid
 									>
-										<UxCheckbox
-											className="grow"
-											label="Unchecked"
-										/>
-										<UxCheckbox
-											className="grow"
-											checked={true}
-											label="Checked"
-										/>
-									</UxGroup>
-								</UxField>
+										<UxSelect
+											placeholder="선택해주세요."
+											value="0"
+											onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+										>
+											<span data-value="0" data-label="React" />
+											<span data-value="1" data-label="Vue" />
+											<span data-value="2" data-label="Svelte" />
+										</UxSelect>
+									</UxField>
 
-								<UxField
-									label="UxCheckbox Disabled"
-									message="Message"
-									disabled
-								>
-									<UxGroup
-										className="flex"
-										checkbox
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+										invalid
 									>
-										<UxCheckbox
-											className="grow"
-											label="Unchecked"
-										/>
-										<UxCheckbox
-											className="grow"
-											checked={true}
-											label="Checked"
-										/>
-									</UxGroup>
-								</UxField>
-							</UxFieldset>
+										<UxSelect
+											placeholder="선택해주세요."
+											value="0"
+											onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+										>
+											<span data-value="0" data-label="React" />
+											<span data-value="1" data-label="Vue" />
+											<span data-value="2" data-label="Svelte" />
+										</UxSelect>
+									</UxField>
 
-							<UxFieldset>
-								<UxField
-									label="UxRadio"
-									message="Message"
-								>
-									<UxGroup
-										className="flex"
-										radio
-										name="RADIO01"
-										selected="A"
-										onChange={(event)=>{console.log(event)}}
+									<UxField
+										label="label"
+										message="Message"
+										readonly
 									>
-										<UxRadio
-											className="grow"
-											label="Unselected"
-											value="A"
-										/>
-										<UxRadio
-											className="grow"
-											label="selected"
-											value="B"
-										/>
-									</UxGroup>
-								</UxField>
+										<UxSelect
+											placeholder="선택해주세요."
+											value="0"
+											onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+										>
+											<span data-value="0" data-label="React" />
+											<span data-value="1" data-label="Vue" />
+											<span data-value="2" data-label="Svelte" />
+										</UxSelect>
+									</UxField>
 
-								<UxField
-									label="UxRadio Disabled"
-									message="Message"
-									disabled
-								>
-									<UxGroup
-										className="flex"
-										radio
-										name="RADIO02"
-										selected="A"
+									<UxField
+										label="label"
+										message="Message"
+										disabled
 									>
-										<UxRadio
-											className="grow"
-											label="Unselected"
-											value="A"
+										<UxSelect
+											placeholder="선택해주세요."
+											value="0"
+											onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+										>
+											<span data-value="0" data-label="React" />
+											<span data-value="1" data-label="Vue" />
+											<span data-value="2" data-label="Svelte" />
+										</UxSelect>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxSelect + UxInput</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+										result="Result"
+									>
+										<UxGroup
+											className="flex"
+											field
+										>
+											<UxSelect
+												placeholder="선택해주세요."
+												onSelect={(props) => {console.log("UxSelect onSelect", props);}}
+												size="12"
+											>
+												<span data-value="0" data-label="React" />
+												<span data-value="1" data-label="Vue" />
+												<span data-value="2" data-label="Svelte" />
+											</UxSelect>
+											<UxInput
+												className="grow"
+												placeholder="입력하세요."
+											/>
+										</UxGroup>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxCheckbox</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+									>
+										<UxGroup
+											className="flex"
+											checkbox
+										>
+											<UxCheckbox
+												className="grow"
+												label="Unchecked"
+											/>
+											<UxCheckbox
+												className="grow"
+												checked={true}
+												label="Checked"
+											/>
+										</UxGroup>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										disabled
+									>
+										<UxGroup
+											className="flex"
+											checkbox
+										>
+											<UxCheckbox
+												className="grow"
+												label="Unchecked"
+											/>
+											<UxCheckbox
+												className="grow"
+												checked={true}
+												label="Checked"
+											/>
+										</UxGroup>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxRadio</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+									>
+										<UxGroup
+											className="flex"
+											radio
+											name="RADIO01"
+											selected="A"
+											onChange={(event)=>{console.log(event)}}
+										>
+											<UxRadio
+												className="grow"
+												label="Unselected"
+												value="A"
+											/>
+											<UxRadio
+												className="grow"
+												label="selected"
+												value="B"
+											/>
+										</UxGroup>
+									</UxField>
+
+									<UxField
+										label="label"
+										message="Message"
+										disabled
+									>
+										<UxGroup
+											className="flex"
+											radio
+											name="RADIO02"
+											selected="A"
+										>
+											<UxRadio
+												className="grow"
+												label="Unselected"
+												value="A"
+											/>
+											<UxRadio
+												className="grow"
+												label="selected"
+												value="B"
+											/>
+										</UxGroup>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxSwitch</h4>
+							<UxForm>
+								<UxFieldset>
+									<UxField
+										label="label"
+										message="Message"
+									>
+										<UxSwitch
+											checked={false}
+											labelLeft="LIGHT"
+											labelRight="DARK"
 										/>
-										<UxRadio
-											className="grow"
-											label="selected"
-											value="B"
-										/>
-									</UxGroup>
-								</UxField>
-							</UxFieldset>
+									</UxField>
+								</UxFieldset>
+							</UxForm>
+						</UxArticle>
 
-							<UxFieldset>
-								<UxField
-									label="UxSwitch"
-									message="Message"
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxModal</h4>
+							<UxGroup className="flex wrap">
+								<UxButton
+									label="Alert"
+									onClick={() => {
+										Alert("메세지", {
+											title: "알림",
+											onConfirm: (close) => {
+												console.log("Alert close");
+												close();
+											}
+										});
+									}}
+								/>
+								<UxButton
+									label="Confirm"
+									onClick={() => {
+										Confirm("메세지", {
+											title: "알림",
+											onCancel: (close) => {
+												console.log("Confirm onCancel");
+												close();
+											},
+											onConfirm: (close) => {
+												console.log("Confirm onConfirm");
+												close();
+											}
+										});
+									}}
+								/>
+								<UxButton
+									label="BottomSheet"
+									onClick={() => {
+										BottomSheet("메세지", {
+											title: "알림",
+											onCancel: (close) => {
+												console.log("BottomSheet onCancel");
+												close();
+											},
+											onConfirm: (close) => {
+												console.log("BottomSheet onConfirm");
+												close();
+											}
+										});
+									}}
+								/>
+								<UxButton
+									label="Modal"
+									onClick={() => {
+										Modal("컨텐츠");
+									}}
+								/>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxCollapse</h4>
+							<UxGroup className="flex wrap">
+								<UxCollapse
+									once
+									onClick={(event, index)=>{console.log("UxCollapse onClick", event, index)}}
 								>
-									<UxSwitch
-										checked={false}
-										labelLeft="LIGHT"
-										labelRight="DARK"
-									/>
-								</UxField>
-							</UxFieldset>
-						</UxForm>
+									<div data-expanded={true}>
+										<button
+											type="button"
+											data-role="button"
+										>
+											<span>UxCollapse1</span>
+										</button>
+										<div data-role="content">
+											<UxInfo
+												data={[
+													{ label: "label1", value: "value1" },
+													{ label: "label2", value: "value2" },
+													{ label: "label3", value: "value3" },
+												]}
+											/>
+										</div>
+									</div>
+									<div data-expanded={false}>
+									<button
+											type="button"
+											data-role="button"
+										>
+											<span>UxCollapse2</span>
+										</button>
+										<div data-role="content">
+											<UxList
+												bullet="dot"
+												size="md"
+												data={[
+													"가나다라 / 1234 / Bullet Dot",
+													"마바사아 / 5678 / Bullet Dot",
+													"자차카타 / 9012 / Bullet Dot",
+												]}
+											/>
+										</div>
+									</div>
+									<div data-expanded={false}>
+									<button
+											type="button"
+											data-role="button"
+										>
+											<span>UxCollapse3</span>
+										</button>
+										<div data-role="content">
+											<UxList
+												prefix="-"
+												size="md"
+												data={[
+													"가나다라 / 1234 / Bullet Dot",
+													"마바사아 / 5678 / Bullet Dot",
+													"자차카타 / 9012 / Bullet Dot",
+												]}
+											/>
+										</div>
+									</div>
+								</UxCollapse>
+							</UxGroup>
+						</UxArticle>
 
-						<UxGroup className="flex wrap">
-							<UxButton
-								label="Alert"
-								onClick={() => {
-									Alert("메세지", {
-										title: "알림",
-										onConfirm: (close) => {
-											console.log("Alert close");
-											close();
-										}
-									});
-								}}
-							/>
+						<UxDivider className="md wide"/>
 
-							<UxButton
-								label="Confirm"
-								onClick={() => {
-									Confirm("메세지", {
-										title: "알림",
-										onCancel: (close) => {
-											console.log("Confirm onCancel");
-											close();
-										},
-										onConfirm: (close) => {
-											console.log("Confirm onConfirm");
-											close();
-										}
-									});
-								}}
-							/>
-
-							<UxButton
-								label="BottomSheet"
-								onClick={() => {
-									BottomSheet("메세지", {
-										title: "알림",
-										onCancel: (close) => {
-											console.log("BottomSheet onCancel");
-											close();
-										},
-										onConfirm: (close) => {
-											console.log("BottomSheet onConfirm");
-											close();
-										}
-									});
-								}}
-							/>
-
-							<UxButton
-								label="Modal"
-								onClick={() => {
-									Modal("컨텐츠");
-								}}
-							/>
-						</UxGroup>
-
-						<UxCollapse
-							once
-							// onClick={(event, index)=>{console.log("UxCollapse All")}}
-						>
-							<div data-expanded={true}>
-								<button
-									type="button"
-									data-role="button"
-									// onClick={() => {console.log("UxCollapse button1");}}
+						<UxArticle>
+							<h4>UxTab</h4>
+							<UxGroup className="flex wrap">
+								<UxTab
+									selected={0}
+									linear
+									scroll
+									// full
+									onChange={(event, index) => {console.log(event, index)}}
 								>
-									<span>UxCollapse1</span>
-								</button>
-								<div data-role="content">
-									<UxInfo
-										data={[
-											{ label: "label1", value: "value1" },
-											{ label: "label2", value: "value2" },
-											{ label: "label3", value: "value3" },
-										]}
-									/>
-								</div>
-							</div>
-							<div data-expanded={false}>
-							<button
-									type="button"
-									data-role="button"
-									// onClick={() => {console.log("UxCollapse button2");}}
+									<div data-label="Tab1">
+										Contents1
+									</div>
+									<div data-label="Tab2">
+										Contents2
+									</div>
+									<div data-label="Tab3">
+										Contents3
+									</div>
+									<div data-label="Tab4">
+										Contents4
+									</div>
+									<div data-label="Tab5">
+										Contents5
+									</div>
+									<div data-label="Tab6">
+										Contents6
+									</div>
+									<div data-label="Tab7">
+										Contents7
+									</div>
+									<div data-label="Tab8">
+										Contents8
+									</div>
+									<div data-label="Tab9">
+										Contents9
+									</div>
+									<div data-label="Tab10">
+										Contents10
+									</div>
+								</UxTab>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxKeypad</h4>
+							<UxGroup className="flex wrap">
+								<UxKeypad
+									shuffle
+								/>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxKeypad</h4>
+							<UxGroup className="flex wrap">
+								<UxTimeline>
+									<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
+									<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
+									<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
+								</UxTimeline>
+
+								<UxTimeline
+									number
 								>
-									<span>UxCollapse2</span>
-								</button>
-								<div data-role="content">
-									<UxList
-										bullet="dot"
-										size="md"
-										data={[
-											"가나다라 / 1234 / Bullet Dot",
-											"마바사아 / 5678 / Bullet Dot",
-											"자차카타 / 9012 / Bullet Dot",
-										]}
-									/>
-								</div>
-							</div>
-							<div data-expanded={false}>
-							<button
-									type="button"
-									data-role="button"
-									// onClick={() => {console.log("UxCollapse button3");}}
-								>
-									<span>UxCollapse3</span>
-								</button>
-								<div data-role="content">
-									<UxList
-										prefix="-"
-										size="md"
-										data={[
-											"가나다라 / 1234 / Bullet Dot",
-											"마바사아 / 5678 / Bullet Dot",
-											"자차카타 / 9012 / Bullet Dot",
-										]}
-									/>
-								</div>
-							</div>
-						</UxCollapse>
+									<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
+									<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
+									<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
+								</UxTimeline>
+							</UxGroup>
+						</UxArticle>
 
-						<UxTab
-							selected={0}
-							linear
-							scroll
-							// full
-							onChange={(event, index) => {console.log(event, index)}}
-						>
-							<div data-label="Tab1">
-								Contents1
-							</div>
-							<div data-label="Tab2">
-								Contents2
-							</div>
-							<div data-label="Tab3">
-								Contents3
-							</div>
-							<div data-label="Tab4">
-								Contents4
-							</div>
-							<div data-label="Tab5">
-								Contents5
-							</div>
-							<div data-label="Tab6">
-								Contents6
-							</div>
-							<div data-label="Tab7">
-								Contents7
-							</div>
-							<div data-label="Tab8">
-								Contents8
-							</div>
-							<div data-label="Tab9">
-								Contents9
-							</div>
-							<div data-label="Tab10">
-								Contents10
-							</div>
-						</UxTab>
+						<UxDivider className="md wide"/>
 
-						<UxKeypad
-							shuffle
-						/>
-
-						<UxTimeline>
-							<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
-							<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
-							<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
-						</UxTimeline>
-
-						<UxTimeline
-							number
-						>
-							<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
-							<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
-							<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
-						</UxTimeline>
-
-						{/* TODO */}
-						<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
-						<UxCalendar>UxCalendar</UxCalendar>
-						<UxRange>UxRange</UxRange>
-						<UxDatepicker>UxDatepicker</UxDatepicker>
-						<UxDropdown>UxDropdown</UxDropdown>
-						<UxFilter>UxFilter</UxFilter>
-						<UxPagination>UxPagination</UxPagination>
-						<UxPopover>UxPopover</UxPopover>
-						<UxProgress>UxProgress</UxProgress>
-						<UxSwiper>UxSwiper</UxSwiper>
-						<UxToast>UxToast</UxToast>
-						<UxToggle>UxToggle</UxToggle>
-						<UxTooltip>UxTooltip</UxTooltip>
-
+						<UxArticle>
+							<h4>TODO</h4>
+							<UxGroup className="flex wrap">
+								<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
+								<UxCalendar>UxCalendar</UxCalendar>
+								<UxRange>UxRange</UxRange>
+								<UxDatepicker>UxDatepicker</UxDatepicker>
+								<UxDropdown>UxDropdown</UxDropdown>
+								<UxFilter>UxFilter</UxFilter>
+								<UxPagination>UxPagination</UxPagination>
+								<UxPopover>UxPopover</UxPopover>
+								<UxProgress>UxProgress</UxProgress>
+								<UxSwiper>UxSwiper</UxSwiper>
+								<UxToast>UxToast</UxToast>
+								<UxToggle>UxToggle</UxToggle>
+								<UxTooltip>UxTooltip</UxTooltip>
+							</UxGroup>
+						</UxArticle>
 					</UxContent>
 				</UxArticle>
 			</UxSection>

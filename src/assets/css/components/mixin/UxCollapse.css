@@ -1,6 +1,7 @@
 /* UxCollapse */
 .ux-collapse {
 	overflow: hidden;
+	width: 100%;
 	border-radius: 1.6rem;
 	border: .1rem solid var(--light2);
 	box-shadow: 0 .1rem .5rem var(--light1);

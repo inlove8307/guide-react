@@ -19,10 +19,12 @@
 }
 .ux-group.flex > * {
 	flex-shrink: 0;
-	flex-basis: 0;
+	/* flex-basis: 0; */
 }
 .ux-group.flex.column {
 	flex-direction: column;
+	justify-content: initial;
+	align-items: initial;
 }
 .ux-group.flex.wrap {
 	flex-wrap: wrap;

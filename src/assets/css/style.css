@@ -38,11 +38,36 @@
 	--font-2xl: 2.2rem;
 
 	/* HEADING */
-	--font-h1: 0.0rem;
-	--font-h2: 0.0rem;
-	--font-h3: 0.0rem;
-	--font-h4: 0.0rem;
-	--font-h5: 0.0rem;
+	--font-h1: 2.4rem;
+	--font-h2: 2.2rem;
+	--font-h3: 2rem;
+	--font-h4: 1.8rem;
+	--font-h5: 1.6rem;
 }
 
 #root {height: 100%;}
+
+/* Heading Size */
+h1, h2, h3, h4, h5 {
+	font-weight: 700;
+}
+h1 {
+	padding-bottom: calc(var(--font-h4) / 2);
+	font-size: var(--font-h1);
+}
+h2 {
+	padding-bottom: calc(var(--font-h4) / 2);
+	font-size: var(--font-h2);
+}
+h3 {
+	padding-bottom: calc(var(--font-h4) / 2);
+	font-size: var(--font-h3);
+}
+h4 {
+	padding-bottom: calc(var(--font-h4) / 2);
+	font-size: var(--font-h4);
+}
+h5 {
+	padding-bottom: calc(var(--font-h4) / 2);
+	font-size: var(--font-h5);
+}

@@ -3,3 +3,14 @@
 	padding: 0 var(--space);
 	width: 102.4rem;
 }
+.ux-content .ux-article {
+	padding: initial;
+	width: initial;
+}
+.ux-content .ux-article + .ux-article {
+	margin-top: 2.4rem;
+}
+/* UxArticle Mobile */
+.ux-container.mobile .ux-article {
+	width: initial;
+}
