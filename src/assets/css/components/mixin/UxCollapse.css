@@ -18,7 +18,7 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 1.2rem 1.6rem;
+	padding: .8rem 1.6rem;
 	transition: color .15s ease-in-out;
 }
 .ux-collapse .ux-collapse-base.expanded > .ux-collapse-button {

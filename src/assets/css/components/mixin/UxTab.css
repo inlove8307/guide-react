@@ -22,7 +22,7 @@
 }
 .ux-tab .ux-tab-button {
 	flex-shrink: 0;
-	padding: 1.2rem 1.6rem;
+	padding: .8rem 1.6rem;
 }
 .ux-tab .ux-tab-button.active .ux-tab-label {
 	color: var(--color1);

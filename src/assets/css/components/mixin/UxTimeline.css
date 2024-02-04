@@ -49,6 +49,8 @@
 	height: 1.2rem;
 	border-radius: 50%;
 	background-color: var(--color1);
+	font-size: 0;
+	line-height: 0;
 	color: transparent;
 }
 .ux-timeline-content {
@@ -74,11 +76,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: .8rem;
 	width: 2.4rem;
 	height: 2.4rem;
 	font-weight: 700;
 	font-size: 1.4rem;
+	line-height: 1;
 	color: var(--light0);
 }
 .ux-timeline.number .ux-timeline-content {}
