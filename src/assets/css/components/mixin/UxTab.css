@@ -1,13 +1,12 @@
 /* UxTab */
-.ux-tab {}
-.ux-tab .ux-tab-base {}
-.ux-tab .ux-tab-scroll {overflow-x: hidden; box-shadow: inset 0 -.1rem 0 var(--light2);}
-.ux-tab .ux-tab-list {display: flex; position: relative;}
-.ux-tab .ux-tab-button {flex-shrink: 0; padding: .8rem 1.6rem;}
-.ux-tab .ux-tab-label {color: var(--light3);}
+.ux-tab {border-radius: 1.6rem; box-shadow: 0 0.1rem 0.5rem var(--light1); background-color: var(--light0);}
+.ux-tab .ux-tab-base {overflow: hidden; border-radius: 1.6rem; box-shadow: 0 0 0 0.1rem var(--light2);}
+.ux-tab .ux-tab-scroll {overflow-x: hidden; position: relative; box-shadow: inset 0 -.1rem 0 var(--light1);}
+.ux-tab .ux-tab-list {display: flex; position: relative; z-index: 1;}
+.ux-tab .ux-tab-button {flex-shrink: 0; padding: 1.2rem 1.6rem;}
 .ux-tab .ux-tab-button.active .ux-tab-label {color: var(--color1);}
-.ux-tab .ux-tab-panel {display: none; padding: 1.6rem;}
-.ux-tab .ux-tab-panel.active {display: block; background-color: var(--light1);}
+.ux-tab .ux-tab-panel {display: none; padding: 1.2rem 1.6rem; min-height: 12rem;}
+.ux-tab .ux-tab-panel.active {display: block;}
 /* UxTab Linear */
 .ux-tab.linear .ux-tab-linear {position: absolute; bottom: 0; left: 0; height: .2rem; background-color: var(--color1); transition: all .1s ease-in-out;}
 /* UxTab Scroll */

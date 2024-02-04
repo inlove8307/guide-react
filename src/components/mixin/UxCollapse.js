@@ -110,7 +110,7 @@ const UxCollapse = (props) => {
 							</button>
 							<div
 								ref={(element) => {collapse.current.push(element)}}
-								className={`${originClassName}-section`}
+								className={`${originClassName}-panel`}
 							>
 								<div className={`${originClassName}-article`}>
 									{item.content}

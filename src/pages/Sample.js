@@ -872,7 +872,7 @@ const Page = () => {
 						</UxCollapse>
 
 						<UxTab
-							selected={3}
+							selected={0}
 							linear
 							scroll
 							// full

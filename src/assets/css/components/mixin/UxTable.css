@@ -1,6 +1,7 @@
 /* UxTable */
 .ux-table {
 	border-top: .1rem solid var(--light3);
+	background-color: var(--light0);
 }
 .ux-table .ux-table-base {}
 .ux-table th {

@@ -2,6 +2,7 @@
 .ux-keypad {
 	border-radius: 1.6rem;
 	box-shadow: 0 0.1rem 0.5rem var(--light1);
+	background-color: var(--light0);
 }
 .ux-keypad .ux-keypad-base {
 	display: grid;
