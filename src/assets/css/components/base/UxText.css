@@ -1,6 +1,6 @@
 /* UxText */
 .ux-text {
-	display: flex;
+	display: inline-flex;
 	align-items: flex-start;
 	gap: .4rem;
 }
@@ -25,29 +25,25 @@
 .ux-text.title.lg {font-size: var(--font-lg);}
 .ux-text.title.xl {font-size: var(--font-xl);}
 .ux-text.title.xxl {font-size: var(--font-2xl);}
+/* UxText Linear */
+.ux-text.linear {display: inline;}
+.ux-text.linear .ux-text-label {display: inline;}
+.ux-text.xxs.linear .ux-text-label {background-image: repeating-linear-gradient(var(--light0) 0rem, var(--light0) calc(var(--font-2xs) * 0.6), var(--light1) calc(var(--font-2xs) * 0.6), var(--light1) calc(var(--font-2xs) * 1.5));}
+.ux-text.xs.linear .ux-text-label {background-image: repeating-linear-gradient(var(--light0) 0rem, var(--light0) calc(var(--font-xs) * 0.6), var(--light1) calc(var(--font-xs) * 0.6), var(--light1) calc(var(--font-xs) * 1.5));}
+.ux-text.sm.linear .ux-text-label {background-image: repeating-linear-gradient(var(--light0) 0rem, var(--light0) calc(var(--font-sm) * 0.6), var(--light1) calc(var(--font-sm) * 0.6), var(--light1) calc(var(--font-sm) * 1.5));}
+.ux-text.md.linear .ux-text-label {background-image: repeating-linear-gradient(var(--light0) 0rem, var(--light0) calc(var(--font-md) * 0.6), var(--light1) calc(var(--font-md) * 0.6), var(--light1) calc(var(--font-md) * 1.5));}
+.ux-text.lg.linear .ux-text-label {background-image: repeating-linear-gradient(var(--light0) 0rem, var(--light0) calc(var(--font-lg) * 0.6), var(--light1) calc(var(--font-lg) * 0.6), var(--light1) calc(var(--font-lg) * 1.5));}
+.ux-text.xl.linear .ux-text-label {background-image: repeating-linear-gradient(var(--light0) 0rem, var(--light0) calc(var(--font-xl) * 0.6), var(--light1) calc(var(--font-xl) * 0.6), var(--light1) calc(var(--font-xl) * 1.5));}
+.ux-text.xxl.linear .ux-text-label {background-image: repeating-linear-gradient(var(--light0) 0rem, var(--light0) calc(var(--font-2xl) * 0.6), var(--light1) calc(var(--font-2xl) * 0.6), var(--light1) calc(var(--font-2xl) * 1.5));}
 /* UxText Prefix Height */
-.ux-text.xxs .ux-text-prefix {
-	height: calc(var(--font-2xs) * 1.5);
-}
-.ux-text.xs .ux-text-prefix {
-	height: calc(var(--font-xs) * 1.5);
-}
-.ux-text.sm .ux-text-prefix {
-	height: calc(var(--font-sm) * 1.5);
-}
+.ux-text.xxs .ux-text-prefix {height: calc(var(--font-2xs) * 1.5);}
+.ux-text.xs .ux-text-prefix {height: calc(var(--font-xs) * 1.5);}
+.ux-text.sm .ux-text-prefix {height: calc(var(--font-sm) * 1.5);}
 .ux-text .ux-text-prefix,
-.ux-text.md .ux-text-prefix {
-	height: calc(var(--font-md) * 1.5);
-}
-.ux-text.lg .ux-text-prefix {
-	height: calc(var(--font-lg) * 1.5);
-}
-.ux-text.xl .ux-text-prefix {
-	height: calc(var(--font-xl) * 1.5);
-}
-.ux-text.xxl .ux-text-prefix {
-	height: calc(var(--font-2xl) * 1.5);
-}
+.ux-text.md .ux-text-prefix {height: calc(var(--font-md) * 1.5);}
+.ux-text.lg .ux-text-prefix {height: calc(var(--font-lg) * 1.5);}
+.ux-text.xl .ux-text-prefix {height: calc(var(--font-xl) * 1.5);}
+.ux-text.xxl .ux-text-prefix {height: calc(var(--font-2xl) * 1.5);}
 /* UxText Bullet */
 .ux-text.dot .ux-text-prefix::before {
 	content: "";

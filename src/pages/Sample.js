@@ -211,6 +211,44 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
+							<h4>UxText Linear</h4>
+							<UxGroup
+								className="flex column"
+							>
+								<UxText
+									className="xxs linear"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="xs linear"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="sm linear"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="md linear"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="lg linear"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="xl linear"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+								<UxText
+									className="xxl linear"
+									label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+								/>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
 							<h4>UxText Prefix, Bullet</h4>
 							<UxGroup
 								className="flex column"
