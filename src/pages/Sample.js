@@ -74,6 +74,11 @@ const Page = () => {
 								onClick={(event)=>{console.log("UxButton onClick", event);}}
 							/>
 							<UxButton
+								className="fill"
+								label="UxButton"
+								onClick={(event)=>{console.log("UxButton onClick", event);}}
+							/>
+							<UxButton
 								label="UxButton"
 								icon={
 									<span
@@ -131,27 +136,65 @@ const Page = () => {
 
 						<UxBadge label="99" />
 
-						<UxDivider className="sm"/>
-						<UxDivider className="md"/>
-						<UxDivider className="lg"/>
-						<UxDivider className="dash"/>
+						<UxGroup>
+							<UxDivider className="sm"/>
+							<UxDivider className="md"/>
+							<UxDivider className="lg"/>
+							<UxDivider className="dash"/>
+						</UxGroup>
 
-						<UxText
-							className="md"
-							prefix="-"
-							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
-						/>
+						<UxList>
+							<UxText
+								className="xxs"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
 
-						<UxText
-							className="md"
-							bullet="dot"
-							label="A relatively simple way to handle the above code would be pass all as value to dependency array of useEffect so that you don't worry about loadData being executed after state update"
-						/>
+							<UxText
+								className="xs"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+
+							<UxText
+								className="sm"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+
+							<UxText
+								className="md"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+
+							<UxText
+								className="lg"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+
+							<UxText
+								className="xl"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+
+							<UxText
+								className="xxl"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+						</UxList>
+
+						<UxList>
+							<UxText
+								prefix="-"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+
+							<UxText
+								bullet="dot"
+								label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+							/>
+						</UxList>
 
 						<UxCard>
 							<UxList
 								bullet="dot"
-								size="md"
 								data={[
 									"가나다라 / 1234 / Bullet Dot",
 									"마바사아 / 5678 / Bullet Dot",
@@ -164,7 +207,6 @@ const Page = () => {
 							<UxList
 								className="line"
 								prefix="number"
-								size="md"
 								data={[
 									"가나다라 / 1234 / Prefix Number",
 									"마바사아 / 5678 / Prefix Number",
@@ -751,7 +793,7 @@ const Page = () => {
 							</UxFieldset>
 						</UxForm>
 
-						<UxGroup className="flex">
+						<UxGroup className="flex wrap">
 							<UxButton
 								label="Alert"
 								onClick={() => {

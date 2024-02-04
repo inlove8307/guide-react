@@ -17,6 +17,14 @@
 .ux-text.xl {font-size: var(--font-xl);}
 .ux-text.xxl {font-size: var(--font-2xl);}
 .ux-text strong {font-weight: 700;}
+/* UxText Title Size */
+.ux-text.title.xxs {font-size: var(--font-2xs);}
+.ux-text.title.xs {font-size: var(--font-xs);}
+.ux-text.title.sm {font-size: var(--font-sm);}
+.ux-text.title.md {font-size: var(--font-md);}
+.ux-text.title.lg {font-size: var(--font-lg);}
+.ux-text.title.xl {font-size: var(--font-xl);}
+.ux-text.title.xxl {font-size: var(--font-2xl);}
 /* UxText Prefix Height */
 .ux-text.xxs .ux-text-prefix {
 	padding-top: calc((var(--font-2xs) * 1.5 - var(--font-2xs)) / 2);
@@ -30,6 +38,7 @@
 	padding-top: calc((var(--font-sm) * 1.5 - var(--font-sm)) / 2);
 	height: calc(var(--font-sm) * 1.5);
 }
+.ux-text .ux-text-prefix,
 .ux-text.md .ux-text-prefix {
 	padding-top: calc((var(--font-md) * 1.5 - var(--font-md)) / 2);
 	height: calc(var(--font-md) * 1.5);

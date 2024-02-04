@@ -22,7 +22,7 @@ const Alert = (props) => {
 			</div>
 			<div className={`${originClassName}-footer`}>
 				<UxButton
-					className={`${originClassName}-close`}
+					className={`${originClassName}-button fill`}
 					label={props.label || "확인"}
 					onClick={(close) => props.onConfirm && props.onConfirm(close)}
 				/>
@@ -49,12 +49,12 @@ const Confirm = (props) => {
 			</div>
 			<div className={`${originClassName}-footer`}>
 				<UxButton
-					className={`${originClassName}-close`}
+					className={`${originClassName}-button`}
 					label={props.label?.cancel || "취소"}
 					onClick={(close) => props.onCancel && props.onCancel(close)}
 				/>
 				<UxButton
-					className={`${originClassName}-close`}
+					className={`${originClassName}-button fill`}
 					label={props.label?.confirm || "확인"}
 					onClick={(close) => props.onConfirm && props.onConfirm(close)}
 				/>
@@ -81,12 +81,12 @@ const BottomSheet = (props) => {
 			</div>
 			<div className={`${originClassName}-footer`}>
 			<UxButton
-					className={`${originClassName}-close`}
+					className={`${originClassName}-button`}
 					label={props.label?.cancel || "취소"}
 					onClick={(close) => props.onCancel && props.onCancel(close)}
 				/>
 				<UxButton
-					className={`${originClassName}-close`}
+					className={`${originClassName}-button fill`}
 					label={props.label?.confirm || "확인"}
 					onClick={(close) => props.onConfirm && props.onConfirm(close)}
 				/>
