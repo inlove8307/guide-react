@@ -1,14 +1,10 @@
 /* UxTab */
 .ux-tab {
 	width: 100%;
-	border-radius: 1.6rem;
-	box-shadow: 0 0.1rem 0.5rem var(--light1);
 	background-color: var(--light0);
 }
 .ux-tab .ux-tab-base {
 	overflow: hidden;
-	border-radius: 1.6rem;
-	box-shadow: 0 0 0 0.1rem var(--light2);
 }
 .ux-tab .ux-tab-scroll {
 	overflow-x: hidden;
@@ -21,8 +17,14 @@
 	z-index: 1;
 }
 .ux-tab .ux-tab-button {
+	position: relative;
 	flex-shrink: 0;
 	padding: .8rem 1.6rem;
+	box-shadow: inset 0 -.1rem 0 transparent;
+	transition: box-shadow .1s ease-in-out;
+}
+.ux-tab .ux-tab-button.active {
+	box-shadow: inset 0 -.2rem 0 var(--color1);
 }
 .ux-tab .ux-tab-button.active .ux-tab-label {
 	color: var(--color1);
@@ -30,12 +32,15 @@
 .ux-tab .ux-tab-panel {
 	display: none;
 	padding: 1.2rem 1.6rem;
-	min-height: 12rem;
+	/* min-height: 12rem; */
 }
 .ux-tab .ux-tab-panel.active {
 	display: block;
 }
 /* UxTab Linear */
+.ux-tab.linear .ux-tab-button.active {
+	box-shadow: none;
+}
 .ux-tab.linear .ux-tab-linear {
 	position: absolute;
 	bottom: 0;
@@ -58,5 +63,11 @@
 }
 /* UxTab Mobile */
 .ux-container.mobile .ux-tab {
-	width: calc(100vw - 4rem);
+	width: calc(var(--100vw) - var(--space) * 2);
+}
+/* UxKeypad in UxCard */
+.ux-card .ux-tab {
+	margin: -1.6rem;
+	width: initial;
+	background-color: transparent;
 }

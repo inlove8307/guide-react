@@ -275,20 +275,30 @@ const Page = () => {
 								<UxList
 									bullet="dot"
 									data={[
-										"가나다라 / 1234 / Bullet Dot",
-										"마바사아 / 5678 / Bullet Dot",
-										"자차카타 / 9012 / Bullet Dot",
+										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 									]}
 								/>
 								<UxList
 									className="line"
 									prefix="number"
 									data={[
-										"가나다라 / 1234 / Prefix Number",
-										"마바사아 / 5678 / Prefix Number",
-										"자차카타 / 9012 / Prefix Number",
+										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 									]}
 								/>
+								<UxCard>
+									<UxList
+										className="line"
+										data={[
+											"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+											"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+											"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+										]}
+									/>
+								</UxCard>
 							</UxGroup>
 						</UxArticle>
 
@@ -314,6 +324,16 @@ const Page = () => {
 										{ label: "label3", value: "value3" },
 									]}
 								/>
+								<UxCard>
+									<UxInfo
+										className="line"
+										data={[
+											{ label: "label1", value: "value1" },
+											{ label: "label2", value: "value2" },
+											{ label: "label3", value: "value3" },
+										]}
+									/>
+								</UxCard>
 							</UxGroup>
 						</UxArticle>
 
@@ -1032,66 +1052,129 @@ const Page = () => {
 						<UxArticle>
 							<h4>UxCollapse</h4>
 							<UxGroup className="flex wrap">
-								<UxCollapse
-									once
-									onClick={(event, index)=>{console.log("UxCollapse onClick", event, index)}}
-								>
-									<div data-expanded={true}>
+								<UxCard>
+									<UxCollapse
+										onClick={(event, index)=>{console.log("UxCollapse onClick", event, index)}}
+									>
+										<div data-expanded={true}>
+											<button
+												type="button"
+												data-role="button"
+											>
+												<span>UxCollapse1</span>
+											</button>
+											<div data-role="content">
+												<UxInfo
+													data={[
+														{ label: "label1", value: "value1" },
+														{ label: "label2", value: "value2" },
+														{ label: "label3", value: "value3" },
+													]}
+												/>
+											</div>
+										</div>
+										<div data-expanded={false}>
 										<button
-											type="button"
-											data-role="button"
-										>
-											<span>UxCollapse1</span>
-										</button>
-										<div data-role="content">
-											<UxInfo
-												data={[
-													{ label: "label1", value: "value1" },
-													{ label: "label2", value: "value2" },
-													{ label: "label3", value: "value3" },
-												]}
-											/>
+												type="button"
+												data-role="button"
+											>
+												<span>UxCollapse2</span>
+											</button>
+											<div data-role="content">
+												<UxList
+													bullet="dot"
+													size="md"
+													data={[
+														"가나다라 / 1234 / Bullet Dot",
+														"마바사아 / 5678 / Bullet Dot",
+														"자차카타 / 9012 / Bullet Dot",
+													]}
+												/>
+											</div>
 										</div>
-									</div>
-									<div data-expanded={false}>
-									<button
-											type="button"
-											data-role="button"
-										>
-											<span>UxCollapse2</span>
-										</button>
-										<div data-role="content">
-											<UxList
-												bullet="dot"
-												size="md"
-												data={[
-													"가나다라 / 1234 / Bullet Dot",
-													"마바사아 / 5678 / Bullet Dot",
-													"자차카타 / 9012 / Bullet Dot",
-												]}
-											/>
+										<div data-expanded={false}>
+										<button
+												type="button"
+												data-role="button"
+											>
+												<span>UxCollapse3</span>
+											</button>
+											<div data-role="content">
+												<UxList
+													prefix="-"
+													size="md"
+													data={[
+														"가나다라 / 1234 / Bullet Dot",
+														"마바사아 / 5678 / Bullet Dot",
+														"자차카타 / 9012 / Bullet Dot",
+													]}
+												/>
+											</div>
 										</div>
-									</div>
-									<div data-expanded={false}>
-									<button
-											type="button"
-											data-role="button"
-										>
-											<span>UxCollapse3</span>
-										</button>
-										<div data-role="content">
-											<UxList
-												prefix="-"
-												size="md"
-												data={[
-													"가나다라 / 1234 / Bullet Dot",
-													"마바사아 / 5678 / Bullet Dot",
-													"자차카타 / 9012 / Bullet Dot",
-												]}
-											/>
+									</UxCollapse>
+								</UxCard>
+								<UxCard>
+									<UxCollapse
+										once
+										onClick={(event, index)=>{console.log("UxCollapse onClick", event, index)}}
+									>
+										<div data-expanded={true}>
+											<button
+												type="button"
+												data-role="button"
+											>
+												<span>UxCollapse1</span>
+											</button>
+											<div data-role="content">
+												<UxInfo
+													data={[
+														{ label: "label1", value: "value1" },
+														{ label: "label2", value: "value2" },
+														{ label: "label3", value: "value3" },
+													]}
+												/>
+											</div>
 										</div>
-									</div>
-								</UxCollapse>
+										<div data-expanded={false}>
+										<button
+												type="button"
+												data-role="button"
+											>
+												<span>UxCollapse2</span>
+											</button>
+											<div data-role="content">
+												<UxList
+													bullet="dot"
+													size="md"
+													data={[
+														"가나다라 / 1234 / Bullet Dot",
+														"마바사아 / 5678 / Bullet Dot",
+														"자차카타 / 9012 / Bullet Dot",
+													]}
+												/>
+											</div>
+										</div>
+										<div data-expanded={false}>
+										<button
+												type="button"
+												data-role="button"
+											>
+												<span>UxCollapse3</span>
+											</button>
+											<div data-role="content">
+												<UxList
+													prefix="-"
+													size="md"
+													data={[
+														"가나다라 / 1234 / Bullet Dot",
+														"마바사아 / 5678 / Bullet Dot",
+														"자차카타 / 9012 / Bullet Dot",
+													]}
+												/>
+											</div>
+										</div>
+									</UxCollapse>
+								</UxCard>
 							</UxGroup>
 						</UxArticle>
 
@@ -1100,44 +1183,101 @@ const Page = () => {
 						<UxArticle>
 							<h4>UxTab</h4>
 							<UxGroup className="flex wrap">
-								<UxTab
-									selected={0}
-									linear
-									scroll
-									// full
-									onChange={(event, index) => {console.log(event, index)}}
-								>
-									<div data-label="Tab1">
-										Contents1
-									</div>
-									<div data-label="Tab2">
-										Contents2
-									</div>
-									<div data-label="Tab3">
-										Contents3
-									</div>
-									<div data-label="Tab4">
-										Contents4
-									</div>
-									<div data-label="Tab5">
-										Contents5
-									</div>
-									<div data-label="Tab6">
-										Contents6
-									</div>
-									<div data-label="Tab7">
-										Contents7
-									</div>
-									<div data-label="Tab8">
-										Contents8
-									</div>
-									<div data-label="Tab9">
-										Contents9
-									</div>
-									<div data-label="Tab10">
-										Contents10
-									</div>
-								</UxTab>
+								<UxCard>
+									<UxTab
+										selected={0}
+										full
+										onChange={(event, index) => {console.log(event, index)}}
+									>
+										<div data-label="Tab1">
+											Contents1
+										</div>
+										<div data-label="Tab2">
+											Contents2
+										</div>
+										<div data-label="Tab3">
+											Contents3
+										</div>
+									</UxTab>
+								</UxCard>
+								<UxCard>
+									<UxTab
+										selected={0}
+										scroll
+										onChange={(event, index) => {console.log(event, index)}}
+									>
+										<div data-label="Tab1">
+											Contents1
+										</div>
+										<div data-label="Tab2">
+											Contents2
+										</div>
+										<div data-label="Tab3">
+											Contents3
+										</div>
+										<div data-label="Tab4">
+											Contents4
+										</div>
+										<div data-label="Tab5">
+											Contents5
+										</div>
+										<div data-label="Tab6">
+											Contents6
+										</div>
+										<div data-label="Tab7">
+											Contents7
+										</div>
+										<div data-label="Tab8">
+											Contents8
+										</div>
+										<div data-label="Tab9">
+											Contents9
+										</div>
+										<div data-label="Tab10">
+											Contents10
+										</div>
+									</UxTab>
+								</UxCard>
+								<UxCard>
+									<UxTab
+										selected={0}
+										linear
+										scroll
+										// full
+										onChange={(event, index) => {console.log(event, index)}}
+									>
+										<div data-label="Tab1">
+											Contents1
+										</div>
+										<div data-label="Tab2">
+											Contents2
+										</div>
+										<div data-label="Tab3">
+											Contents3
+										</div>
+										<div data-label="Tab4">
+											Contents4
+										</div>
+										<div data-label="Tab5">
+											Contents5
+										</div>
+										<div data-label="Tab6">
+											Contents6
+										</div>
+										<div data-label="Tab7">
+											Contents7
+										</div>
+										<div data-label="Tab8">
+											Contents8
+										</div>
+										<div data-label="Tab9">
+											Contents9
+										</div>
+										<div data-label="Tab10">
+											Contents10
+										</div>
+									</UxTab>
+								</UxCard>
 							</UxGroup>
 						</UxArticle>
 
@@ -1146,9 +1286,11 @@ const Page = () => {
 						<UxArticle>
 							<h4>UxKeypad</h4>
 							<UxGroup className="flex wrap">
-								<UxKeypad
-									shuffle
-								/>
+								<UxCard>
+									<UxKeypad
+										shuffle
+									/>
+								</UxCard>
 							</UxGroup>
 						</UxArticle>
 
