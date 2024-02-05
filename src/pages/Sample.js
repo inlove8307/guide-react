@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 // HOOK
 import useModals from "hook/useModals";
 // LAYOUT
@@ -72,16 +73,16 @@ const Page = () => {
 							<h4>UxButton</h4>
 							<UxGroup className="flex wrap">
 								<UxButton
-									label="UxButton"
+									label="label"
 									onClick={(event)=>{console.log("UxButton onClick", event);}}
 								/>
 								<UxButton
 									className="fill"
-									label="UxButton"
+									label="label"
 									onClick={(event)=>{console.log("UxButton onClick", event);}}
 								/>
 								<UxButton
-									label="UxButton"
+									label="label"
 									icon={
 										<span
 											className="ux-icon-clear"
@@ -91,7 +92,7 @@ const Page = () => {
 									onClick={(event)=>{console.log("UxButton onClick", event);}}
 								/>
 								<UxButton
-									label="UxButton"
+									label="label"
 									icon={<span className="ux-icon-clear" />}
 									onClick={(event)=>{console.log("UxButton onClick", event);}}
 								/>
@@ -108,11 +109,11 @@ const Page = () => {
 							<h4>UxChip</h4>
 							<UxGroup className="flex wrap">
 								<UxChip
-									label="UxChip"
+									label="label"
 									onClick={(event)=>{console.log("UxChip onClick", event);}}
 								/>
 								<UxChip
-									label="UxChip"
+									label="label"
 									onClick={(event)=>{console.log("UxChip onClick", event);}}
 									icon={
 										<span
@@ -1318,6 +1319,19 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
+							<h4>UxPagination</h4>
+							<UxGroup className="flex wrap">
+								<UxPagination
+									page={1}
+									unit={isMobile ? 5 : 10}
+									total={15}
+								/>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
 							<h4>TODO</h4>
 							<UxGroup className="flex wrap">
 								<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
@@ -1326,7 +1340,6 @@ const Page = () => {
 								<UxDatepicker>UxDatepicker</UxDatepicker>
 								<UxDropdown>UxDropdown</UxDropdown>
 								<UxFilter>UxFilter</UxFilter>
-								<UxPagination>UxPagination</UxPagination>
 								<UxPopover>UxPopover</UxPopover>
 								<UxProgress>UxProgress</UxProgress>
 								<UxSwiper>UxSwiper</UxSwiper>
