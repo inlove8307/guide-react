@@ -1284,6 +1284,21 @@ const Page = () => {
 
 						<UxDivider className="md wide"/>
 
+
+						<UxArticle>
+							<h4>UxPagination</h4>
+							<UxGroup className="flex wrap">
+								<UxPagination
+									page={1}
+									unit={isMobile ? 5 : 10}
+									total={15}
+									onChange={(page) => {console.log("UxPagination", page);}}
+								/>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
 						<UxArticle>
 							<h4>UxKeypad</h4>
 							<UxGroup className="flex wrap">
@@ -1313,19 +1328,6 @@ const Page = () => {
 									<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
 									<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
 								</UxTimeline>
-							</UxGroup>
-						</UxArticle>
-
-						<UxDivider className="md wide"/>
-
-						<UxArticle>
-							<h4>UxPagination</h4>
-							<UxGroup className="flex wrap">
-								<UxPagination
-									page={1}
-									unit={isMobile ? 5 : 10}
-									total={15}
-								/>
 							</UxGroup>
 						</UxArticle>
 
