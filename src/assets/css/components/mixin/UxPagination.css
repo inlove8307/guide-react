@@ -18,6 +18,7 @@
 .ux-pagination-page.selected .ux-button-base {
 	font-weight: 800;
 	color: var(--color1);
+	pointer-events: none;
 }
 .ux-pagination-page .ux-button-base,
 .ux-pagination-page .ux-button-base:hover,
