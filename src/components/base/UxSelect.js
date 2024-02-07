@@ -36,9 +36,7 @@ const UxSelect = (props) => {
 	}
 
 	const handleBlur = async (event) => {
-		setTimeout(() => {
-			setExtended(false);
-		}, 1);
+		setExtended(false);
 		props.onBlur && props.onBlur(event);
 	}
 
@@ -93,7 +91,7 @@ const UxSelect = (props) => {
 										key={index}
 										className={classnames(`${originClassName}-item`, item.props.className, {selected})}
 										role="presentation"
-										onClick={(event) => handleItemClick(event, object)}
+										onMouseDown={(event) => handleItemClick(event, object)}
 									>
 										{item.props["data-label"]}
 										{item.props.children && item.props.children}
