@@ -53,6 +53,7 @@ import UxTable from "components/mixin/UxTable";
 import UxTimeline from "components/mixin/UxTimeline";
 import UxToast from "components/mixin/UxToast";
 import UxToggle from "components/mixin/UxToggle";
+import UxToggleGroup from "components/mixin/UxToggleGroup";
 import UxTooltip from "components/mixin/UxTooltip";
 // IMAGE
 import image from "assets/image/sample/image_01.png"
@@ -1319,6 +1320,37 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
+							<h4>UxToggle</h4>
+							<UxGroup className="flex column">
+								<UxToggle
+									label="label"
+								/>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxToggleGroup</h4>
+							<UxToggleGroup
+								selected={1}
+								onChange={(selected) => {console.log(selected)}}
+							>
+								<UxToggle
+									label="label"
+								/>
+								<UxToggle
+									label="label"
+								/>
+								<UxToggle
+									label="label"
+								/>
+							</UxToggleGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
 							<h4>UxTimeline</h4>
 							<UxGroup className="flex wrap">
 								<UxTimeline>
@@ -1352,7 +1384,7 @@ const Page = () => {
 								<UxProgress>UxProgress</UxProgress>
 								<UxSwiper>UxSwiper</UxSwiper>
 								<UxToast>UxToast</UxToast>
-								<UxToggle>UxToggle</UxToggle>
+
 								<UxTooltip>UxTooltip</UxTooltip>
 							</UxGroup>
 						</UxArticle>

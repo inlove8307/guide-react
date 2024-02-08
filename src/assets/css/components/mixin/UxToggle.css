@@ -1,2 +1,52 @@
 /* UxToggle */
-.ux-toggle {}
+.ux-toggle {
+	display: inline-flex;
+}
+.ux-toggle .ux-toggle-base {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: .4rem;
+	padding: 0 1.2rem;
+	width: 100%;
+	min-height: 3.6rem;
+	border-radius: 1rem;
+	box-shadow: inset 0 0 0 .1rem var(--light2);
+	background-color: var(--light0);
+	font-size: 1.6rem;
+	color: var(--dark1);
+	letter-spacing: 0;
+	transition: box-shadow .1s cubic-bezier(.65,.05,.36,1);
+}
+.ux-toggle .ux-toggle-label {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/* UxButton Fill */
+.ux-toggle.fill .ux-toggle-base {
+	box-shadow: none;
+	background-color: var(--color1);
+	color: var(--light0);
+}
+/* UxToggle in UxToggleGroup */
+.ux-toggle-group .ux-toggle {
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 0;
+	position: relative;
+}
+.ux-toggle-group .ux-toggle:not(:first-of-type):not(.fill)::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: .1rem;
+	height: 50%;
+	background-color: var(--light1);
+	transform: translateY(-50%);
+}
+.ux-toggle-group .ux-toggle-base {
+	box-shadow: none;
+	background-color: transparent;
+}

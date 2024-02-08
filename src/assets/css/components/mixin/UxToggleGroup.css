@@ -1,0 +1,8 @@
+/* UxToggle */
+.ux-toggle-group {}
+.ux-toggle-group .ux-toggle-group-base {
+	display: flex;
+	border-radius: 1rem;
+	box-shadow: inset 0 0 0 .1rem var(--light2);
+	background-color: var(--light0);
+}
