@@ -1307,23 +1307,11 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
-							<h4>UxKeypad</h4>
-							<UxGroup className="flex wrap">
-								<UxCard>
-									<UxKeypad
-										shuffle
-									/>
-								</UxCard>
-							</UxGroup>
-						</UxArticle>
-
-						<UxDivider className="md wide"/>
-
-						<UxArticle>
 							<h4>UxToggle</h4>
 							<UxGroup className="flex column">
 								<UxToggle
 									label="label"
+									onChange={(isToggle) => {console.log(isToggle)}}
 								/>
 							</UxGroup>
 						</UxArticle>
@@ -1332,20 +1320,110 @@ const Page = () => {
 
 						<UxArticle>
 							<h4>UxToggleGroup</h4>
-							<UxToggleGroup
-								selected={1}
-								onChange={(selected) => {console.log(selected)}}
-							>
-								<UxToggle
-									label="label"
-								/>
-								<UxToggle
-									label="label"
-								/>
-								<UxToggle
-									label="label"
-								/>
-							</UxToggleGroup>
+							<UxGroup className="flex wrap">
+								<UxToggleGroup
+									selected={0}
+									onChange={(selected) => {console.log(selected)}}
+								>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+								</UxToggleGroup>
+								<UxToggleGroup
+									className="col2"
+									selected={0}
+									onChange={(selected) => {console.log(selected)}}
+								>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+								</UxToggleGroup>
+								<UxToggleGroup
+									className="col3"
+									selected={0}
+									onChange={(selected) => {console.log(selected)}}
+								>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+								</UxToggleGroup>
+								<UxToggleGroup
+									className="col4"
+									selected={0}
+									onChange={(selected) => {console.log(selected)}}
+								>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+									<UxToggle
+										label="label"
+									/>
+								</UxToggleGroup>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxKeypad</h4>
+							<UxGroup className="flex wrap">
+								<UxCard>
+									<UxKeypad
+										shuffle
+										onClick={(number) => {console.log(number)}}
+										onDelete={() => {console.log("delete")}}
+										onClear={() => {console.log("clear")}}
+									/>
+								</UxCard>
+							</UxGroup>
 						</UxArticle>
 
 						<UxDivider className="md wide"/>
@@ -1383,8 +1461,6 @@ const Page = () => {
 								<UxPopover>UxPopover</UxPopover>
 								<UxProgress>UxProgress</UxProgress>
 								<UxSwiper>UxSwiper</UxSwiper>
-								<UxToast>UxToast</UxToast>
-
 								<UxTooltip>UxTooltip</UxTooltip>
 							</UxGroup>
 						</UxArticle>

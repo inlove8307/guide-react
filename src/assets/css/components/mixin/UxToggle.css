@@ -30,22 +30,6 @@
 	color: var(--light0);
 }
 /* UxToggle in UxToggleGroup */
-.ux-toggle-group .ux-toggle {
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 0;
-	position: relative;
-}
-.ux-toggle-group .ux-toggle:not(:first-of-type):not(.fill)::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: .1rem;
-	height: 50%;
-	background-color: var(--light1);
-	transform: translateY(-50%);
-}
 .ux-toggle-group .ux-toggle-base {
 	box-shadow: none;
 	background-color: transparent;

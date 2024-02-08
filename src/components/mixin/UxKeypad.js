@@ -11,16 +11,16 @@ const UxKeypad = (props) => {
 	keyArray.splice(9, 0, "delete");
 	keyArray.splice(11, 0, "clear");
 
-	const handleClick = (event) => {
-		props.onClick && props.onClick(event);
+	const handleClick = (item) => {
+		props.onClick && props.onClick(item);
 	}
 
 	const handler = {
-		"delete": (event) => {
-			props.onDelete && props.onDelete(event);
+		"delete": () => {
+			props.onDelete && props.onDelete();
 		},
-		"clear": (event) => {
-			props.onClear && props.onClear(event);
+		"clear": () => {
+			props.onClear && props.onClear();
 		}
 	}
 
@@ -29,15 +29,12 @@ const UxKeypad = (props) => {
 			<div className={`${originClassName}-base`}>
 				{
 					keyArray.map((item, index) => {
-
-
 						return (
 							<button
 								key={index}
 								type="button"
 								className={`${originClassName}-button`}
-								data-value={isNaN(item) ? item : keyArray[index]}
-								onClick={isNaN(item) ? handler[item] : handleClick}
+								onClick={isNaN(item) ? handler[item] : () => handleClick(item)}
 							>
 								<span className={`${originClassName}-label`}>
 									{isNaN(item) ? item : keyArray[index]}
