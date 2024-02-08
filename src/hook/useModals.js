@@ -20,10 +20,15 @@ export default function useModals() {
 		open(Component, {...props, bottom: true});
 	};
 
+	const Toast = (Component, props) => {
+		open(Component, {...props, toast: true});
+	};
+
 	return {
 		Modal,
 		Alert,
 		Confirm,
 		BottomSheet,
+		Toast
 	};
 }

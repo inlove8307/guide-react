@@ -95,13 +95,36 @@ const BottomSheet = (props) => {
 	)
 };
 
+const Toast = (props) => {
+	const originClassName = props.originClassName;
+
+	return (
+		<>
+			<div className={`${originClassName}-main`}>
+				{props.children}
+				<UxButton
+					className={`${originClassName}-close`}
+					icon={
+						<span
+							className="ux-icon-clear"
+							style={{ backgroundColor: "var(--light0)" }}
+						/>
+					}
+					onClick={props.close}
+				/>
+			</div>
+		</>
+	)
+};
+
 const UxModal = (props) => {
 	const originClassName = "ux-modal";
 	const mixinClassName = classnames(originClassName, props.className, {
 		base: props.modal,
 		alert: props.alert,
 		confirm: props.confirm,
-		bottom: props.bottom
+		bottom: props.bottom,
+		toast: props.toast
 	});
 	const modalRef = useRef();
 	const baseRef = useRef();
@@ -113,7 +136,10 @@ const UxModal = (props) => {
 	}
 
 	useEffect(() => {
+		const container = document.querySelector(".ux-container");
+
 		setTimeout(() => {
+			modalRef.current.style.paddingRight = `${container.offsetWidth - container.clientWidth}px`;
 			modalRef.current.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
 			baseRef.current.style.transform = "translateY(0)";
 		}, 1);
@@ -147,6 +173,13 @@ const UxModal = (props) => {
 				{
 					props.bottom &&
 					<BottomSheet
+						{...props}
+						originClassName={originClassName}
+					/>
+				}
+				{
+					props.toast &&
+					<Toast
 						{...props}
 						originClassName={originClassName}
 					/>

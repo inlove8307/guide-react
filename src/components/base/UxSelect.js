@@ -61,8 +61,8 @@ const UxSelect = (props) => {
 					label={selected || props.placeholder}
 					icon={
 						extended
-							? <span className="ux-icon-arrow-up" />
-							: <span className="ux-icon-arrow-down" />
+							? <span className="ux-icon-angle-up" />
+							: <span className="ux-icon-angle-down" />
 					}
 					disabled={props.readonly || props.disabled}
 					onClick={handleButtonClick}

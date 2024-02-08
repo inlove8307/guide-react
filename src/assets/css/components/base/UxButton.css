@@ -39,6 +39,7 @@
 	min-height: initial;
 	border-radius: 0;
 	box-shadow: none!important;
+	background-color: transparent;
 }
 /* UxButton Status */
 .ux-button .ux-button-base:hover {

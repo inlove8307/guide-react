@@ -5,7 +5,9 @@ import { getClosest } from "utils/dom";
 
 const UxButton = (props) => {
 	const originClassName = "ux-button";
-	const mixinClassName = classnames(originClassName, props.className, { icon: !props.label && !props.children });
+	const mixinClassName = classnames(originClassName, props.className, {
+		icon: !props.label && !props.children
+	});
 
 	const handleClick = (event) => {
 		event.target = getClosest(event.target, `.${originClassName}`);

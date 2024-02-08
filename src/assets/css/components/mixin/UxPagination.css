@@ -2,36 +2,35 @@
 .ux-pagination {
 	width: 100%;
 }
-.ux-pagination-base {
+.ux-pagination .ux-pagination-base {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: .8rem;
 }
-.ux-pagination-page {}
-.ux-pagination-page .ux-button-base {
+.ux-pagination .ux-pagination-page {}
+.ux-pagination .ux-pagination-page .ux-button-base {
 	padding: 0 0.4rem;
 	min-width: 2.4rem;
 	min-height: 2.4rem;
 	color: var(--light3);
 }
-.ux-pagination-page.selected .ux-button-base {
+.ux-pagination .ux-pagination-page.selected .ux-button-base {
 	font-weight: 800;
 	color: var(--color1);
 	pointer-events: none;
 }
-.ux-pagination-page .ux-button-base,
-.ux-pagination-page .ux-button-base:hover,
-.ux-pagination-page .ux-button-base:focus {
+.ux-pagination .ux-pagination-page .ux-button-base,
+.ux-pagination .ux-pagination-page .ux-button-base:hover,
+.ux-pagination .ux-pagination-page .ux-button-base:focus {
 	border-radius: 0;
 	box-shadow: none;
 	background-color: none;
 }
-.ux-pagination-prev.disabled {
-	opacity: 0.5;
-	pointer-events: none;
-}
-.ux-pagination-next.disabled {
+.ux-pagination .ux-pagination-first.disabled,
+.ux-pagination .ux-pagination-prev.disabled,
+.ux-pagination .ux-pagination-next.disabled,
+.ux-pagination .ux-pagination-last.disabled {
 	opacity: 0.5;
 	pointer-events: none;
 }

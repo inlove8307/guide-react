@@ -58,7 +58,7 @@ import UxTooltip from "components/mixin/UxTooltip";
 import image from "assets/image/sample/image_01.png"
 
 const Page = () => {
-	const { Modal, Alert, Confirm, BottomSheet } = useModals();
+	const { Modal, Alert, Confirm, BottomSheet, Toast } = useModals();
 
 	return (
 		<UxLayout>
@@ -143,7 +143,7 @@ const Page = () => {
 								<UxLink
 									href="#"
 									label="UxLink Icon"
-									icon={<span className="ux-icon-arrow-right" />}
+									icon={<span className="ux-icon-angle-right" />}
 								/>
 							</UxGroup>
 						</UxArticle>
@@ -1045,6 +1045,12 @@ const Page = () => {
 										Modal("컨텐츠");
 									}}
 								/>
+								<UxButton
+									label="Toast"
+									onClick={() => {
+										Toast("컨텐츠");
+									}}
+								/>
 							</UxGroup>
 						</UxArticle>
 
@@ -1291,7 +1297,7 @@ const Page = () => {
 								<UxPagination
 									page={1}
 									unit={isMobile ? 5 : 10}
-									total={15}
+									total={35}
 									onChange={(page) => {console.log("UxPagination", page);}}
 								/>
 							</UxGroup>

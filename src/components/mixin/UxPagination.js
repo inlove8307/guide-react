@@ -7,6 +7,8 @@ const UxPagination = (props) => {
 	const originClassName = "ux-pagination";
 	const mixinClassName = classnames(originClassName, props.className);
 	const [page, setPage] = useState(props.page || 1);
+	const [hasPrev, setHasPrev] = useState(false);
+	const [hasNext, setHasNext] = useState(false);
 	const [data, setData] = useState([]);
 
 	const getData = () => {
@@ -22,46 +24,74 @@ const UxPagination = (props) => {
 		return array;
 	};
 
+	const getPrev = () => {
+		return Math.ceil(page / props.unit) * props.unit - props.unit;
+	};
+
+	const getNext = () => {
+		return Math.ceil(page / props.unit) * props.unit + 1;
+	};
+
 	const handlePage = (item) => {
 		setPage(item);
 	};
 
 	const handlePrev = () => {
-		page > 1 && setPage(page - 1);
+		setPage(getPrev());
 	};
 
 	const handleNext = () => {
-		page < props.total && setPage(page + 1);
+		setPage(getNext());
 	};
+
+	const handleFirst = () => {
+		setPage(1);
+	}
+
+	const handleLast = () => {
+		setPage(props.total);
+	}
 
 	useEffect(() => {
 		setData(getData());
+		getPrev() > 0 ? setHasPrev(true) : setHasPrev(false);
+		getNext() < props.total ? setHasNext(true) : setHasNext(false);
 		props.onChange && props.onChange(page);
 	}, [page]);
 
 	return (
 		<div className={mixinClassName}>
 			<div className={`${originClassName}-base`}>
-			<UxButton
-				className={classnames(`${originClassName}-prev`, { disabled: page === 1 })}
-				icon={<span className="ux-icon-arrow-left" />}
-				onClick={handlePrev}
-			/>
-			{
-				data.map((item, index) => (
-					<UxButton
-						key={index}
-						className={classnames(`${originClassName}-page`, { selected: item === page })}
-						label={item}
-						onClick={() => handlePage(item)}
-					/>
-				))
-			}
-			<UxButton
-				className={classnames(`${originClassName}-next`, { disabled: page === props.total })}
-				icon={<span className="ux-icon-arrow-right" />}
-				onClick={handleNext}
-			/>
+				<UxButton
+					className={classnames(`${originClassName}-first`, { disabled: page === 1 })}
+					icon={<span className="ux-icon-angle-left-double" />}
+					onClick={handleFirst}
+				/>
+				<UxButton
+					className={classnames(`${originClassName}-prev`, { disabled: !hasPrev })}
+					icon={<span className="ux-icon-angle-left" />}
+					onClick={handlePrev}
+				/>
+				{
+					data.map((item, index) => (
+						<UxButton
+							key={index}
+							className={classnames(`${originClassName}-page`, { selected: item === page })}
+							label={item}
+							onClick={() => handlePage(item)}
+						/>
+					))
+				}
+				<UxButton
+					className={classnames(`${originClassName}-next`, { disabled: !hasNext })}
+					icon={<span className="ux-icon-angle-right" />}
+					onClick={handleNext}
+				/>
+				<UxButton
+					className={classnames(`${originClassName}-last`, { disabled: page === props.total })}
+					icon={<span className="ux-icon-angle-right-double" />}
+					onClick={handleLast}
+				/>
 			</div>
 			{props.children}
 		</div>

@@ -104,8 +104,8 @@ const UxCollapse = (props) => {
 							>
 								{item.button}
 								<span className={classnames(`${originClassName}-icon`, {
-									"ux-icon-arrow-up": item.expanded,
-									"ux-icon-arrow-down": !item.expanded
+									"ux-icon-angle-up": item.expanded,
+									"ux-icon-angle-down": !item.expanded
 								})} />
 							</button>
 							<div

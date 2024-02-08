@@ -28,7 +28,7 @@
 .ux-collapse .ux-collapse-panel {
 	overflow: hidden;
 	box-shadow: inset 0 0.1rem 0 var(--light1);
-	transition: max-height .15s ease;
+	transition: max-height .15s ease-in-out;
 }
 .ux-collapse .ux-collapse-article {
 	padding: 1.2rem 1.6rem;

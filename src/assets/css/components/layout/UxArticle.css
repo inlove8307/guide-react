@@ -1,16 +1,15 @@
 /* UxArticle */
 .ux-article {
-	padding: 0 var(--space);
 	width: 72rem;
-}
-.ux-content .ux-article {
-	padding: initial;
-	width: initial;
 }
 .ux-content .ux-article + .ux-article {
 	margin-top: 2.4rem;
 }
 /* UxArticle Mobile */
 .ux-container.mobile .ux-article {
+	padding: 0 var(--space);
 	width: initial;
+}
+.ux-container.mobile .ux-content .ux-article {
+	padding: 0;
 }

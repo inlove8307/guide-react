@@ -5,9 +5,9 @@
 	align-items: center;
 	position: fixed;
 	top: 0;
-	right: 0;
-	bottom: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
 	background-color: rgba(0, 0, 0, 0);
 	backdrop-filter: blur(.5rem);
 	-webkit-backdrop-filter: blur(.5rem);
@@ -76,12 +76,13 @@
 	flex-grow: 1;
 }
 /* UxModal BottomSheet */
-.ux-modal.bottom {}
+.ux-modal.bottom {
+	padding: 0!important;
+}
 .ux-modal.bottom .ux-modal-base {
 	position: absolute;
 	bottom: 0;
-	right: 0;
-	left: 0;
+	width: 100%;
 	height: auto;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
@@ -94,5 +95,29 @@
 .ux-modal.bottom .ux-modal-footer > * {
 	flex-grow: 1;
 }
+/* UxModal Toast*/
+.ux-modal.toast {
+	top: initial;
+	bottom: calc(8rem + var(--space));
+	height: initial;
+	background-color: transparent!important;
+	backdrop-filter: none;
+}
+.ux-modal.toast .ux-modal-base {
+	width: 720px;
+	background-color: rgba(0, 0, 0, 0.75);
+	backdrop-filter: blur(0.5rem);
+	-webkit-backdrop-filter: blur(.5rem);
+}
+.ux-container.mobile .ux-modal.toast .ux-modal-base {
+	width: calc(100% - var(--space) * 2);
+}
+.ux-modal.toast .ux-modal-main {
+	display: flex;
+	align-items: center;
+	min-height: 4rem;
+	color: var(--light0);
+}
+
 /* UxModal z-index */
 .ux-modal {z-index: 100;}
