@@ -1429,6 +1429,24 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
+							<h4>UxCalendar</h4>
+							<UxGroup className="flex wrap">
+								<UxCalendar>UxCalendar</UxCalendar>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxDatepicker</h4>
+							<UxGroup className="flex wrap">
+								<UxDatepicker>UxDatepicker</UxDatepicker>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
 							<h4>UxTimeline</h4>
 							<UxGroup className="flex wrap">
 								<UxTimeline>
@@ -1453,9 +1471,7 @@ const Page = () => {
 							<h4>TODO</h4>
 							<UxGroup className="flex wrap">
 								<UxBreadcrumb>UxBreadcrumb</UxBreadcrumb>
-								<UxCalendar>UxCalendar</UxCalendar>
 								<UxRange>UxRange</UxRange>
-								<UxDatepicker>UxDatepicker</UxDatepicker>
 								<UxDropdown>UxDropdown</UxDropdown>
 								<UxFilter>UxFilter</UxFilter>
 								<UxPopover>UxPopover</UxPopover>

@@ -16,7 +16,6 @@
 	font-size: 1.6rem;
 	color: var(--dark1);
 	letter-spacing: 0;
-	transition: box-shadow .1s cubic-bezier(.65,.05,.36,1);
 }
 .ux-toggle .ux-toggle-label {
 	overflow: hidden;

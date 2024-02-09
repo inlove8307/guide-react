@@ -23,7 +23,10 @@ const UxButton = (props) => {
 	}
 
 	return (
-		<span className={mixinClassName}>
+		<span
+			className={mixinClassName}
+			style={props.style}
+		>
 			<button
 				type="button"
 				className={`${originClassName}-base`}

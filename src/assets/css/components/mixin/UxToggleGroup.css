@@ -1,7 +1,12 @@
 /* UxToggle */
 .ux-toggle-group {
 	width: 100%;
-	background-image: repeating-linear-gradient(to top, var(--light0), var(--light0) 3.6rem, var(--light1) 3.6rem, var(--light1) 3.7rem);
+	border-radius: 1rem;
+	background-image:
+	repeating-linear-gradient(to right, var(--light0), var(--light0) .8rem, transparent .8rem, transparent calc(100%)),
+	repeating-linear-gradient(to left, var(--light0), var(--light0) .8rem, transparent .8rem, transparent calc(100%)),
+	repeating-linear-gradient(to bottom, transparent, transparent 3.6rem, var(--light1) 3.6rem, var(--light1) 3.7rem);
+	background-color: var(--light0);
 }
 .ux-toggle-group .ux-toggle-group-base {
 	display: flex;

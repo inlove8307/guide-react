@@ -1,2 +1,101 @@
 /* UxCalendar */
-.ux-calendar {}
+.ux-calendar {width: 100%;}
+.ux-calendar-base {}
+/* UxCalendar Header */
+.ux-calendar .ux-calendar-header {
+	display: flex;
+	justify-content: center;
+	gap: 2.4rem;
+	height: 4rem;
+}
+.ux-calendar .ux-calendar-select .ux-button-base {
+	padding: 0;
+	min-height: initial;
+	box-shadow: none;
+}
+/* UxCalendar Content */
+.ux-calendar .ux-calendar-content {
+	position: relative;
+}
+/* UxCalendar DateCalendar */
+.ux-calendar .ux-calendar-date {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: .4rem
+}
+.ux-calendar .ux-calendar-date .ux-calendar-week {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3.6rem;
+}
+.ux-calendar .ux-calendar-date .ux-calendar-button {
+	height: 3.6rem;
+}
+.ux-calendar .ux-calendar-date .ux-calendar-button .ux-button-base {
+	padding: 0;
+	min-height: initial;
+	box-shadow: none;
+	letter-spacing: 0;
+}
+.ux-calendar .ux-calendar-date .ux-calendar-button .ux-button-label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius: 50%;
+}
+.ux-calendar .ux-calendar-date .ux-calendar-button.isToday .ux-button-label {
+	box-shadow: inset 0 0 0 .1rem var(--light3);
+	font-weight: 700;
+}
+.ux-calendar .ux-calendar-date .ux-calendar-button.selected .ux-button-label {
+	box-shadow: inset 0 0 0 .1rem var(--color1);
+	font-weight: 700;
+	color: var(--color1);
+}
+/* UxCalendar YearCalendar */
+.ux-calendar .ux-calendar-year {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--light0);
+}
+.ux-calendar .ux-calendar-year .ux-calendar-button.direction {
+	width: 100%;
+}
+.ux-calendar .ux-calendar-year .ux-calendar-button .ux-button-base {
+	padding: 0;
+	min-height: initial;
+	box-shadow: none;
+}
+.ux-calendar .ux-calendar-year .ux-calendar-button.selected .ux-button-base {
+	color: var(--color1);
+}
+/* UxCalendar MonthCalendar */
+.ux-calendar .ux-calendar-month {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--light0);
+}
+.ux-calendar .ux-calendar-month .ux-calendar-button {
+	width: calc(100% / 3);
+}
+.ux-calendar .ux-calendar-month .ux-calendar-button .ux-button-base {
+	padding: 0;
+	min-height: initial;
+	box-shadow: none;
+}
+.ux-calendar .ux-calendar-month .ux-calendar-button.selected .ux-button-base {
+	color: var(--color1);
+}
