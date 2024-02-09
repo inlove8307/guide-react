@@ -1,5 +1,5 @@
 /* UxCalendar */
-.ux-calendar {width: 100%;}
+.ux-calendar {}
 .ux-calendar-base {}
 /* UxCalendar Header */
 .ux-calendar .ux-calendar-header {
@@ -21,7 +21,11 @@
 .ux-calendar .ux-calendar-date {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	gap: .4rem
+	gap: .4rem;
+}
+.ux-calendar .ux-calendar-date > :nth-child(7n),
+.ux-calendar .ux-calendar-date > :nth-child(7n + 1) {
+	color: var(--invalid);
 }
 .ux-calendar .ux-calendar-date .ux-calendar-week {
 	display: flex;
@@ -32,19 +36,23 @@
 .ux-calendar .ux-calendar-date .ux-calendar-button {
 	height: 3.6rem;
 }
-.ux-calendar .ux-calendar-date .ux-calendar-button .ux-button-base {
+.ux-calendar .ux-calendar-date .ux-button-base {
 	padding: 0;
 	min-height: initial;
 	box-shadow: none;
 	letter-spacing: 0;
 }
-.ux-calendar .ux-calendar-date .ux-calendar-button .ux-button-label {
+.ux-calendar .ux-calendar-date .ux-button-label {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 3.6rem;
 	height: 3.6rem;
 	border-radius: 50%;
+}
+.ux-calendar .ux-calendar-date > :nth-child(7n) .ux-button-label,
+.ux-calendar .ux-calendar-date > :nth-child(7n + 1) .ux-button-label {
+	color: var(--invalid);
 }
 .ux-calendar .ux-calendar-date .ux-calendar-button.isToday .ux-button-label {
 	box-shadow: inset 0 0 0 .1rem var(--light3);
@@ -75,6 +83,7 @@
 	box-shadow: none;
 }
 .ux-calendar .ux-calendar-year .ux-calendar-button.selected .ux-button-base {
+	font-weight: 700;
 	color: var(--color1);
 }
 /* UxCalendar MonthCalendar */
@@ -97,5 +106,6 @@
 	box-shadow: none;
 }
 .ux-calendar .ux-calendar-month .ux-calendar-button.selected .ux-button-base {
+	font-weight: 700;
 	color: var(--color1);
 }

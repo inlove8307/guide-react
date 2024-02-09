@@ -138,7 +138,7 @@ const YearCalendar = (props) => {
 		<div className={`${originClassName}-year`}>
 			<UxButton
 				className={classnames(`${originClassName}-button direction`)}
-				icon={<span className="ux-icon-angle-up" />}
+				icon={<span className="ux-icon-caret-up" />}
 				onClick={() => handleChange("prev")}
 			/>
 			{
@@ -157,7 +157,7 @@ const YearCalendar = (props) => {
 			}
 			<UxButton
 				className={classnames(`${originClassName}-button direction`)}
-				icon={<span className="ux-icon-angle-down" />}
+				icon={<span className="ux-icon-caret-down" />}
 				onClick={() => handleChange("next")}
 			/>
 		</div>

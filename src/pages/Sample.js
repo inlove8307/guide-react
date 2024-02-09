@@ -1430,8 +1430,10 @@ const Page = () => {
 
 						<UxArticle>
 							<h4>UxCalendar</h4>
-							<UxGroup className="flex wrap">
-								<UxCalendar>UxCalendar</UxCalendar>
+							<UxGroup className="flex">
+								<UxCard>
+									<UxCalendar />
+								</UxCard>
 							</UxGroup>
 						</UxArticle>
 
