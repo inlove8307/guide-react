@@ -149,7 +149,7 @@ const YearCalendar = (props) => {
 							key={index}
 							className={classnames(`${originClassName}-button`, {selected})}
 							label={`${item}년`}
-							style={{ width: `${100 / col}%` }}
+							style={{width: `${100 / col}%`}}
 							onClick={() => handleClick(item)}
 						/>
 					)
