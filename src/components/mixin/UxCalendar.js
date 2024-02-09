@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxCalendar.css";
 import moment from "moment";
