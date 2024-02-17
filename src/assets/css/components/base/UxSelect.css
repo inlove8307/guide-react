@@ -19,7 +19,7 @@
 .ux-select.selected .ux-select-button .ux-button-label {
 	color: var(--dark0);
 }
-.ux-select .ux-select-button [class^=ux-icon] {
+.ux-select .ux-select-icon {
 	margin-left: auto;
 }
 .ux-select .ux-select-trans {

@@ -1,10 +1,10 @@
 import React from "react";
 import classnames from "classnames";
-import "assets/css/components/mixin/UxConfirm.css";
+import "assets/css/components/mixin/UxBottomSheet.css";
 import UxButton from 'components/base/UxButton';
 import UxIcon from "components/base/UxIcon";
 
-const UxConfirm = (props) => {
+const UxBottomSheet = (props) => {
 	const originClassName = props.originClassName;
 
 	return (
@@ -33,7 +33,7 @@ const UxConfirm = (props) => {
 				/>
 			</div>
 		</>
-	)
+	);
 };
 
-export default UxConfirm;
+export default UxBottomSheet;

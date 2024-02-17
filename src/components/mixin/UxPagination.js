@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxPagination.css";
 import UxButton from "components/base/UxButton";
+import UxIcon from "components/base/UxIcon";
 
 const UxPagination = (props) => {
 	const originClassName = "ux-pagination";
@@ -64,12 +65,12 @@ const UxPagination = (props) => {
 			<div className={`${originClassName}-base`}>
 				<UxButton
 					className={classnames(`${originClassName}-first`, { disabled: page === 1 })}
-					icon={<span className="ux-icon-angle-left-double" />}
+					icon={<UxIcon icon="angle-left-double" />}
 					onClick={handleFirst}
 				/>
 				<UxButton
 					className={classnames(`${originClassName}-prev`, { disabled: !hasPrev })}
-					icon={<span className="ux-icon-angle-left" />}
+					icon={<UxIcon icon="angle-left" />}
 					onClick={handlePrev}
 				/>
 				{
@@ -84,12 +85,12 @@ const UxPagination = (props) => {
 				}
 				<UxButton
 					className={classnames(`${originClassName}-next`, { disabled: !hasNext })}
-					icon={<span className="ux-icon-angle-right" />}
+					icon={<UxIcon icon="angle-right" />}
 					onClick={handleNext}
 				/>
 				<UxButton
 					className={classnames(`${originClassName}-last`, { disabled: page === props.total })}
-					icon={<span className="ux-icon-angle-right-double" />}
+					icon={<UxIcon icon="angle-right-double" />}
 					onClick={handleLast}
 				/>
 			</div>

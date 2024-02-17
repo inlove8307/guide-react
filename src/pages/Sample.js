@@ -17,6 +17,7 @@ import UxChip from "components/base/UxChip";
 import UxDivider from "components/base/UxDivider";
 import UxFile from "components/base/UxFile";
 import UxImage from "components/base/UxImage";
+import UxIcon from "components/base/UxIcon";
 import UxInput from "components/base/UxInput";
 import UxLink from "components/base/UxLink";
 import UxPassword from "components/base/UxPassword";
@@ -42,7 +43,7 @@ import UxForm from "components/mixin/UxForm";
 import UxGroup from "components/mixin/UxGroup";
 import UxInfo from "components/mixin/UxInfo";
 import UxKeypad from "components/mixin/UxKeypad";
-import UxList from "components/mixin/UxList";
+import UxTextList from "components/mixin/UxTextList";
 import UxMasking from "components/mixin/UxMasking";
 import UxPagination from "components/mixin/UxPagination";
 import UxPopover from "components/mixin/UxPopover";
@@ -85,8 +86,8 @@ const Page = () => {
 								<UxButton
 									label="label"
 									icon={
-										<span
-											className="ux-icon-clear"
+										<UxIcon
+											icon="clear"
 											align="left"
 										/>
 									}
@@ -94,11 +95,11 @@ const Page = () => {
 								/>
 								<UxButton
 									label="label"
-									icon={<span className="ux-icon-clear" />}
+									icon={<UxIcon icon="clear" />}
 									onClick={(event)=>{console.log("UxButton onClick", event);}}
 								/>
 								<UxButton
-									icon={<span className="ux-icon-clear"/>}
+									icon={<UxIcon icon="clear"/>}
 									onClick={(event)=>{console.log("UxButton onClick", event);}}
 								/>
 							</UxGroup>
@@ -117,10 +118,10 @@ const Page = () => {
 									label="label"
 									onClick={(event)=>{console.log("UxChip onClick", event);}}
 									icon={
-										<span
-											role="presentation"
-											className="ux-icon-clear white"
-											onClick={(event)=>{console.log("UxChip Icon onClick", event);}}
+										<UxIcon
+											icon="clear"
+											color="white"
+											onClick={() => {console.log("UxChip Icon onClick");}}
 										/>
 									}
 								/>
@@ -144,7 +145,7 @@ const Page = () => {
 								<UxLink
 									href="#"
 									label="UxLink Icon"
-									icon={<span className="ux-icon-angle-right" />}
+									icon={<UxIcon icon="angle-right" />}
 								/>
 							</UxGroup>
 						</UxArticle>
@@ -270,11 +271,25 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
-							<h4>UxList</h4>
+							<h4>UxTextList</h4>
 							<UxGroup
 								className="flex column"
 							>
-								<UxList
+								<UxTextList>
+									<UxText
+										prefix="-"
+										label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+									/>
+									<UxText
+										prefix="-"
+										label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+									/>
+									<UxText
+										prefix="-"
+										label="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+									/>
+								</UxTextList>
+								<UxTextList
 									bullet="dot"
 									data={[
 										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -282,7 +297,7 @@ const Page = () => {
 										"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 									]}
 								/>
-								<UxList
+								<UxTextList
 									className="line"
 									prefix="number"
 									data={[
@@ -292,7 +307,7 @@ const Page = () => {
 									]}
 								/>
 								<UxCard>
-									<UxList
+									<UxTextList
 										className="line"
 										data={[
 											"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -448,7 +463,7 @@ const Page = () => {
 									>
 										<UxInput
 											placeholder="입력하세요."
-											icon="ux-icon-calendar"
+											icon={<UxIcon icon="calendar" />}
 											clear
 											onIconClick={(event)=>{console.log("UxInput onIconClick", event);}}
 										/>
@@ -994,7 +1009,7 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
-							<h4>UxModal</h4>
+							<h4>UxModal (Alert, Confirm, BottomSheet, Modal, Toast)</h4>
 							<UxGroup className="flex wrap">
 								<UxButton
 									label="Alert"
@@ -1089,7 +1104,7 @@ const Page = () => {
 												<span>UxCollapse2</span>
 											</button>
 											<div data-role="content">
-												<UxList
+												<UxTextList
 													bullet="dot"
 													size="md"
 													data={[
@@ -1108,7 +1123,7 @@ const Page = () => {
 												<span>UxCollapse3</span>
 											</button>
 											<div data-role="content">
-												<UxList
+												<UxTextList
 													prefix="-"
 													size="md"
 													data={[
@@ -1151,7 +1166,7 @@ const Page = () => {
 												<span>UxCollapse2</span>
 											</button>
 											<div data-role="content">
-												<UxList
+												<UxTextList
 													bullet="dot"
 													size="md"
 													data={[
@@ -1170,7 +1185,7 @@ const Page = () => {
 												<span>UxCollapse3</span>
 											</button>
 											<div data-role="content">
-												<UxList
+												<UxTextList
 													prefix="-"
 													size="md"
 													data={[
@@ -1290,7 +1305,6 @@ const Page = () => {
 						</UxArticle>
 
 						<UxDivider className="md wide"/>
-
 
 						<UxArticle>
 							<h4>UxPagination</h4>
@@ -1429,7 +1443,7 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
-							<h4>UxCalendar</h4>
+							<h4>UxCalendar (DateCalendar, YearCalendar, MonthCalendar)</h4>
 							<UxGroup className="flex">
 								<UxCard>
 									<UxCalendar />

@@ -1,15 +1,28 @@
 import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxToast.css";
+import UxButton from 'components/base/UxButton';
+import UxIcon from "components/base/UxIcon";
 
 const UxToast = (props) => {
-	const originClassName = "ux-toast";
-	const mixinClassName = classnames(originClassName, props.className);
+	const originClassName = props.originClassName;
 
 	return (
-		<div className={mixinClassName}>
-			{props.children}
-		</div>
+		<>
+			<div className={`${originClassName}-main`}>
+				{props.children}
+				<UxButton
+					className={`${originClassName}-close`}
+					icon={
+						<UxIcon
+							icon="clear"
+							color="white"
+						/>
+					}
+					onClick={props.close}
+				/>
+			</div>
+		</>
 	);
 };
 

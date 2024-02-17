@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxCollapse.css";
-import { arrayChild } from "utils/core";
+import { slotArray } from "utils/core";
+import UxIcon from "components/base/UxIcon";
 
 const UxCollapse = (props) => {
 	const originClassName = "ux-collapse";
@@ -9,7 +10,7 @@ const UxCollapse = (props) => {
 	const array = (() => {
 		let array = [];
 
-		arrayChild(props.children).map((item, index) => {
+		slotArray(props.children).map((item, index) => {
 			let object = {};
 
 			object["expanded"] = item.props["data-expanded"];
@@ -103,10 +104,10 @@ const UxCollapse = (props) => {
 								onClick={(event) => handleClick(event, index)}
 							>
 								{item.button}
-								<span className={classnames(`${originClassName}-icon`, {
-									"ux-icon-angle-up": item.expanded,
-									"ux-icon-angle-down": !item.expanded
-								})} />
+								<UxIcon
+									className={`${originClassName}-icon`}
+									icon={item.expanded ? "angle-up" : "angle-down"}
+								/>
 							</button>
 							<div
 								ref={(element) => {collapse.current.push(element)}}

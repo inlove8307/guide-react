@@ -10,11 +10,6 @@ const UxChip = (props) => {
 		props.onClick && props.onClick(event);
 	}
 
-	const handleIconClick = (event) => {
-		event.stopPropagation();
-		props.icon.props.onClick && props.icon.props.onClick(event);
-	}
-
 	return (
 		<div className={mixinClassName}>
 			<span
@@ -29,14 +24,7 @@ const UxChip = (props) => {
 						{props.label}
 					</span>
 				}
-				{
-					props.icon &&
-					<span
-						role="presentation"
-						className={classnames(`${originClassName}-icon`, props.icon.props.className, {presentation: props.icon.props.onClick})}
-						onClick={handleIconClick}
-					/>
-				}
+				{ props.icon && props.icon }
 			</span>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxRadio.css";
+import UxIcon from "components/base/UxIcon";
 
 const UxRadio = (props) => {
 	const originClassName = "ux-radio";
@@ -27,11 +28,9 @@ const UxRadio = (props) => {
 					onChange={handleChange}
 					disabled={props.disabled}
 				/>
-				<span
-					className={classnames(`${originClassName}-icon`, {
-						"ux-icon-selected-circle": isChecked,
-						"ux-icon-unselected-circle": !isChecked
-					})}
+				<UxIcon
+					className={`${originClassName}-icon`}
+					icon={isChecked ? "selected-circle" : "unselected-circle"}
 				/>
 				<span className={`${originClassName}-label`}>{props.label}</span>
 			</label>

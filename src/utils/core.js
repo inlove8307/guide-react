@@ -6,7 +6,7 @@ export const sleep = (delay) => {
 	});
 };
 
-export const arrayChild = (children) => {
+export const slotArray = (children) => {
 	if (Array.isArray(children)) {
 		return children;
 	}

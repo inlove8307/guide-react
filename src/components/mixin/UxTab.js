@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxTab.css";
-import { arrayChild } from "utils/core";
+import { slotArray } from "utils/core";
 
 const UxTab = (props) => {
 	const originClassName = "ux-tab";
@@ -18,7 +18,7 @@ const UxTab = (props) => {
 	const data = (() => {
 		let array = [];
 
-		arrayChild(props.children).map((item) => {
+		slotArray(props.children).map((item) => {
 			array.push({
 				label: item.props["data-label"],
 				content: item.props.children

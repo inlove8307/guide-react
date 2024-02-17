@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxCheckbox.css";
+import UxIcon from "components/base/UxIcon";
 
 const UxCheckbox = (props) => {
 	const originClassName = "ux-checkbox";
 	const mixinClassName = classnames(originClassName, props.className, {disabled: props.disabled});
-	const [checked, setChecked] = useState(props.checked || false);
+	const [isChecked, setIsChecked] = useState(props.checked || false);
 
 	const handleChange = (event) => {
-		setChecked(event.target.checked);
+		setIsChecked(event.target.checked);
 		props.onChange && props.onChange(event);
 	};
 
@@ -22,11 +23,9 @@ const UxCheckbox = (props) => {
 					onChange={handleChange}
 					disabled={props.disabled}
 				/>
-				<span
-					className={classnames(`${originClassName}-icon`, {
-						"ux-icon-checked-circle": checked,
-						"ux-icon-unchecked-circle": !checked
-					})}
+				<UxIcon
+					className={`${originClassName}-icon`}
+					icon={isChecked ? "checked-circle" : "unchecked-circle"}
 				/>
 				<span className={`${originClassName}-label`}>{props.label}</span>
 			</label>

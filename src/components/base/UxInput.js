@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxInput.css";
 import UxButton from "components/base/UxButton";
+import UxIcon from "components/base/UxIcon";
 
 const UxInput = (props) => {
 	const originClassName = "ux-input";
@@ -15,8 +16,8 @@ const UxInput = (props) => {
 	const [value, setValue] = useState(props.value || "");
 
 	const handleChange = (event) => {
+		setValue(event.target.value);
 		props.onChange && props.onChange(event);
-		setValue(inputRef.current.value);
 	};
 
 	const handleFocus = (event) => {
@@ -62,7 +63,7 @@ const UxInput = (props) => {
 				ref={inputRef}
 				type={props.type || "text"}
 				className={`${originClassName}-base`}
-				defaultValue={value}
+				value={value}
 				placeholder={props.placeholder}
 				readOnly={props.readonly}
 				disabled={props.disabled}
@@ -76,7 +77,7 @@ const UxInput = (props) => {
 				props.clear && value && !props.readonly && !props.disabled &&
 				<UxButton
 					className={`${originClassName}-clear`}
-					icon={<span className="ux-icon-clear" />}
+					icon={<UxIcon icon="clear" />}
 					onClick={handleClear}
 				/>
 			}
@@ -92,7 +93,7 @@ const UxInput = (props) => {
 				props.icon && !props.readonly && !props.disabled &&
 				<UxButton
 					className={`${originClassName}-icon`}
-					icon={<span className={props.icon} />}
+					icon={props.icon}
 					onClick={handleIconClick}
 				/>
 			}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxGroup.css";
-import { arrayChild, mergeProps } from "utils/core";
+import { slotArray, mergeProps } from "utils/core";
 
 const UxGroup = (props) => {
 	const originClassName = "ux-group";
@@ -65,7 +65,7 @@ const UxGroup = (props) => {
 		<div className={mixinClassName}>
 			{
 				(props.field || props.radio || props.checkbox) &&
-				arrayChild(props.children).map((element, index) => {
+				slotArray(props.children).map((element, index) => {
 					return mergeProps(element, getProps(index));
 				})
 			}

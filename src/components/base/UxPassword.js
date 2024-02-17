@@ -58,7 +58,7 @@ const UxPassword = (props) => {
 				props.clear && password && !props.readonly && !props.disabled &&
 				<UxButton
 					className={`${originClassName}-clear`}
-					icon={<span className="ux-icon-clear" />}
+					icon={<UxIcon icon="clear" />}
 					onClick={handleClear}
 				/>
 			}

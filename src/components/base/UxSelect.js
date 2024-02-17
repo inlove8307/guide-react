@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxSelect.css";
-import { arrayChild } from "utils/core";
+import { slotArray } from "utils/core";
 import UxButton from "components/base/UxButton";
+import UxIcon from "components/base/UxIcon";
 
 const UxSelect = (props) => {
 	const originClassName = "ux-select";
@@ -60,9 +61,10 @@ const UxSelect = (props) => {
 					className={`${originClassName}-button`}
 					label={selected || props.placeholder}
 					icon={
-						extended
-							? <span className="ux-icon-angle-up" />
-							: <span className="ux-icon-angle-down" />
+						<UxIcon
+							className={`${originClassName}-icon`}
+							icon={extended ? "angle-up" : "angle-down"}
+						/>
 					}
 					disabled={props.readonly || props.disabled}
 					onClick={handleButtonClick}
@@ -75,7 +77,7 @@ const UxSelect = (props) => {
 				>
 					<div className={`${originClassName}-list`}>
 						{
-							arrayChild(props.children).map((item, index) => {
+							slotArray(props.children).map((item, index) => {
 								const selected = value === item.props["data-value"];
 								const object = {
 									value: item.props["data-value"],

@@ -1,9 +1,9 @@
 import React from "react";
 import classnames from "classnames";
-import "assets/css/components/mixin/UxList.css";
+import "assets/css/components/mixin/UxThumb.css";
 
-const UxList = (props) => {
-	const originClassName = "ux-list";
+const UxThumb = (props) => {
+	const originClassName = "ux-thumb";
 	const mixinClassName = classnames(originClassName, props.className);
 
 	return (
@@ -13,4 +13,4 @@ const UxList = (props) => {
 	);
 };
 
-export default UxList;
+export default UxThumb;
