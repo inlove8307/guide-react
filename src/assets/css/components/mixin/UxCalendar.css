@@ -109,3 +109,7 @@
 	font-weight: 700;
 	color: var(--color1);
 }
+/* UxCalendar in UxModal */
+.ux-modal .ux-calendar {
+	margin-top: -1.6rem;
+}

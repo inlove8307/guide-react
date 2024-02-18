@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxInput.css";
+import Cleave from "cleave.js/react";
 import UxButton from "components/base/UxButton";
 import UxIcon from "components/base/UxIcon";
 
@@ -15,8 +16,12 @@ const UxInput = (props) => {
 	const inputRef = useRef(null);
 	const [value, setValue] = useState(props.value || "");
 
+	const handleInput = (event) => {
+		props.onInput && props.onInput(event);
+	};
+
 	const handleChange = (event) => {
-		setValue(event.target.value);
+		!props.pattern && setValue(event.target.value);
 		props.onChange && props.onChange(event);
 	};
 
@@ -46,10 +51,6 @@ const UxInput = (props) => {
 		props.onSubmit && props.onSubmit(event);
 	};
 
-	const handleIconClick = (event) => {
-		props.onIconClick && props.onIconClick(event);
-	};
-
 	return (
 		<div
 			className={mixinClassName}
@@ -59,20 +60,41 @@ const UxInput = (props) => {
 				props.prefix &&
 				<span className={`${originClassName}-prefix`}>{props.prefix}</span>
 			}
-			<input
-				ref={inputRef}
-				type={props.type || "text"}
-				className={`${originClassName}-base`}
-				value={value}
-				placeholder={props.placeholder}
-				readOnly={props.readonly}
-				disabled={props.disabled}
-				onChange={handleChange}
-				onFocus={handleFocus}
-				onBlur={handleBlur}
-				onKeyDown={handleKeyDown}
-				onKeyUp={handleKeyUp}
-			/>
+			{
+				props.pattern &&
+				<Cleave
+					className={`${originClassName}-base`}
+					value={props.value}
+					options={props.pattern}
+					placeholder={props.placeholder}
+					readOnly={props.readonly}
+					disabled={props.disabled}
+					onInput={handleInput}
+					onChange={handleChange}
+					onFocus={handleFocus}
+					onBlur={handleBlur}
+					onKeyDown={handleKeyDown}
+					onKeyUp={handleKeyUp}
+				/>
+			}
+			{
+				!props.pattern &&
+				<input
+					ref={inputRef}
+					type={props.type || "text"}
+					className={`${originClassName}-base`}
+					value={value}
+					placeholder={props.placeholder}
+					readOnly={props.readonly}
+					disabled={props.disabled}
+					onInput={handleInput}
+					onChange={handleChange}
+					onFocus={handleFocus}
+					onBlur={handleBlur}
+					onKeyDown={handleKeyDown}
+					onKeyUp={handleKeyUp}
+				/>
+			}
 			{
 				props.clear && value && !props.readonly && !props.disabled &&
 				<UxButton
@@ -89,14 +111,7 @@ const UxInput = (props) => {
 				props.timer &&
 				<span className={`${originClassName}-timer`}>{props.timer}</span>
 			}
-			{
-				props.icon && !props.readonly && !props.disabled &&
-				<UxButton
-					className={`${originClassName}-icon`}
-					icon={props.icon}
-					onClick={handleIconClick}
-				/>
-			}
+			{props.icon && !props.readonly && !props.disabled && props.icon}
 			{
 				props.button && !props.readonly && !props.disabled &&
 				<UxButton

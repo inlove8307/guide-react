@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ModalsDispatchContext } from "context/ModalsContext";
 
 export default function useModals() {
-	const { open } = useContext(ModalsDispatchContext);
+	const { open, close } = useContext(ModalsDispatchContext);
 
 	const Modal = (Component, props) => {
 		open(Component, {...props, modal: true});
@@ -24,11 +24,16 @@ export default function useModals() {
 		open(Component, {...props, toast: true});
 	};
 
+	const Close = () => {
+		close();
+	}
+
 	return {
 		Modal,
 		Alert,
 		Confirm,
 		BottomSheet,
-		Toast
+		Toast,
+		Close
 	};
 }

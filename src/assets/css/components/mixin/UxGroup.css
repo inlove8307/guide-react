@@ -54,6 +54,7 @@
 /* UxGroup Flex Item */
 .ux-group.flex > *.grow {
 	flex-grow: 1;
+	flex-shrink: 1;
 }
 .ux-group.flex > *.left {
 	margin-right: auto;

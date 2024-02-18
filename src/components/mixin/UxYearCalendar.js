@@ -25,7 +25,7 @@ const UxYearCalendar = (props) => {
 	};
 
 	const handleClick = (item) => {
-		props.onChange && props.onChange("year", item);
+		props.onChange && props.onChange(item);
 	};
 
 	const handleChange = (direction) => {

@@ -20,7 +20,7 @@ const UxMonthCalendar = (props) => {
 	};
 
 	const handleClick = (item) => {
-		props.onChange && props.onChange("month", item - 1);
+		props.onChange && props.onChange(item - 1);
 	};
 
 	useEffect(() => {

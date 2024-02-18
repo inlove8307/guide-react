@@ -1,6 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxField.css";
+import { slotArray, mergeProps } from "utils/core";
 
 const UxField = (props) => {
 	const originClassName = "ux-field";
@@ -10,21 +11,6 @@ const UxField = (props) => {
 		readonly: props.readonly,
 		disabled: props.disabled
 	});
-
-	const children = (children) => {
-		if (Array.isArray(children)) {
-			return children;
-		}
-		else {
-			return [children];
-		}
-	}
-
-	const mergeProps = (children, object) => {
-		if (React.isValidElement(children)) {
-			return React.cloneElement(children, object);
-		}
-	}
 
 	return (
 		<div
@@ -37,7 +23,7 @@ const UxField = (props) => {
 				<p className={`${originClassName}-label`}>{props.label}</p>
 			}
 			{
-				children(props.children).map((element, index) => {
+				slotArray(props.children).map((element, index) => {
 					return mergeProps(element, {
 						key: index,
 						valid: props.valid,

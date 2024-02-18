@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import classnames from "classnames";
 import { getClosest } from "utils/dom";
-import "assets/css/components/mixin/UxModal.css";
+import "assets/css/components/layout/UxModal.css";
 import UxButton from 'components/base/UxButton';
+import UxIcon from 'components/base/UxIcon';
 import UxAlert from 'components/mixin/UxAlert';
 import UxConfirm from 'components/mixin/UxConfirm';
 import UxBottomSheet from 'components/mixin/UxBottomSheet';
@@ -24,6 +25,11 @@ const UxModal = (props) => {
 		if (!getClosest(event.target, `.${originClassName}-base`)) {
 			props.close();
 		}
+	}
+
+	const handleClose = (close) => {
+		props.close();
+		props.onClose && props.onClose(close);
 	}
 
 	useEffect(() => {
@@ -75,7 +81,9 @@ const UxModal = (props) => {
 						originClassName={originClassName}
 					/>
 				}
-				{props.modal && props.children}
+				{
+					props.modal && props.children
+				}
 			</div>
 		</div>
 	)

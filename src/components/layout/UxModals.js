@@ -17,6 +17,10 @@ const UxModals = (props) => {
 			props.onConfirm && props.onConfirm(close);
 		}
 
+		const handleClose = () => {
+			props.onClose && props.onClose(close);
+		}
+
 		return (
 			<UxModal
 				{...props}
@@ -25,6 +29,7 @@ const UxModals = (props) => {
 				close={close}
 				onCancel={handleCancel}
 				onConfirm={handleConfirm}
+				onClose={handleClose}
 			/>
 		)
 	})

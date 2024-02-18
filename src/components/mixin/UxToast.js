@@ -1,6 +1,8 @@
 import React from "react";
 import classnames from "classnames";
 import "assets/css/components/mixin/UxToast.css";
+import UxModalContainer from "components/layout/UxModalContainer"
+import UxModalMain from "components/layout/UxModalMain"
 import UxButton from 'components/base/UxButton';
 import UxIcon from "components/base/UxIcon";
 
@@ -8,8 +10,8 @@ const UxToast = (props) => {
 	const originClassName = props.originClassName;
 
 	return (
-		<>
-			<div className={`${originClassName}-main`}>
+		<UxModalContainer>
+			<UxModalMain>
 				{props.children}
 				<UxButton
 					className={`${originClassName}-close`}
@@ -21,8 +23,8 @@ const UxToast = (props) => {
 					}
 					onClick={props.close}
 				/>
-			</div>
-		</>
+			</UxModalMain>
+		</UxModalContainer>
 	);
 };
 

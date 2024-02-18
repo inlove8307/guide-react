@@ -23,36 +23,35 @@
 }
 .ux-modal-header {
 	display: flex;
-	align-items: center;
-	padding: 1.6rem;
+	padding: 1.6rem 1.6rem 0;
 	font-weight: 700;
 	color: var(--color1);
 }
-.ux-modal-close {
+.ux-modal-header .ux-button {
 	margin-left: auto;
 }
 .ux-modal-main {
-	padding: 0 1.6rem;
+	padding: 1.6rem;
 }
 .ux-modal-footer {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	gap: .8rem;
-	padding: 1.6rem;
+	padding: 0 1.6rem 1.6rem;
 }
 /* UxModal Base */
 .ux-modal.base {}
 .ux-modal.base .ux-modal-base {
 	justify-content: center;
-	align-items: center;
 	min-width: 30rem;
 	min-height: 10rem;
 }
 .ux-modal.base .ux-modal-header {}
 .ux-modal.base .ux-modal-main {}
 .ux-modal.base .ux-modal-footer {}
-.ux-modal.base .ux-modal-footer > * {}
+.ux-modal.base .ux-modal-footer > * {
+	flex-grow: 1;
+}
 /* UxModal Alert */
 .ux-modal.alert {}
 .ux-modal.alert .ux-modal-base {}
@@ -117,6 +116,9 @@
 	align-items: center;
 	min-height: 4rem;
 	color: var(--light0);
+}
+.ux-modal.toast .ux-modal-main .ux-button {
+	margin-left: auto;
 }
 
 /* UxModal z-index */

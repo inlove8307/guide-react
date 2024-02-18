@@ -56,7 +56,7 @@ const UxDateCalendar = (props) => {
 	}
 
 	const handleClick = (item) => {
-		props.onChange && props.onChange("date", item.date);
+		props.onChange && props.onChange(item.date);
 	};
 
 	useEffect(() => {

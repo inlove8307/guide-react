@@ -35,23 +35,25 @@ const UxCalendar = (props) => {
 		setIsYear(false);
 	};
 
-	const handleChange = (label, value) => {
-		switch (label) {
-			case("date"):
-				setDate(moment(date).date(value));
-				break;
-			case("year"):
-				setDate(moment(date).year(value));
-				break;
-			case("month"):
-				setDate(moment(date).month(value));
-				break;
-		}
+	const handleDateChange = (value) => {
+		setDate(moment(date).date(value));
+		props.onDateChange && props.onDateChange(moment(date).date(value).format(format));
+	};
+
+	const handleYearChange = (value) => {
+		setDate(moment(date).year(value));
+		props.onYearChange && props.onYearChange(moment(date).year(value).format(format));
+	};
+
+	const handleMonthChange = (value) => {
+		setDate(moment(date).month(value));
+		props.onMonthChange && props.onMonthChange(moment(date).month(value).format(format));
 	};
 
 	useEffect(() => {
 		setIsYear(false);
 		setIsMonth(false);
+		props.onChange && props.onChange(moment(date).format(format));
 	}, [date]);
 
 	return (
@@ -87,7 +89,7 @@ const UxCalendar = (props) => {
 						format={format}
 						date={date}
 						originClassName={originClassName}
-						onChange={handleChange}
+						onChange={handleDateChange}
 					/>
 					{
 						isYear &&
@@ -95,7 +97,7 @@ const UxCalendar = (props) => {
 							{...props}
 							date={date}
 							originClassName={originClassName}
-							onChange={handleChange}
+							onChange={handleYearChange}
 						/>
 					}
 					{
@@ -104,7 +106,7 @@ const UxCalendar = (props) => {
 							{...props}
 							date={date}
 							originClassName={originClassName}
-							onChange={handleChange}
+							onChange={handleMonthChange}
 						/>
 					}
 				</div>
