@@ -18,7 +18,7 @@ const UxFile = (props) => {
 
 	const handleChange = (event) => {
 		const array = event.target.value.split("\\");
-		setPath(array[array.length - 1]);
+		!props.children && setPath(array[array.length - 1]);
 		props.onChange && props.onChange(event);
 	}
 

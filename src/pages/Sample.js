@@ -829,10 +829,19 @@ const Page = () => {
 										label="label"
 										message="Message"
 									>
-										<UxFile placeholder="파일 버튼을 클릭하세요." />
+										<UxFile
+											placeholder="파일 버튼을 클릭하세요."
+											onChange={(event) => {
+												console.log("UxFile onChange", event.target.value);
+											}}
+										/>
 									</UxField>
 
-									<UxFile>
+									<UxFile
+										onChange={(event) => {
+											console.log("UxFile onChange", event.target.value);
+										}}
+									>
 										<UxButton label="파일첨부" />
 									</UxFile>
 								</UxFieldset>
