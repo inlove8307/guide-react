@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
-import "assets/css/components/mixin/UxDatepicker.css";
+import "assets/css/components/mixin/UxDatePicker.css";
 import useModals from "hook/useModals";
 import moment from "moment";
 import UxModalContainer from "components/layout/UxModalContainer"
 import UxModalHeader from "components/layout/UxModalHeader"
 import UxModalMain from "components/layout/UxModalMain"
-import UxModalFooter from "components/layout/UxModalFooter"
 import UxButton from "components/base/UxButton";
 import UxIcon from "components/base/UxIcon";
 import UxInput from "components/base/UxInput";
 import UxCalendar from "components/mixin/UxCalendar";
 
-const UxDatepicker = (props) => {
+const UxDatePicker = (props) => {
 	const originClassName = "ux-datepicker";
 	const mixinClassName = classnames(originClassName, props.className);
 	const { Modal, Close } = useModals();
@@ -36,15 +35,15 @@ const UxDatepicker = (props) => {
 
 	const Component = (props) => {
 		return (
-			<UxModalContainer>
-				<UxModalHeader>
+			<UxModalContainer className={`${originClassName}-container`}>
+				<UxModalHeader className={`${originClassName}-header`}>
 					<p>날짜선택</p>
 					<UxButton
 						icon={<UxIcon icon="clear" />}
 						onClick={(close) => handleClose(close)}
 					/>
 				</UxModalHeader>
-				<UxModalMain>
+				<UxModalMain className={`${originClassName}-main`}>
 					<UxCalendar
 						date={date}
 						onDateChange={handleDateChange}
@@ -59,7 +58,7 @@ const UxDatepicker = (props) => {
 	};
 
 	useEffect(() => {
-		console.log('UxDatepicker date', date);
+		console.log('UxDatePicker date', date);
 	}, [date]);
 
 	return (
@@ -88,4 +87,4 @@ const UxDatepicker = (props) => {
 	);
 };
 
-export default UxDatepicker;
+export default UxDatePicker;

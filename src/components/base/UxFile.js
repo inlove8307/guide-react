@@ -1,13 +1,15 @@
 import React, { useRef, useState } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxFile.css";
+import { slotArray, mergeProps } from "utils/core";
 import UxButton from "components/base/UxButton";
 
 const UxFile = (props) => {
 	const originClassName = "ux-file";
-	const mixinClassName = classnames(originClassName, props.className);
+	const mixinClassName = classnames(originClassName, props.className, { default: !props.children });
 	const fileRef = useRef();
 	const [path, setPath] = useState("");
+	const children = useRef(null);
 
 	const handleClick = (event) => {
 		fileRef.current.click();
@@ -18,6 +20,10 @@ const UxFile = (props) => {
 		const array = event.target.value.split("\\");
 		setPath(array[array.length - 1]);
 		props.onChange && props.onChange(event);
+	}
+
+	if (React.isValidElement(props.children)) {
+		children.current = mergeProps(props.children, { onClick: handleClick });
 	}
 
 	return (
@@ -33,11 +39,15 @@ const UxFile = (props) => {
 					{path || props.placeholder}
 				</span>
 			</div>
-			<UxButton
-				className={`${originClassName}-button`}
-				label="파일"
-				onClick={handleClick}
-			/>
+			{
+				!children.current &&
+				<UxButton
+					className={`${originClassName}-button`}
+					label="파일"
+					onClick={handleClick}
+				/>
+			}
+			{children.current && children.current}
 		</div>
 	);
 };

@@ -95,6 +95,9 @@
 	box-shadow: none;
 	background-color: transparent;
 }
+.ux-group.field .ux-select:focus-within .ux-button-base {
+	box-shadow: none;
+}
 .ux-group.field.readonly .ux-select .ux-button-base,
 .ux-group.field.disabled .ux-select .ux-button-base {
 	background-color: transparent;

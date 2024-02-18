@@ -3,6 +3,7 @@ import classnames from "classnames";
 import "assets/css/components/base/UxPassword.css";
 import Masking from "components/mixin/UxMasking";
 import UxButton from "components/base/UxButton";
+import UxIcon from "components/base/UxIcon";
 
 const UxPassword = (props) => {
 	const originClassName = "ux-password";

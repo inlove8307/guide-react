@@ -114,6 +114,7 @@
 .ux-modal.toast .ux-modal-main {
 	display: flex;
 	align-items: center;
+	padding: .8rem 1.6rem;
 	min-height: 4rem;
 	color: var(--light0);
 }

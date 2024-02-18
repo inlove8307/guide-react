@@ -34,7 +34,7 @@ import UxCalendar from "components/mixin/UxCalendar";
 import UxCard from "components/mixin/UxCard";
 import UxCollapse from "components/mixin/UxCollapse";
 import UxConfirm from "components/mixin/UxConfirm";
-import UxDatepicker from "components/mixin/UxDatepicker";
+import UxDatePicker from "components/mixin/UxDatePicker";
 import UxDropdown from "components/mixin/UxDropdown";
 import UxField from "components/mixin/UxField";
 import UxFieldset from "components/mixin/UxFieldset";
@@ -831,6 +831,10 @@ const Page = () => {
 									>
 										<UxFile placeholder="파일 버튼을 클릭하세요." />
 									</UxField>
+
+									<UxFile>
+										<UxButton label="파일첨부" />
+									</UxFile>
 								</UxFieldset>
 							</UxForm>
 						</UxArticle>
@@ -1637,7 +1641,7 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
-							<h4>UxDatepicker</h4>
+							<h4>UxDatePicker</h4>
 							<UxForm>
 								<UxFieldset>
 									<UxField
@@ -1645,7 +1649,7 @@ const Page = () => {
 										message="Message"
 										result="Result"
 									>
-										<UxDatepicker className="grow" />
+										<UxDatePicker className="grow" />
 									</UxField>
 
 									<UxField
@@ -1654,7 +1658,7 @@ const Page = () => {
 										result="Result"
 										valid
 									>
-										<UxDatepicker className="grow" />
+										<UxDatePicker className="grow" />
 									</UxField>
 
 									<UxField
@@ -1663,7 +1667,7 @@ const Page = () => {
 										result="Result"
 										invalid
 									>
-										<UxDatepicker className="grow" />
+										<UxDatePicker className="grow" />
 									</UxField>
 
 									<UxField
@@ -1672,7 +1676,7 @@ const Page = () => {
 										result="Result"
 										readonly
 									>
-										<UxDatepicker className="grow" />
+										<UxDatePicker className="grow" />
 									</UxField>
 
 									<UxField
@@ -1681,7 +1685,7 @@ const Page = () => {
 										result="Result"
 										disabled
 									>
-										<UxDatepicker className="grow" />
+										<UxDatePicker className="grow" />
 									</UxField>
 								</UxFieldset>
 							</UxForm>
@@ -1690,7 +1694,7 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
-							<h4>UxDatepicker Range</h4>
+							<h4>UxDatePicker Range</h4>
 							<UxForm>
 								<UxFieldset>
 									<UxField
@@ -1703,8 +1707,8 @@ const Page = () => {
 											field
 											dash
 										>
-											<UxDatepicker className="grow" />
-											<UxDatepicker className="grow" />
+											<UxDatePicker className="grow" />
+											<UxDatePicker className="grow" />
 										</UxGroup>
 									</UxField>
 
@@ -1719,8 +1723,8 @@ const Page = () => {
 											field
 											dash
 										>
-											<UxDatepicker className="grow" />
-											<UxDatepicker className="grow" />
+											<UxDatePicker className="grow" />
+											<UxDatePicker className="grow" />
 										</UxGroup>
 									</UxField>
 
@@ -1735,8 +1739,8 @@ const Page = () => {
 											field
 											dash
 										>
-											<UxDatepicker className="grow" />
-											<UxDatepicker className="grow" />
+											<UxDatePicker className="grow" />
+											<UxDatePicker className="grow" />
 										</UxGroup>
 									</UxField>
 
@@ -1751,8 +1755,8 @@ const Page = () => {
 											field
 											dash
 										>
-											<UxDatepicker className="grow" />
-											<UxDatepicker className="grow" />
+											<UxDatePicker className="grow" />
+											<UxDatePicker className="grow" />
 										</UxGroup>
 									</UxField>
 
@@ -1767,8 +1771,8 @@ const Page = () => {
 											field
 											dash
 										>
-											<UxDatepicker className="grow" />
-											<UxDatepicker className="grow" />
+											<UxDatePicker className="grow" />
+											<UxDatePicker className="grow" />
 										</UxGroup>
 									</UxField>
 								</UxFieldset>
