@@ -1,9 +1,16 @@
 /* UxTable */
 .ux-table {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	border-top: .1rem solid var(--light3);
+	border-bottom: .1rem solid var(--light2);
 	background-color: var(--light0);
 }
-.ux-table .ux-table-base {}
+.ux-table .ux-table-base {
+	margin: -1px;
+	width: initial;
+}
 .ux-table th {
 	background-color: var(--light1);
 	font-weight: 700;
@@ -11,15 +18,7 @@
 .ux-table th,
 .ux-table td {
 	padding: .8rem 1.2rem;
-	border-right: .1rem solid var(--light2);
-	border-bottom: .1rem solid var(--light2);
-}
-.ux-table th:last-child,
-.ux-table td:last-child {
-	border-right: 0;
-}
-.ux-table tbody th {
-	border-right: 0;
+	border: .1rem solid var(--light2);
 }
 /* UxTable Align */
 .ux-table.left th,

@@ -10,14 +10,14 @@ const UxIcon = (props) => {
 	const handleClick = (event) => {
 		event.stopPropagation();
 		props.onClick && props.onClick();
-	}
+	};
 
 	const Component = (props) => {
 		const element = <i className={mixinClassName} />
 		const attribute = {
 			role: "presentation",
 			onClick: handleClick
-		}
+		};
 
 		return (
 				props.onClick

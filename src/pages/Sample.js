@@ -56,8 +56,7 @@ import UxToast from "components/mixin/UxToast";
 import UxToggle from "components/mixin/UxToggle";
 import UxToggleGroup from "components/mixin/UxToggleGroup";
 import UxTooltip from "components/mixin/UxTooltip";
-// IMAGE
-import image from "assets/image/sample/image_01.png"
+import UxThumb from "components/mixin/UxThumb";
 
 const Page = () => {
 	const { Modal, Alert, Confirm, BottomSheet, Toast } = useModals();
@@ -407,7 +406,7 @@ const Page = () => {
 							>
 								<UxImage
 									className="full"
-									src={image}
+									src="/assets/images/image_01.png"
 									alt="UxImage Alt"
 								>
 									UxImage Figcaption
@@ -846,6 +845,35 @@ const Page = () => {
 									</UxFile>
 								</UxFieldset>
 							</UxForm>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxThumb</h4>
+							<UxGroup className="flex wrap">
+								<UxThumb
+									src="/assets/images/image_01.png"
+									style={{ width: "96px", height: "96px" }}
+									label="label1"
+									// icon={<UxIcon icon="clear" color="white" onClick={() => {console.log("UxThumb UxIcon onClick")}} />}
+									// onClick={() => {console.log("UxThumb onClick")}}
+								/>
+								<UxThumb
+									src="/assets/images/image_01.png"
+									style={{ width: "96px", height: "96px" }}
+									label="label2"
+									// icon={<UxIcon icon="clear" color="white" onClick={() => {console.log("UxThumb UxIcon Click")}} />}
+									onClick={() => {console.log("UxThumb onClick")}}
+								/>
+								<UxThumb
+									src="/assets/images/image_01.png"
+									style={{ width: "96px", height: "96px" }}
+									label="label3"
+									icon={<UxIcon icon="clear" color="white" onClick={() => {console.log("UxThumb UxIcon Click")}} />}
+									onClick={() => {console.log("UxThumb onClick")}}
+								/>
+							</UxGroup>
 						</UxArticle>
 
 						<UxDivider className="md wide"/>

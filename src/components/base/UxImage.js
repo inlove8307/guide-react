@@ -11,7 +11,8 @@ const UxImage = (props) => {
 			<img
 				className={`${originClassName}-base`}
 				src={props.src}
-				alt={props.alt}
+				alt={props.alt || ""}
+				style={props.style}
 			/>
 			{
 				props.children &&
