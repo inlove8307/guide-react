@@ -1898,6 +1898,7 @@ const Page = () => {
 											</UxTextList>
 										</UxCard>
 									</UxGroup>
+
 									<UxGroup className="flex column">
 										<UxChip
 											className="dark"
@@ -1911,6 +1912,7 @@ const Page = () => {
 											</UxTextList>
 										</UxCard>
 									</UxGroup>
+
 									<UxGroup className="flex column">
 										<UxChip
 											className="dark"
@@ -1933,9 +1935,7 @@ const Page = () => {
 						<UxArticle>
 							<h4>UxTimeline Index</h4>
 							<UxGroup className="flex wrap">
-								<UxTimeline
-									number
-								>
+								<UxTimeline number>
 									<UxGroup className="flex column">
 										<UxChip
 											className="dark"
@@ -1949,6 +1949,7 @@ const Page = () => {
 											</UxTextList>
 										</UxCard>
 									</UxGroup>
+
 									<UxGroup className="flex column">
 										<UxChip
 											className="dark"
@@ -1962,6 +1963,7 @@ const Page = () => {
 											</UxTextList>
 										</UxCard>
 									</UxGroup>
+
 									<UxGroup className="flex column">
 										<UxChip
 											className="dark"
