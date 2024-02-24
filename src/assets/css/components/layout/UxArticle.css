@@ -1,6 +1,6 @@
 /* UxArticle */
 .ux-article {
-	width: 72rem;
+	width: 64rem;
 }
 .ux-content .ux-article + .ux-article {
 	margin-top: 2.4rem;

@@ -1,2 +1,95 @@
 /* UxTooltip */
-.ux-tooltip {}
+.ux-tooltip {
+	--space: .4rem;
+	--angle: .3rem;
+}
+.ux-tooltip {
+	display: inline-flex;
+	position: relative;
+}
+.ux-tooltip .ux-tooltip-base {
+	position: absolute;
+}
+.ux-tooltip .ux-tooltip-content {
+	display: flex;
+	align-items: flex-start;
+	gap: .4rem;
+	position: relative;
+	padding: .2rem .8rem;
+	border-radius: .8rem;
+	background-color: var(--dark1);
+	font-weight: 300;
+	color: var(--light0);
+	white-space: nowrap;
+}
+.ux-tooltip .ux-tooltip-content::before {
+	content: "";
+	position: absolute;
+}
+.ux-tooltip .ux-tooltip-close {
+	margin-top: .4rem;
+}
+/* UxTooltip Content Direction */
+.ux-tooltip .ux-tooltip-base.right {
+	top: 50%;
+	right: 0;
+	padding-left: calc(var(--space) + var(--space) / 2);
+	transform: translate(100%, -50%);
+}
+.ux-tooltip .ux-tooltip-base.left {
+	top: 50%;
+	left: 0;
+	padding-right: calc(var(--space) + var(--space) / 2);
+	transform: translate(-100%, -50%);
+}
+.ux-tooltip .ux-tooltip-base.top {
+	top: 0;
+	left: 50%;
+	padding-bottom: calc(var(--space) + var(--space) / 2);
+	transform: translate(-50%, -100%);
+}
+.ux-tooltip .ux-tooltip-base.bottom {
+	left: 50%;
+	bottom: 0;
+	padding-top: calc(var(--space) + var(--space) / 2);
+	transform: translate(-50%, 100%);
+}
+/* UxTooltip Arrow Direction */
+.ux-tooltip-base.top .ux-tooltip-content::before {
+	bottom: 0;
+	left: 50%;
+	border-top: var(--space) solid rgba(0, 0, 0, 0.75);
+	border-left: var(--angle) solid transparent;
+	border-right: var(--angle) solid transparent;
+	transform: translate(-50%, 100%);
+}
+.ux-tooltip-base.bottom .ux-tooltip-content::before {
+	top: 0;
+	left: 50%;
+	border-bottom: var(--space) solid rgba(0, 0, 0, 0.75);
+	border-left: var(--angle) solid transparent;
+	border-right: var(--angle) solid transparent;
+	transform: translate(-50%, -100%);
+}
+.ux-tooltip-base.left .ux-tooltip-content::before {
+	top: 50%;
+	right: 0;
+	border-left: var(--space) solid rgba(0, 0, 0, 0.75);
+	border-top: var(--angle) solid transparent;
+	border-bottom: var(--angle) solid transparent;
+	transform: translate(100%, -50%);
+}
+.ux-tooltip-base.right .ux-tooltip-content::before {
+	top: 50%;
+	left: 0;
+	border-right: var(--space) solid rgba(0, 0, 0, 0.75);
+	border-top: var(--angle) solid transparent;
+	border-bottom: var(--angle) solid transparent;
+	transform: translate(-100%, -50%);
+}
+/* UxTooltip z-index */
+.ux-tooltip .ux-tooltip-base {
+	z-index: 1;
+}
+/*  */
+* + .ux-tooltip {margin-left: var(--space);}

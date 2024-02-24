@@ -17,14 +17,14 @@ const UxChip = (props) => {
 				className={`${originClassName}-base`}
 				onClick={handleClick}
 			>
-				{ props.children && props.children }
+				{props.children && props.children}
 				{
 					!props.children && props.label &&
 					<span className={`${originClassName}-label`}>
 						{props.label}
 					</span>
 				}
-				{ props.icon && props.icon }
+				{props.icon && props.icon}
 			</span>
 		</div>
 	);

@@ -4,7 +4,7 @@
 @import "icon.css";
 /* @import "components.css"; */
 
-/* VARIABLES */
+/* ROOT VARIABLES */
 :root {
 	--100vh: calc(var(--vh, 1vh) * 100);
 	--100vw: calc(var(--vw, 1vw) * 100);

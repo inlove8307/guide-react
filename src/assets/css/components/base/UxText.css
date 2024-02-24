@@ -8,6 +8,10 @@
 	display: inline-flex;
 	align-items: center;
 }
+.ux-text .ux-text-label {
+	display: inline-flex;
+	align-items: center;
+}
 /* UxText Size */
 .ux-text.xxs {font-size: var(--font-2xs);}
 .ux-text.xs {font-size: var(--font-xs);}

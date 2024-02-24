@@ -103,7 +103,7 @@
 	backdrop-filter: none;
 }
 .ux-modal.toast .ux-modal-base {
-	width: 720px;
+	width: 64rem;
 	background-color: rgba(0, 0, 0, 0.75);
 	backdrop-filter: blur(0.5rem);
 	-webkit-backdrop-filter: blur(.5rem);

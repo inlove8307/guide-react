@@ -1819,20 +1819,162 @@ const Page = () => {
 						<UxDivider className="md wide"/>
 
 						<UxArticle>
+							<h4>UxTooltip</h4>
+							<UxGroup className="flex column">
+								<UxText prefix="1.">
+									<span>UxText + UxTooltip (Right)</span>
+									<UxTooltip
+										icon={<UxIcon icon="question" />}
+										close={<UxIcon icon="clear" color="white" />}
+										direction="right"
+									>
+										<div>
+											툴팁 컨텐츠<br />
+											툴팁 컨텐츠
+										</div>
+									</UxTooltip>
+								</UxText>
+
+								<UxText prefix="2.">
+									<span>UxText + UxTooltip (Left)</span>
+									<UxTooltip
+										icon={<UxIcon icon="question" />}
+										close={<UxIcon icon="clear" color="white" />}
+										direction="left"
+									>
+										<div>
+											툴팁 컨텐츠<br />
+											툴팁 컨텐츠
+										</div>
+									</UxTooltip>
+								</UxText>
+
+								<UxText prefix="3.">
+									<span>UxText + UxTooltip (Top)</span>
+									<UxTooltip
+										icon={<UxIcon icon="question" />}
+										close={<UxIcon icon="clear" color="white" />}
+										direction="top"
+									>
+										<div>
+											툴팁 컨텐츠<br />
+											툴팁 컨텐츠
+										</div>
+									</UxTooltip>
+								</UxText>
+
+								<UxText prefix="4.">
+									<span>UxText + UxTooltip (Bottom)</span>
+									<UxTooltip
+										icon={<UxIcon icon="question" />}
+										close={<UxIcon icon="clear" color="white" />}
+										direction="bottom"
+									>
+										<div>
+											툴팁 컨텐츠<br />
+											툴팁 컨텐츠
+										</div>
+									</UxTooltip>
+								</UxText>
+							</UxGroup>
+						</UxArticle>
+
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
 							<h4>UxTimeline</h4>
 							<UxGroup className="flex wrap">
 								<UxTimeline>
-									<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
-									<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
-									<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
+									<UxGroup className="flex column">
+										<UxChip
+											className="dark"
+											label="2024.01.01"
+										/>
+										<UxCard>
+											<UxTextList className="line">
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+											</UxTextList>
+										</UxCard>
+									</UxGroup>
+									<UxGroup className="flex column">
+										<UxChip
+											className="dark"
+											label="2024.01.02"
+										/>
+										<UxCard>
+											<UxTextList className="line">
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+											</UxTextList>
+										</UxCard>
+									</UxGroup>
+									<UxGroup className="flex column">
+										<UxChip
+											className="dark"
+											label="2024.01.03"
+										/>
+										<UxCard>
+											<UxTextList className="line">
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+											</UxTextList>
+										</UxCard>
+									</UxGroup>
 								</UxTimeline>
+							</UxGroup>
+						</UxArticle>
 
+						<UxDivider className="md wide"/>
+
+						<UxArticle>
+							<h4>UxTimeline Index</h4>
+							<UxGroup className="flex wrap">
 								<UxTimeline
 									number
 								>
-									<div>타임라인 1<br />줄바꿈 타임라인 1<br />줄바꿈 타임라인 1</div>
-									<div>타임라인 2<br />줄바꿈 타임라인 2<br />줄바꿈 타임라인 2</div>
-									<div>타임라인 3<br />줄바꿈 타임라인 3<br />줄바꿈 타임라인 3</div>
+									<UxGroup className="flex column">
+										<UxChip
+											className="dark"
+											label="2024.01.01"
+										/>
+										<UxCard>
+											<UxTextList className="line">
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+											</UxTextList>
+										</UxCard>
+									</UxGroup>
+									<UxGroup className="flex column">
+										<UxChip
+											className="dark"
+											label="2024.01.02"
+										/>
+										<UxCard>
+											<UxTextList className="line">
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+											</UxTextList>
+										</UxCard>
+									</UxGroup>
+									<UxGroup className="flex column">
+										<UxChip
+											className="dark"
+											label="2024.01.03"
+										/>
+										<UxCard>
+											<UxTextList className="line">
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+												<UxText label="타임라인"/>
+											</UxTextList>
+										</UxCard>
+									</UxGroup>
 								</UxTimeline>
 							</UxGroup>
 						</UxArticle>

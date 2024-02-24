@@ -12,14 +12,14 @@
 	background-color: var(--color1);
 	color: var(--light0);
 }
-.ux-chip .ux-chip-label {
-}
-.ux-chip .ux-chip-icon {
-}
-.ux-chip .presentation {
-
-}
+.ux-chip .ux-chip-label {}
+.ux-chip .ux-chip-icon {}
+.ux-chip .presentation {}
 .ux-chip.presentation .ux-chip-base,
 .ux-chip .ux-chip-icon.presentation {
 	cursor: pointer;
+}
+/* UxChip Color */
+.ux-chip.dark .ux-chip-base {
+	background-color: var(--dark1);
 }
