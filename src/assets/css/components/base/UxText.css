@@ -12,6 +12,8 @@
 	display: inline-flex;
 	align-items: center;
 }
+/* UxText Weight */
+.ux-text strong {font-weight: 700;}
 /* UxText Size */
 .ux-text.xxs {font-size: var(--font-2xs);}
 .ux-text.xs {font-size: var(--font-xs);}
@@ -20,15 +22,14 @@
 .ux-text.lg {font-size: var(--font-lg);}
 .ux-text.xl {font-size: var(--font-xl);}
 .ux-text.xxl {font-size: var(--font-2xl);}
-.ux-text strong {font-weight: 700;}
-/* UxText Title Size */
-.ux-text.title.xxs {font-size: var(--font-2xs);}
-.ux-text.title.xs {font-size: var(--font-xs);}
-.ux-text.title.sm {font-size: var(--font-sm);}
-.ux-text.title.md {font-size: var(--font-md);}
-.ux-text.title.lg {font-size: var(--font-lg);}
-.ux-text.title.xl {font-size: var(--font-xl);}
-.ux-text.title.xxl {font-size: var(--font-2xl);}
+/* UxText Double */
+.ux-text.xxs.double {font-size: calc(var(--font-2xs) * 2);}
+.ux-text.xs.double {font-size: calc(var(--font-xs) * 2);}
+.ux-text.sm.double {font-size: calc(var(--font-sm) * 2);}
+.ux-text.md.double {font-size: calc(var(--font-md) * 2);}
+.ux-text.lg.double {font-size: calc(var(--font-lg) * 2);}
+.ux-text.xl.double {font-size: calc(var(--font-xl) * 2);}
+.ux-text.xxl.double {font-size: calc(var(--font-2xl) * 2);}
 /* UxText Linear */
 .ux-text.linear {display: inline;}
 .ux-text.linear .ux-text-label {display: inline;}

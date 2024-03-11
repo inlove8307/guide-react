@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import classnames from "classnames";
 import "assets/css/components/base/UxPassword.css";
-import Masking from "components/mixin/UxMasking";
+import UxMasking from "components/mixin/UxMasking";
 import UxButton from "components/base/UxButton";
 import UxIcon from "components/base/UxIcon";
 
@@ -44,7 +44,7 @@ const UxPassword = (props) => {
 
 	return (
 		<div className={mixinClassName}>
-			<Masking
+			<UxMasking
 				ref={maskRef}
 				value={password}
 				mask={props.mask}

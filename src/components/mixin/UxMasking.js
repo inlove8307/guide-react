@@ -66,7 +66,7 @@ const UxMasking = (props, ref) => {
 				props.hasFocus &&
 				<input
 					ref={ref}
-					type="text"
+					type={props.type || "text"}
 					className={`${originClassName}-input`}
 					defaultValue={props.value}
 					maxLength={props.mask}

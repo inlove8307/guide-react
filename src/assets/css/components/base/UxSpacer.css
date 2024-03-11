@@ -1,2 +1,32 @@
 /* UxSpacer */
-.ux-spacer {}
+.ux-spacer {
+	display: block;
+}
+.ux-spacer.color {
+	background-color: var(--color1);
+	opacity: .1;
+}
+/* UxSpacer Size */
+.ux-spacer.xxs {height: .4rem;}
+.ux-spacer.xs {height: .8rem;}
+.ux-spacer.sm {height: 1.2rem;}
+.ux-spacer.md {height: 1.6rem;}
+.ux-spacer.lg {height: 2rem;}
+.ux-spacer.xl {height: 2.4rem;}
+.ux-spacer.xxl {height: 2.8rem;}
+/* UxSpacer Double */
+.ux-spacer.xxs.double {height: calc(.4rem * 2);} /* 8 */
+.ux-spacer.xs.double {height: calc(.8rem * 2);} /* 16 */
+.ux-spacer.sm.double {height: calc(1.2rem * 2);} /* 24 */
+.ux-spacer.md.double {height: calc(1.6rem * 2);} /* 32 */
+.ux-spacer.lg.double {height: calc(2rem * 2);} /* 40 */
+.ux-spacer.xl.double {height: calc(2.4rem * 2);} /* 48 */
+.ux-spacer.xxl.double {height: calc(2.8rem * 2);} /* 56 */
+/* UxSpacer Triple */
+.ux-spacer.xxs.triple {height: calc(.4rem * 3);} /* 12 */
+.ux-spacer.xs.triple {height: calc(.8rem * 3);} /* 24 */
+.ux-spacer.sm.triple {height: calc(1.2rem * 3);} /* 36 */
+.ux-spacer.md.triple {height: calc(1.6rem * 3);} /* 48 */
+.ux-spacer.lg.triple {height: calc(2rem * 3);} /* 60 */
+.ux-spacer.xl.triple {height: calc(2.4rem * 3);} /* 72 */
+.ux-spacer.xxl.triple {height: calc(2.8rem * 3);} /* 84 */

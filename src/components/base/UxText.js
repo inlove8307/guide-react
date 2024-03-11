@@ -12,7 +12,7 @@ const UxText = (props) => {
 				(props.prefix || props.bullet) &&
 				<span className={`${originClassName}-prefix`}>{props.prefix}</span>
 			}
-			<p className={`${originClassName}-label`}>{props.label || props.children}</p>
+			<div className={`${originClassName}-label`}>{props.label || props.children}</div>
 		</div>
 	);
 };
