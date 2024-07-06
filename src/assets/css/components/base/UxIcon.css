@@ -1,5 +1,0 @@
-/* UxIcon */
-[class*=ux-icon] {}
-[class*=ux-icon][role=presentation] {
-	cursor: pointer;
-}

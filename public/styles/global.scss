@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* GLOBAL VARIABLES :ROOT */
+:root {
+  /* SPACE */
+  --space: 2rem;
+  --minus: calc(var(--space) * -1);
+
+  /* COLOR */
+  --color1: rgb(217, 13, 88);
+  --color2: rgba();
+  --color3: rgba();
+  --light0: rgb(255, 255, 255);
+  --light1: rgb(238, 238, 238);
+  --light2: rgb(204, 204, 204);
+  --light3: rgb(170, 170, 170);
+  --dark0: rgb(0, 0, 0);
+  --dark1: rgb(34, 34, 34);
+  --dark2: rgb(68, 68, 68);
+  --dark3: rgb(102, 102, 102);
+  --valid: rgb(28, 87, 248);
+  --invalid: rgb(242, 56, 39);
+
+  /* FONT */
+  --font-2xs: 1rem;
+  --font-xs: 1.2rem;
+  --font-sm: 1.4rem;
+  --font-md: 1.6rem;
+  --font-lg: 1.8rem;
+  --font-xl: 2rem;
+  --font-2xl: 2.2rem;
+
+  /* HEADING */
+  --font-h1: 2.4rem;
+  --font-h2: 2.2rem;
+  --font-h3: 2rem;
+  --font-h4: 1.8rem;
+  --font-h5: 1.6rem;
+
+  /* SHADOW */
+  --shadow: 0 1rem 1rem rgba(0, 0, 0, .05);
+}
+/* GLOBAL VARIABLES SCSS */
+$headerHeight: 6rem;
+
+/* LAYOUT BASE */
+html {}
+body {}
+/* LAYOUT NEXT */
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* LAYOUT HEADER */
+.ux-header {
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $headerHeight;
+  border-bottom: .1rem solid var(--light1);
+  background-color: var(--light0);
+  box-shadow: var(--shadow);
+
+  .ux-section {
+    justify-content: center;
+    height: 100%;
+  }
+
+  .ux-content {
+    display: flex;
+    gap: .8rem;
+  }
+}
+/* LAYOUT MAIN */
+.ux-main {
+  margin-top: $headerHeight;
+  padding-top: 2rem;
+}
+/* LAYOUT FOOTER */
+.ux-footer {}
+/* LAYOUT SECTION */
+.ux-section {
+  display: flex;
+  flex-direction: column;
+
+  html.desktop & {
+    align-items: center;
+  }
+}
+/* LAYOUT ARTICLE */
+.ux-article {
+  display: flex;
+  flex-direction: column;
+
+  html.desktop & {
+    width: 72rem;
+  }
+
+  html.mobile & {
+    padding: 0 var(--space);
+  }
+}
+/* LAYOUT TITLE */
+.ux-title {}
+/* LAYOUT CONTENT */
+.ux-content {
+  display: flex;
+
+  .ux-main & {
+    flex-direction: column;
+  }
+}
+/* LAYOUT Z-INDEX */
+.ux-header {
+  z-index: 1;
+}

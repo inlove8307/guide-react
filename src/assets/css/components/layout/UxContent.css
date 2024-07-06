@@ -1,8 +1,0 @@
-/* UxContent */
-.ux-content {
-	display: flex;
-	flex-direction: column;
-}
-.ux-main > .ux-section:not(.ux-dock) > .ux-article > .ux-content {
-	padding: 2.4rem 0 8rem;
-}
